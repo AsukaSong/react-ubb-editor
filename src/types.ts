@@ -148,6 +148,12 @@ export interface IUBBButtonConfig extends IUBBBaseConfig {
   type: 'button'
 }
 
+/**
+ * @export
+ * @interface IUBBExtendConfig
+ * @extends {IUBBBaseConfig}
+ * @description button with extra menu
+ */
 export interface IUBBExtendConfig extends IUBBBaseConfig {
   /**
    * @type {('extend')}
@@ -179,9 +185,27 @@ export interface IUBBExtendConfig extends IUBBBaseConfig {
   upload?: () => Promise<IAction>
 }
 
+/**
+ * @export
+ * @interface IUBBCustomConfig
+ * @template T
+ * @description custom button
+ */
 export interface IUBBCustomConfig<T = any> {
+  /**
+   * @type {'custom'}
+   * @memberof IUBBCustomConfig
+   */
   type: 'custom'
+  /**
+   * @memberof IUBBCustomConfig
+   * @description there's no default handler for custom, so handler is required
+   */
   handler: (state: IState, action: ICustomAction<T>) => IState
+  /**
+   * @memberof IUBBCustomConfig
+   * @description element returned will be rendered under the button
+   */
   render: (invoke: (action: ICustomAction<T>) => void) => JSX.Element
 }
 
