@@ -1,0 +1,59 @@
+{
+  "name": "react-ubb-editor",
+  "version": "1.0.0",
+  "description": "A ubb editor component based on react",
+  "browser": "./lib/index.js",
+  "scripts": {
+    "start": "start-storybook -p 9000 -c .storybook",
+    "build": "rimraf lib && tsc",
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "ubb",
+    "editor"
+  ],
+  "files": [
+    "lib"
+  ],
+  "author": "AsukaSong",
+  "license": "WTFPL",
+  "devDependencies": {
+    "@storybook/addon-actions": "4.0.0-alpha.21",
+    "@storybook/addon-info": "4.0.0-alpha.21",
+    "@storybook/cli": "4.0.0-alpha.21",
+    "@storybook/react": "4.0.0-alpha.21",
+    "@types/jest": "^23.3.2",
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-core": "^7.0.0-beta.41",
+    "babel-loader": "^7.0.0",
+    "jest": "^23.6.0",
+    "react-docgen-typescript-webpack-plugin": "^1.1.0",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^23.1.4",
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "mapCoverage": true,
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/lib/"
+    ],
+    "testRegex": "(/test/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  }
+}
