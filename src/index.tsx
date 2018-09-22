@@ -2,17 +2,16 @@ import React from 'react'
 import uniqBy from 'lodash/uniqBy'
 import {
   IUBBConfig,
-} from './types'
+} from 'src/types'
+import { defaultConfig } from './config'
+import { Provider } from './context'
+import Core from './components'
 
-const defaultConfig: IUBBConfig[] = [] // TODO
 
-const context = React.createContext(defaultConfig)
-const { Provider, Consumer } = context
-
-type props = {
+export type props = {
   value: string
   onChange: (value: string) => void
-  option: any
+  option?: any // TODO
 }
 
 export default function createEditor(extraConfig: IUBBConfig[] = [], ignoreDefaultConfig = false) {
@@ -25,9 +24,9 @@ export default function createEditor(extraConfig: IUBBConfig[] = [], ignoreDefau
     config = uniqBy([ ...extraConfig, ...defaultConfig ], 'tagName')
   }
 
-  let Editor: React.SFC<props> = () => (
+  const Editor: React.SFC<props> = (props) => (
     <Provider value={config}>
-      <div>hello world</div>
+      <Core {...props} />
     </Provider>
   )
 
@@ -37,9 +36,4 @@ export default function createEditor(extraConfig: IUBBConfig[] = [], ignoreDefau
   }
 
   return Editor
-}
-
-export {
-  Consumer,
-  IUBBConfig,
 }

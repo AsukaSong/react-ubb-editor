@@ -72,26 +72,6 @@ export interface IAction {
 }
 
 /**
- * @export
- * @interface ICustomAction<T>
- * @description to be dispatched after the button clicked
- */
-export interface ICustomAction<T> {
-  /**
-   * @type {string}
-   * @memberof ICustomAction<T>
-   * @description determine which specific handler to be used
-   */
-  tagName: string
-  /**
-   * @type {{T}}
-   * @memberof ICustomAction<T>
-   * @description extra message passed by action
-   */
-  payload: T
-}
-
-/**
  * @interface IUBBBaseConfig
  * @description base interface of config
  */
@@ -191,7 +171,7 @@ export interface IUBBExtendConfig extends IUBBBaseConfig {
  * @template T
  * @description custom button
  */
-export interface IUBBCustomConfig<T = any> {
+export interface IUBBCustomConfig extends IUBBBaseConfig {
   /**
    * @type {'custom'}
    * @memberof IUBBCustomConfig
@@ -201,12 +181,12 @@ export interface IUBBCustomConfig<T = any> {
    * @memberof IUBBCustomConfig
    * @description there's no default handler for custom, so handler is required
    */
-  handler: (state: IState, action: ICustomAction<T>) => IState
+  handler: (state: IState, action: IAction) => IState
   /**
    * @memberof IUBBCustomConfig
    * @description element returned will be rendered under the button
    */
-  render: (invoke: (action: ICustomAction<T>) => void) => JSX.Element
+  render: (invoke: (action: IAction) => void) => JSX.Element
 }
 
 export type IUBBConfig = IUBBButtonConfig | IUBBCustomConfig | IUBBExtendConfig
