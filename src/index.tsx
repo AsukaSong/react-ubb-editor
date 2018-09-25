@@ -15,7 +15,7 @@ export type props = {
 }
 
 export default function createEditor(extraConfig: IUBBConfig[] = [], ignoreDefaultConfig = false) {
-  let config: IUBBConfig[];
+  let config!: IUBBConfig[];
 
   if(ignoreDefaultConfig) {
     if(!extraConfig) throw new Error('need extra config with ignoreDefaultConfig specified')

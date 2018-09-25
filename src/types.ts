@@ -68,8 +68,22 @@ export interface IAction {
       key: string
       value: string | boolean
     }[],
-  }
+  },
+  /**
+   * @description after insert the value, whether to select the content
+   * @type {boolean}
+   * @memberof IAction
+   */
+  shouldSelect?: boolean
+  /**
+   * @description after insert the value, whether to insert a new enter
+   * @type {boolean}
+   * @memberof IAction
+   */
+  shouldEnter?: boolean
 }
+
+export type handler = (state: IState, action: IAction) => IState
 
 /**
  * @interface IUBBBaseConfig
@@ -110,7 +124,7 @@ interface IUBBBaseConfig {
    * @memberof IUBBBaseConfig
    * @description custom how to handle the action and insert the code
    */
-  handler?: (state: IState, action: IAction) => IState
+  handler?: handler
 }
 
 /**
@@ -168,7 +182,6 @@ export interface IUBBExtendConfig extends IUBBBaseConfig {
 /**
  * @export
  * @interface IUBBCustomConfig
- * @template T
  * @description custom button
  */
 export interface IUBBCustomConfig extends IUBBBaseConfig {
@@ -181,7 +194,7 @@ export interface IUBBCustomConfig extends IUBBBaseConfig {
    * @memberof IUBBCustomConfig
    * @description there's no default handler for custom, so handler is required
    */
-  handler: (state: IState, action: IAction) => IState
+  handler: handler
   /**
    * @memberof IUBBCustomConfig
    * @description element returned will be rendered under the button
