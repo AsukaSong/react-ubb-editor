@@ -31,19 +31,24 @@ class Core extends React.Component<props, state> {
   }
 
   reduce(action: IAction): void {
+    console.log(action)
     const handler = this.getHandlerByTagName(action.tagName)
     this.setState(prevState => handler(prevState, action))
   }
 
   getHandlerByTagName(tagName: string) {
-    const { config } = this.props
-    const buttomConfig = config.configs.filter(item => item.tagName === tagName).pop()
-    if(buttomConfig && buttomConfig.handler)  return buttomConfig.handler
+    const { config: { configs } } = this.props
+    const config = configs.filter(item => item.tagName === tagName).pop()
+    if(config && config.handler)  return config.handler
     return defaultHandler
   }
 
   render() {
-    return <div>hello world<Buttons /></div>
+    return (
+      <div>
+        <Buttons reduce={this.reduce} />
+      </div>
+    )
   }
 }
 

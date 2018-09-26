@@ -1,3 +1,4 @@
+import { faUnderline } from '@fortawesome/free-solid-svg-icons'
 import {
   IUBBButtonConfig,
 } from 'src/types'
@@ -6,6 +7,6 @@ export default <IUBBButtonConfig>{
   type: 'button',
   tagName: 'u',
   title: '下划线',
-  icon: 'fa-underline',
+  icon: faUnderline,
   index: 30
 }

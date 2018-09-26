@@ -20,7 +20,7 @@ export function withConfig<P extends ConfigProps>(Component: React.ComponentType
   return function(props) {
     return (
       <Consumer>
-        {config=> <Component {...props} config={config} />}
+        {config => <Component {...props} config={config} />}
       </Consumer>
     )
   }

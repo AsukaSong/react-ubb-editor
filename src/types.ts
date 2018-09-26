@@ -1,3 +1,5 @@
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
+
 /**
  * button - just a button
  * extend - expand a menu after button click 
@@ -119,9 +121,9 @@ interface IUBBBaseConfig {
    * @memberof IUBBBaseConfig
    * @description fontawesome icon type, will be displayed inside the button
    */
-  icon?: string
+  icon?: IconDefinition
   /**
-   * @type {string}
+   * @type {IconDefinition}
    * @memberof IUBBBaseConfig
    * @description will be displayed inside the button if there's no icon given
    */
