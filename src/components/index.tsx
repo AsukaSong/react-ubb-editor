@@ -1,12 +1,12 @@
 import React from 'react'
 import bindAll from 'lodash-decorators/bindAll'
-// import Notification from ''
 import { props as indexProps } from 'src/index'
 import { IState, IAction } from 'src/types'
 import { withConfig, ConfigProps } from 'src/context'
 import defaultHandler from 'src/defaultHandler'
 
 import Buttons from './buttons'
+import Textarea from './textarea'
 
 type props = indexProps & ConfigProps
 
@@ -30,6 +30,14 @@ class Core extends React.Component<props, state> {
     }
   }
 
+  componentWillReceiveProps(newProps: props) {
+    if(this.state.value !== newProps.value) this.setState({
+        value: newProps.value,
+        start: newProps.value.length,
+        end: newProps.value.length,
+    })
+}
+
   reduce(action: IAction): void {
     console.log(action)
     const handler = this.getHandlerByTagName(action.tagName)
@@ -43,10 +51,27 @@ class Core extends React.Component<props, state> {
     return defaultHandler
   }
 
+  handleTextareaChange(value: string) {
+    this.setState({
+      value,
+    })
+    this.props.onChange(value)
+  }
+
   render() {
     return (
       <div>
-        <Buttons reduce={this.reduce} />
+        <Buttons
+          reduce={this.reduce} 
+        />
+        <Textarea 
+          onChange={this.handleTextareaChange} 
+          onBlur={e => {
+            const { selectionStart: start, selectionEnd: end } = e.target
+            this.setState({ start, end })
+          }}
+          value={this.state.value} 
+        />
       </div>
     )
   }

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { ConfigProps, withConfig } from 'src/context'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
+import bindAll from 'lodash-decorators/bindAll'
 import { IAction, IUBBButtonConfig } from 'src/types'
 import createAction from 'src/actionCreator'
 
@@ -8,13 +9,8 @@ type props = ConfigProps & {
   reduce: (action: IAction) => void
 }
 
+@bindAll()
 class Buttons extends React.Component<props> {
-  constructor(props: props) {
-    super(props)
-
-
-  }
-
   renderButton(config: IUBBButtonConfig): JSX.Element {
     return (
       <button
