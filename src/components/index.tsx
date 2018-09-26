@@ -6,6 +6,8 @@ import { IState, IAction } from 'src/types'
 import { withConfig, ConfigProps } from 'src/context'
 import defaultHandler from 'src/defaultHandler'
 
+import Buttons from './buttons'
+
 type props = indexProps & ConfigProps
 
 type state = IState & {
@@ -34,14 +36,14 @@ class Core extends React.Component<props, state> {
   }
 
   getHandlerByTagName(tagName: string) {
-    const { configs } = this.props
-    const config = configs.filter(item => item.tagName === tagName).pop()
-    if(config && config.handler)  return config.handler
+    const { config } = this.props
+    const buttomConfig = config.configs.filter(item => item.tagName === tagName).pop()
+    if(buttomConfig && buttomConfig.handler)  return buttomConfig.handler
     return defaultHandler
   }
 
   render() {
-    return <div>hello world</div>
+    return <div>hello world<Buttons /></div>
   }
 }
 

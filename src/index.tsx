@@ -1,5 +1,6 @@
 import React from 'react'
 import uniqBy from 'lodash/uniqBy'
+import orderBy from 'lodash/orderBy'
 import {
   IUBBConfig,
 } from 'src/types'
@@ -14,18 +15,28 @@ export type props = {
   option?: any // TODO
 }
 
-export default function createEditor(extraConfig: IUBBConfig[] = [], ignoreDefaultConfig = false) {
-  let config!: IUBBConfig[];
+export interface Config {
+  configs?: IUBBConfig[]
+}
+
+export default function createEditor(extraConfig: Config = {}, ignoreDefaultConfig = false) {
+  let configs!: IUBBConfig[];
 
   if(ignoreDefaultConfig) {
-    if(!extraConfig) throw new Error('need extra config with ignoreDefaultConfig specified')
-    config = extraConfig
+    if(!extraConfig.configs) throw new Error('need extra config with ignoreDefaultConfig specified')
+    configs = extraConfig.configs
+  } else if(extraConfig.configs) {
+    configs = uniqBy([ ...extraConfig.configs, ...defaultConfig ], 'tagName')
   } else {
-    config = uniqBy([ ...extraConfig, ...defaultConfig ], 'tagName')
+    configs = defaultConfig
   }
 
+  configs = orderBy(configs, ['index'], ['asc'])
+
   const Editor: React.SFC<props> = (props) => (
-    <Provider value={config}>
+    <Provider value={{
+      configs,
+    }}>
       <Core {...props} />
     </Provider>
   )

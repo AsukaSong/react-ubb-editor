@@ -42,7 +42,7 @@ export interface IAction {
    * @memberof IAction
    * @description determine which default handler to be used
    */
-  type: 'button' | 'extend'
+  type: 'button' | 'extend' | 'custom'
   /**
    * @type {string}
    * @memberof IAction
@@ -103,6 +103,12 @@ interface IUBBBaseConfig {
    */
   tagName: string
   /**
+   * @type {number}
+   * @memberof IUBBBaseConfig
+   * @description index of the button, higher are later
+   */
+  index: number
+  /**
    * @type {string}
    * @memberof IUBBBaseConfig
    * @description displayed when mouse hover the button
@@ -125,6 +131,12 @@ interface IUBBBaseConfig {
    * @description custom how to handle the action and insert the code
    */
   handler?: handler
+  /**
+   * @type {}
+   * @memberof IUBBBaseConfig
+   * @description default action
+   */
+  defaultAction?: IAction
 }
 
 /**

@@ -4,8 +4,8 @@ import {
 
 export default <IUBBButtonConfig>{
   type: 'button',
-  tagName: 'b',
-  title: '加粗',
-  icon: 'fa-bold',
-  index: 10
+  tagName: 'del',
+  title: '删除线',
+  icon: 'fa-strikethrough',
+  index: 40
 }

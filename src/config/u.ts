@@ -4,8 +4,8 @@ import {
 
 export default <IUBBButtonConfig>{
   type: 'button',
-  tagName: 'b',
-  title: '加粗',
-  icon: 'fa-bold',
-  index: 10
+  tagName: 'u',
+  title: '下划线',
+  icon: 'fa-underline',
+  index: 30
 }
