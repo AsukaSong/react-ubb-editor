@@ -42,7 +42,7 @@ export default class Textarea extends React.PureComponent<Props> {
     this.textarea.blur()
   }
 
-  changeValue(value: string) {
+  private changeValue(value: string) {
     this.props.onChange(value)
     this.valueStack.push(value)
     this.textarea.scrollTop = this.scrollTop

@@ -3,21 +3,15 @@ import uniqBy from 'lodash/uniqBy'
 import orderBy from 'lodash/orderBy'
 import {
   IUBBConfig,
+  Config,
+  IUBBButtonConfig,
+  IUBBExtendConfig,
+  IUBBCustomConfig
 } from 'src/types'
 import { defaultConfig } from './config'
 import { Provider } from './context'
-import Core from './components'
-
-
-export type props = {
-  value: string
-  onChange: (value: string) => void
-  option?: any // TODO
-}
-
-export interface Config {
-  configs?: IUBBConfig[]
-}
+import Core, { indexProps } from './components'
+import createAction from './actionCreator'
 
 export default function createEditor(extraConfig: Config = {}, ignoreDefaultConfig = false) {
   let configs!: IUBBConfig[];
@@ -33,7 +27,7 @@ export default function createEditor(extraConfig: Config = {}, ignoreDefaultConf
 
   configs = orderBy(configs, ['index'], ['asc'])
 
-  const Editor: React.SFC<props> = (props) => (
+  const Editor: React.SFC<indexProps> = (props) => (
     <Provider value={{
       configs,
     }}>
@@ -47,4 +41,12 @@ export default function createEditor(extraConfig: Config = {}, ignoreDefaultConf
   }
 
   return Editor
+}
+
+export {
+  IUBBConfig,
+  IUBBButtonConfig,
+  IUBBExtendConfig,
+  IUBBCustomConfig,
+  createAction,
 }

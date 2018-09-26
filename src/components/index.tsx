@@ -1,12 +1,17 @@
 import React from 'react'
 import bindAll from 'lodash-decorators/bindAll'
-import { props as indexProps } from 'src/index'
 import { IState, IAction } from 'src/types'
 import { withConfig, ConfigProps } from 'src/context'
 import defaultHandler from 'src/defaultHandler'
 
 import Buttons from './buttons'
 import Textarea from './textarea'
+
+export type indexProps = {
+  value: string
+  onChange: (value: string) => void
+  option?: any // TODO
+}
 
 type props = indexProps & ConfigProps
 
@@ -18,8 +23,11 @@ type state = IState & {
 
 @bindAll()
 class Core extends React.Component<props, state> {
+  customTextarea!: Textarea
+
   constructor(props: props) {
     super(props)
+
     this.state = {
       value: props.value,
       start: 0,
@@ -35,23 +43,31 @@ class Core extends React.Component<props, state> {
         value: newProps.value,
         start: newProps.value.length,
         end: newProps.value.length,
-    })
-}
-
-  reduce(action: IAction): void {
-    console.log(action)
-    const handler = this.getHandlerByTagName(action.tagName)
-    this.setState(prevState => handler(prevState, action))
+    }, this.focusAndSelectTextarea)
   }
 
-  getHandlerByTagName(tagName: string) {
+  focusAndSelectTextarea() {
+    this.customTextarea.textarea.focus()
+    this.customTextarea.textarea.setSelectionRange(this.state.start, this.state.end)
+  }
+
+  private reduce(action: IAction): void {
+    console.log(action)
+    const handler = this.getHandlerByTagName(action.tagName)
+    this.setState(
+      prevState => handler(prevState, action),
+      this.focusAndSelectTextarea
+    )
+  }
+
+  private getHandlerByTagName(tagName: string) {
     const { config: { configs } } = this.props
     const config = configs.filter(item => item.tagName === tagName).pop()
     if(config && config.handler)  return config.handler
     return defaultHandler
   }
 
-  handleTextareaChange(value: string) {
+  private handleTextareaChange(value: string) {
     this.setState({
       value,
     })
@@ -65,6 +81,7 @@ class Core extends React.Component<props, state> {
           reduce={this.reduce} 
         />
         <Textarea 
+          ref={(it: any) => this.customTextarea = it}
           onChange={this.handleTextareaChange} 
           onBlur={e => {
             const { selectionStart: start, selectionEnd: end } = e.target

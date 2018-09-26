@@ -217,3 +217,7 @@ export interface IUBBCustomConfig extends IUBBBaseConfig {
 }
 
 export type IUBBConfig = IUBBButtonConfig | IUBBCustomConfig | IUBBExtendConfig
+
+export interface Config {
+  configs?: IUBBConfig[]
+}
