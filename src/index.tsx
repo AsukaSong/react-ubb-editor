@@ -7,7 +7,7 @@ import {
   IUBBButtonConfig,
   IUBBExtendConfig,
   IUBBCustomConfig
-} from 'src/types'
+} from './types'
 import { defaultConfig } from './config'
 import { Provider } from './context'
 import Core, { indexProps } from './components'

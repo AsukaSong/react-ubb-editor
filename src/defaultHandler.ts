@@ -1,4 +1,4 @@
-import { handler } from 'src/types'
+import { handler } from './types'
 
 const defaultHandler: handler = (state, action) => {
   const { start, end, value } = state

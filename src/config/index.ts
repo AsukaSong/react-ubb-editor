@@ -1,6 +1,6 @@
 import {
   IUBBConfig,
-} from 'src/types'
+} from '../types'
 
 import b from './b'
 import i from './i'

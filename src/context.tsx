@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Omit } from 'lodash'
 import { defaultConfig } from './config'
-import { IUBBConfig, Config } from 'src/types'
+import { IUBBConfig, Config } from './types'
 
 export interface ConfigProps {
   config: Config & {

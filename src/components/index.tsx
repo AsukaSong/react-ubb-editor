@@ -1,8 +1,8 @@
 import React from 'react'
 import bindAll from 'lodash-decorators/bindAll'
-import { IState, IAction } from 'src/types'
-import { withConfig, ConfigProps } from 'src/context'
-import defaultHandler from 'src/defaultHandler'
+import { IState, IAction } from '../types'
+import { withConfig, ConfigProps } from '../context'
+import defaultHandler from '../defaultHandler'
 
 import Buttons from './buttons'
 import Textarea from './textarea'

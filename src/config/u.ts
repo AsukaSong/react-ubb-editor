@@ -1,7 +1,7 @@
 import { faUnderline } from '@fortawesome/free-solid-svg-icons'
 import {
   IUBBButtonConfig,
-} from 'src/types'
+} from '../types'
 
 export default <IUBBButtonConfig>{
   type: 'button',
