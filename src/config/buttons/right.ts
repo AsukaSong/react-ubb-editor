@@ -8,5 +8,5 @@ export default <IUBBButtonConfig>{
   tagName: 'right',
   title: '右对齐',
   icon: faAlignRight,
-  index: 70
+  index: 70,
 }

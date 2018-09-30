@@ -8,5 +8,5 @@ export default <IUBBButtonConfig>{
   tagName: 'i',
   title: '斜体',
   icon: faItalic,
-  index: 20
+  index: 20,
 }

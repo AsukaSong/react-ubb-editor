@@ -8,5 +8,5 @@ export default <IUBBButtonConfig>{
   tagName: 'u',
   title: '下划线',
   icon: faUnderline,
-  index: 30
+  index: 30,
 }

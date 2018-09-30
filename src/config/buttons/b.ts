@@ -8,5 +8,5 @@ export default <IUBBButtonConfig>{
   tagName: 'b',
   title: '加粗',
   icon: faBold,
-  index: 10
+  index: 10,
 }

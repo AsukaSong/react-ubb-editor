@@ -8,5 +8,5 @@ export default <IUBBButtonConfig>{
   tagName: 'del',
   title: '删除线',
   icon: faStrikethrough,
-  index: 40
+  index: 40,
 }

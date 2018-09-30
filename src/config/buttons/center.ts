@@ -8,5 +8,5 @@ export default <IUBBButtonConfig>{
   tagName: 'center',
   title: '居中',
   icon: faAlignCenter,
-  index: 60
+  index: 60,
 }
