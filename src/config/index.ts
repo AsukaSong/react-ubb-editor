@@ -2,13 +2,13 @@ import {
   IUBBConfig,
 } from '../types'
 
-import b from './b'
-import i from './i'
-import u from './u'
-import del from './del'
-import left from './left'
-import center from './center'
-import right from './right'
+import b from './buttons/b'
+import i from './buttons/i'
+import u from './buttons/u'
+import del from './buttons/del'
+import left from './buttons/left'
+import center from './buttons/center'
+import right from './buttons/right'
 
 export const defaultConfig: IUBBConfig[] = [
   b,

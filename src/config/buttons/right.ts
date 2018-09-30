@@ -1,7 +1,7 @@
 import { faAlignRight } from '@fortawesome/free-solid-svg-icons'
 import {
   IUBBButtonConfig,
-} from '../types'
+} from '../../types'
 
 export default <IUBBButtonConfig>{
   type: 'button',

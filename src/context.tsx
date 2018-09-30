@@ -15,7 +15,7 @@ const context = React.createContext({
 
 const { Provider, Consumer } = context
 
-export function withConfig<P extends ConfigProps>(Component: React.ComponentType<P>): React.ComponentType<Omit<P, keyof ConfigProps>> {
+function withConfig<P extends ConfigProps>(Component: React.ComponentType<P>): React.ComponentType<Omit<P, keyof ConfigProps>> {
   return function(props) {
     return (
       <Consumer>
@@ -27,4 +27,5 @@ export function withConfig<P extends ConfigProps>(Component: React.ComponentType
 
 export {
   Provider,
+  withConfig,
 }
