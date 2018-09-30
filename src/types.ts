@@ -188,9 +188,9 @@ export interface IUBBExtendConfig extends IUBBBaseConfig {
   }>
   /**
    * @memberof IUBBExtendConfig
-   * @description if specified, there will be an upload button inside extra menu
+   * @description rendered inside the extend bar
    */
-  upload?: () => Promise<IAction>
+  ExtraComponent?: React.ComponentClass<ICustomComponentProps>
 }
 
 /**

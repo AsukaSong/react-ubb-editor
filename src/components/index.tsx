@@ -1,8 +1,10 @@
 import bindAll from 'lodash-decorators/bindAll'
+// @ts-ignore there's no types for rc-notification
+import Notification from 'rc-notification'
 import React from 'react'
 import { IConfigProps, withConfig } from '../context'
 import defaultHandler from '../defaultHandler'
-import { IAction, IState } from '../types'
+import { IAction, IState as State } from '../types'
 
 import Buttons from './buttons'
 import Textarea from './textarea'
@@ -15,16 +17,18 @@ export interface IndexProps {
 
 type props = IndexProps & IConfigProps
 
-type state = IState & {
+interface IState extends State {
   extendTagName: string
   customTagName: string
   message: string
-  isPreviewing: boolean,
+  isPreviewing: boolean
 }
 
 @bindAll()
-class Core extends React.Component<props, state> {
+class Core extends React.Component<props, IState> {
   public customTextarea!: Textarea
+  private root!: HTMLDivElement
+  public message: any
 
   constructor(props: props) {
     super(props)
@@ -38,6 +42,15 @@ class Core extends React.Component<props, state> {
       start: 0,
       value: props.value,
     }
+  }
+
+  componentDidMount() {
+    Notification.newInstance(
+      {
+        getContainer: () => this.root,
+      },
+      (n: any) => (this.message = n),
+    )
   }
 
   componentWillReceiveProps(newProps: props) {
@@ -110,7 +123,7 @@ class Core extends React.Component<props, state> {
 
   public render() {
     return (
-      <div>
+      <div ref={(it: any) => (this.root = it)}>
         <Buttons
           customTagName={this.state.customTagName}
           dispatch={this.reduce}
