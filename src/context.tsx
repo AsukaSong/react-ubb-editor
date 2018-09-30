@@ -1,31 +1,27 @@
-import * as React from 'react'
-import { Omit } from 'lodash'
-import { defaultConfig } from './config'
-import { IUBBConfig, Config } from './types'
+import { Omit } from 'lodash';
+import * as React from 'react';
+import { defaultConfig } from './config';
+import { IConfig, IUBBConfig } from './types';
 
-export interface ConfigProps {
-  config: Config & {
-    configs: IUBBConfig[]
-  }
+export interface IConfigProps {
+  config: IConfig & {
+    configs: IUBBConfig[];
+  };
 }
 
 const context = React.createContext({
-  configs: defaultConfig
-})
+  configs: defaultConfig,
+});
 
-const { Provider, Consumer } = context
+const { Provider, Consumer } = context;
 
-function withConfig<P extends ConfigProps>(Component: React.ComponentType<P>): React.ComponentType<Omit<P, keyof ConfigProps>> {
+function withConfig<P extends IConfigProps>( // tslint:disable-next-line
+  Component: React.ComponentType<P>
+): React.ComponentType<Omit<P, keyof IConfigProps>> {
+  // tslint:disable-next-line
   return function(props) {
-    return (
-      <Consumer>
-        {config => <Component {...props} config={config} />}
-      </Consumer>
-    )
-  }
+    return <Consumer>{config => <Component {...props} config={config} />}</Consumer>;
+  };
 }
 
-export {
-  Provider,
-  withConfig,
-}
+export { Provider, withConfig };

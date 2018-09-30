@@ -1,15 +1,15 @@
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 /**
  * button - just a button
- * extend - expand a menu after button click 
+ * extend - expand a menu after button click
  * custom - custom how to render the menu
  */
-export type buttonType = 'button' | 'extend' | 'custom'
+export type buttonType = 'button' | 'extend' | 'custom';
 
 /**
  * @export
- * @interface IState 
+ * @interface IState
  * @description state of editor
  */
 export interface IState {
@@ -18,19 +18,19 @@ export interface IState {
    * @memberof IState
    * @description value of editor
    */
-  value: string
+  value: string;
   /**
    * @type {number}
    * @memberof IState
    * @description where the select starts
    */
-  start: number
+  start: number;
   /**
    * @type {number}
    * @memberof IState
    * @description where the select ends
    */
-  end: number
+  end: number;
 }
 
 /**
@@ -44,13 +44,13 @@ export interface IAction {
    * @memberof IAction
    * @description determine which default handler to be used
    */
-  type: 'button' | 'extend' | 'custom'
+  type: 'button' | 'extend' | 'custom';
   /**
    * @type {string}
    * @memberof IAction
    * @description determine which specific handler to be used
    */
-  tagName: string
+  tagName: string;
   /**
    * @type {{mainValue?: string, subValues?: { key: string, value: string }[]}}
    * @memberof IAction
@@ -61,31 +61,31 @@ export interface IAction {
      * @type {string}
      * @example mainValue of '[align=center]' is center
      */
-    mainValue?: string
+    mainValue?: string;
     /**
      * @type {{ key: string, value: string | boolean }[]}
      * @example subValues of '[iframe,width=200,height=100]' is [{ width: '200', height: '100' }]
      */
-    subValues?: {
-      key: string
-      value: string | boolean
-    }[],
-  },
+    subValues?: Array<{
+      key: string;
+      value: string | boolean;
+    }>;
+  };
   /**
    * @description after insert the value, whether to select the content
    * @type {boolean}
    * @memberof IAction
    */
-  shouldSelect?: boolean
+  shouldSelect?: boolean;
   /**
    * @description after insert the value, whether to insert a new enter
    * @type {boolean}
    * @memberof IAction
    */
-  shouldEnter?: boolean
+  shouldEnter?: boolean;
 }
 
-export type handler = (state: IState, action: IAction) => IState
+export type handler = (state: IState, action: IAction) => IState;
 
 /**
  * @interface IUBBBaseConfig
@@ -97,48 +97,48 @@ interface IUBBBaseConfig {
    * @memberof IUBBBaseConfig
    * @description type of button
    */
-  type: buttonType
+  type: buttonType;
   /**
    * @type {string}
    * @memberof IUBBBaseConfig
    * @description tagName added into quote mark, should be unique
    */
-  tagName: string
+  tagName: string;
   /**
    * @type {number}
    * @memberof IUBBBaseConfig
    * @description index of the button, higher are later
    */
-  index: number
+  index: number;
   /**
    * @type {string}
    * @memberof IUBBBaseConfig
    * @description displayed when mouse hover the button
    */
-  title?: string
-  /**
-   * @type {string}
-   * @memberof IUBBBaseConfig
-   * @description fontawesome icon type, will be displayed inside the button
-   */
-  icon?: IconDefinition
+  title?: string;
   /**
    * @type {IconDefinition}
    * @memberof IUBBBaseConfig
+   * @description fontawesome icon type, will be displayed inside the button
+   */
+  icon?: IconDefinition;
+  /**
+   * @type {JSX.Element}
+   * @memberof IUBBBaseConfig
    * @description will be displayed inside the button if there's no icon given
    */
-  label?: string
+  label?: React.ReactNode;
   /**
    * @memberof IUBBBaseConfig
    * @description custom how to handle the action and insert the code
    */
-  handler?: handler
+  handler?: handler;
   /**
    * @type {}
    * @memberof IUBBBaseConfig
    * @description default action
    */
-  defaultAction?: IAction
+  defaultAction?: IAction;
 }
 
 /**
@@ -153,7 +153,7 @@ export interface IUBBButtonConfig extends IUBBBaseConfig {
    * @memberof IUBBButtonConfig
    * @description determine which default handler to be used
    */
-  type: 'button'
+  type: 'button';
 }
 
 /**
@@ -168,29 +168,29 @@ export interface IUBBExtendConfig extends IUBBBaseConfig {
    * @memberof IUBBExtendConfig
    * @description determine which default handler to be used
    */
-  type: 'extend'
+  type: 'extend';
   /**
    * @type {({ label: string, type: 'checkbox' | 'input' }[])}
    * @memberof IUBBExtendConfig
    * @description inputs that will be displayed in extra menu
    */
-  inputs: {
+  inputs: Array<{
     /**
      * @type {string}
      * @description label for checkbox and placeholder for input
      */
-    label: string
+    label: string;
     /**
      * @type {('checkbox' | 'input')}
      * @description which kind of input to be displayed
      */
-    type: 'checkbox' | 'input'
-  }[]
+    type: 'checkbox' | 'input';
+  }>;
   /**
    * @memberof IUBBExtendConfig
    * @description if specified, there will be an upload button inside extra menu
    */
-  upload?: () => Promise<IAction>
+  upload?: () => Promise<IAction>;
 }
 
 /**
@@ -203,21 +203,21 @@ export interface IUBBCustomConfig extends IUBBBaseConfig {
    * @type {'custom'}
    * @memberof IUBBCustomConfig
    */
-  type: 'custom'
+  type: 'custom';
   /**
    * @memberof IUBBCustomConfig
    * @description there's no default handler for custom, so handler is required
    */
-  handler: handler
+  handler: handler;
   /**
    * @memberof IUBBCustomConfig
    * @description element returned will be rendered under the button
    */
-  render: (invoke: (action: IAction) => void) => JSX.Element
+  render: (invoke: (action: IAction) => void) => JSX.Element;
 }
 
-export type IUBBConfig = IUBBButtonConfig | IUBBCustomConfig | IUBBExtendConfig
+export type IUBBConfig = IUBBButtonConfig | IUBBCustomConfig | IUBBExtendConfig;
 
-export interface Config {
-  configs?: IUBBConfig[]
+export interface IConfig {
+  configs?: IUBBConfig[];
 }

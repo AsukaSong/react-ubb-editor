@@ -1,52 +1,41 @@
-import React from 'react'
-import uniqBy from 'lodash/uniqBy'
-import orderBy from 'lodash/orderBy'
-import {
-  IUBBConfig,
-  Config,
-  IUBBButtonConfig,
-  IUBBExtendConfig,
-  IUBBCustomConfig
-} from './types'
-import { defaultConfig } from './config'
-import { Provider } from './context'
-import Core, { indexProps } from './components'
-import createAction from './actionCreator'
+import orderBy from 'lodash/orderBy';
+import uniqBy from 'lodash/uniqBy';
+import React from 'react';
+import Core, { IndexProps } from './components';
+import { defaultConfig } from './config';
+import { Provider } from './context';
+import createAction from './createAction';
+import { IConfig, IUBBButtonConfig, IUBBConfig, IUBBCustomConfig, IUBBExtendConfig } from './types';
 
-export default function createEditor(extraConfig: Config = {}, ignoreDefaultConfig = false) {
+export default function createEditor(extraConfig: IConfig = {}, ignoreDefaultConfig = false) {
   let configs!: IUBBConfig[];
 
-  if(ignoreDefaultConfig) {
-    if(!extraConfig.configs) throw new Error('need extra config with ignoreDefaultConfig specified')
-    configs = extraConfig.configs
-  } else if(extraConfig.configs) {
-    configs = uniqBy([ ...extraConfig.configs, ...defaultConfig ], 'tagName')
+  if (ignoreDefaultConfig) {
+    if (!extraConfig.configs) {
+      throw new Error('need extra config with ignoreDefaultConfig specified');
+    }
+    configs = extraConfig.configs;
+  } else if (extraConfig.configs) {
+    configs = uniqBy([...extraConfig.configs, ...defaultConfig], 'tagName');
   } else {
-    configs = defaultConfig
+    configs = defaultConfig;
   }
 
-  configs = orderBy(configs, ['index'], ['asc'])
+  configs = orderBy(configs, ['index'], ['asc']);
 
-  const Editor: React.SFC<indexProps> = (props) => (
-    <Provider value={{
-      configs,
-    }}>
+  // tslint:disable-next-line
+  const Editor: React.SFC<IndexProps> = props => (
+    <Provider value={{ configs }}>
       <Core {...props} />
     </Provider>
-  )
+  );
 
   Editor.defaultProps = {
-    value: '',
     onChange: () => null,
-  }
+    value: '',
+  };
 
-  return Editor
+  return Editor;
 }
 
-export {
-  IUBBConfig,
-  IUBBButtonConfig,
-  IUBBExtendConfig,
-  IUBBCustomConfig,
-  createAction,
-}
+export { IUBBConfig, IUBBButtonConfig, IUBBExtendConfig, IUBBCustomConfig, createAction };
