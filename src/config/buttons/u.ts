@@ -1,12 +1,12 @@
 import { faUnderline } from '@fortawesome/free-solid-svg-icons'
-import {
-  IUBBButtonConfig,
-} from '../../types'
+import { IUBBButtonConfig } from '../../types'
 
-export default <IUBBButtonConfig>{
+const config: IUBBButtonConfig = {
   type: 'button',
   tagName: 'u',
   title: '下划线',
   icon: faUnderline,
   index: 30,
 }
+
+export default config
