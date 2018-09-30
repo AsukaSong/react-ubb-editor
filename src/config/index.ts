@@ -9,6 +9,7 @@ import replyview from './buttons/replyview'
 import right from './buttons/right'
 import u from './buttons/u'
 
+import color from './customs/color'
 import size from './customs/size'
 
 // prettier-ignore
@@ -22,4 +23,5 @@ export const defaultConfig: IUBBConfig[] = [
   right,
   replyview,
   size,
+  color,
 ] // TODO

@@ -35,7 +35,7 @@ class Buttons extends React.Component<IProps> {
     return (
       <div
         style={{
-          position: 'relative',
+          position: 'absolute',
           display: customTagName === config.tagName ? '' : 'none',
         }}
       >
