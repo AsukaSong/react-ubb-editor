@@ -1,21 +1,21 @@
-import { IAction, IUBBConfig } from './types';
+import { IAction, IUBBConfig } from './types'
 
 const createAction: (config: IUBBConfig, payload?: IAction['payload']) => IAction = (
   config,
   payload,
 ) => {
-  const { tagName, type, defaultAction } = config;
+  const { tagName, type, defaultAction } = config
 
   const action: IAction = defaultAction || {
     tagName,
     type,
-  };
-
-  if (payload) {
-    action.payload = payload;
   }
 
-  return action;
-};
+  if (payload) {
+    action.payload = payload
+  }
 
-export default createAction;
+  return action
+}
+
+export default createAction

@@ -1,33 +1,33 @@
-import bindAll from 'lodash-decorators/bindAll';
-import React from 'react';
-import { IConfigProps, withConfig } from '../context';
-import defaultHandler from '../defaultHandler';
-import { IAction, IState } from '../types';
+import bindAll from 'lodash-decorators/bindAll'
+import React from 'react'
+import { IConfigProps, withConfig } from '../context'
+import defaultHandler from '../defaultHandler'
+import { IAction, IState } from '../types'
 
-import Buttons from './buttons';
-import Textarea from './textarea';
+import Buttons from './buttons'
+import Textarea from './textarea'
 
 export interface IndexProps {
-  value: string;
-  onChange: (value: string) => void;
-  option?: any; // TODO
+  value: string
+  onChange: (value: string) => void
+  option?: any // TODO:
 }
 
-type props = IndexProps & IConfigProps;
+type props = IndexProps & IConfigProps
 
 type state = IState & {
-  extendTagName: string;
-  customTagName: string;
-  message: string;
-  isPreviewing: boolean;
-};
+  extendTagName: string
+  customTagName: string
+  message: string
+  isPreviewing: boolean,
+}
 
 @bindAll()
 class Core extends React.Component<props, state> {
-  public customTextarea!: Textarea;
+  public customTextarea!: Textarea
 
   constructor(props: props) {
-    super(props);
+    super(props)
 
     this.state = {
       customTagName: '',
@@ -37,7 +37,7 @@ class Core extends React.Component<props, state> {
       message: '',
       start: 0,
       value: props.value,
-    };
+    }
   }
 
   componentWillReceiveProps(newProps: props) {
@@ -49,53 +49,53 @@ class Core extends React.Component<props, state> {
           value: newProps.value,
         },
         this.focusAndSelectTextarea,
-      );
+      )
     }
   }
 
   focusAndSelectTextarea() {
-    this.customTextarea.textarea.focus();
-    this.customTextarea.textarea.setSelectionRange(this.state.start, this.state.end);
+    this.customTextarea.textarea.focus()
+    this.customTextarea.textarea.setSelectionRange(this.state.start, this.state.end)
   }
 
   private reduce(action: IAction): void {
-    const handler = this.getHandlerByTagName(action.tagName);
-    this.setState(prevState => handler(prevState, action), this.focusAndSelectTextarea);
+    const handler = this.getHandlerByTagName(action.tagName)
+    this.setState(prevState => handler(prevState, action), this.focusAndSelectTextarea)
   }
 
   private getHandlerByTagName(tagName: string) {
     const {
       config: { configs },
-    } = this.props;
-    const config = configs.filter(item => item.tagName === tagName).pop();
-    if (config && config.handler) return config.handler;
-    return defaultHandler;
+    } = this.props
+    const config = configs.filter(item => item.tagName === tagName).pop()
+    if (config && config.handler) return config.handler
+    return defaultHandler
   }
 
   private handleTextareaChange(value: string) {
     this.setState({
       value,
-    });
-    this.props.onChange(value);
+    })
+    this.props.onChange(value)
   }
 
   private handleExtendButtonClick(extendTagName: string) {
     this.setState({
       extendTagName,
       customTagName: '',
-    });
+    })
   }
 
   private handleCustomButtonClick(customTagName: string) {
     this.setState({
       customTagName,
       extendTagName: '',
-    });
+    })
   }
 
   private handleTextareaBlur(e: React.FocusEvent<HTMLTextAreaElement>) {
-    const { selectionStart: start, selectionEnd: end } = e.target;
-    this.setState({ start, end });
+    const { selectionStart: start, selectionEnd: end } = e.target
+    this.setState({ start, end })
   }
 
   public render() {
@@ -113,8 +113,8 @@ class Core extends React.Component<props, state> {
           value={this.state.value}
         />
       </div>
-    );
+    )
   }
 }
 
-export default withConfig(Core);
+export default withConfig(Core)
