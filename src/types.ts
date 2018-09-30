@@ -208,7 +208,13 @@ export interface IUBBCustomConfig extends IUBBBaseConfig {
    * @memberof IUBBCustomConfig
    * @description element returned will be rendered under the button
    */
-  render: (invoke: (action: IAction) => void) => React.ReactNode
+  Component: React.ComponentClass<ICustomComponentProps>
+}
+
+export type dispatch = (action: IAction) => void
+
+export interface ICustomComponentProps {
+  dispatch: dispatch
 }
 
 export type IUBBConfig = IUBBButtonConfig | IUBBCustomConfig | IUBBExtendConfig

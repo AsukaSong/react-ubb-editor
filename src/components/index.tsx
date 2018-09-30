@@ -58,9 +58,19 @@ class Core extends React.Component<props, state> {
     this.customTextarea.textarea.setSelectionRange(this.state.start, this.state.end)
   }
 
+  clearExtendAndCustom() {
+    this.setState({
+      customTagName: '',
+      extendTagName: '',
+    })
+  }
+
   private reduce(action: IAction): void {
+    // tslint:disable-next-line
+    console.log(action)
     const handler = this.getHandlerByTagName(action.tagName)
     this.setState(prevState => handler(prevState, action), this.focusAndSelectTextarea)
+    this.clearExtendAndCustom()
   }
 
   private getHandlerByTagName(tagName: string) {
@@ -102,6 +112,7 @@ class Core extends React.Component<props, state> {
     return (
       <div>
         <Buttons
+          customTagName={this.state.customTagName}
           dispatch={this.reduce}
           onExtendButtonClick={this.handleExtendButtonClick}
           onCustomButtonClick={this.handleCustomButtonClick}

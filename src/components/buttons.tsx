@@ -3,40 +3,61 @@ import bindAll from 'lodash-decorators/bindAll'
 import * as React from 'react'
 import { IConfigProps, withConfig } from '../context'
 import createAction from '../createAction'
-import { IAction, IUBBConfig } from '../types'
+import { IAction, IUBBConfig, IUBBCustomConfig } from '../types'
 
-type props = IConfigProps & {
+interface IProps extends IConfigProps {
   dispatch: (action: IAction) => void
+  customTagName: string
   onExtendButtonClick: (tagName: string) => void
-  onCustomButtonClick: (tagName: string) => void,
+  onCustomButtonClick: (tagName: string) => void
 }
 
 @bindAll()
-class Buttons extends React.Component<props> {
-  public renderContent(config: IUBBConfig): JSX.Element {
+class Buttons extends React.Component<IProps> {
+  renderContent(config: IUBBConfig): JSX.Element {
     return config.icon ? <Icon icon={config.icon} /> : <span>{config.label}</span>
   }
 
-  public generateHandleButtonClick(config: IUBBConfig) {
+  generateHandleButtonClick(config: IUBBConfig) {
     switch (config.type) {
       case 'button':
         return () => this.props.dispatch(createAction(config))
-      case 'custom':
-        return () => this.props.onExtendButtonClick(config.tagName)
       case 'extend':
+        return () => this.props.onExtendButtonClick(config.tagName)
+      case 'custom':
         return () => this.props.onCustomButtonClick(config.tagName)
     }
   }
 
-  public render() {
+  renderCustom(config: IUBBCustomConfig) {
+    const { customTagName, dispatch } = this.props
+    const Component = config.Component
+    return (
+      <div
+        style={{
+          position: 'relative',
+          display: customTagName === config.tagName ? '' : 'none',
+        }}
+      >
+        <Component dispatch={dispatch} />
+      </div>
+    )
+  }
+
+  render() {
     const {
       config: { configs },
     } = this.props
 
     return (
-      <div>
+      <div style={{ display: 'flex' }}>
         {configs.map(item => (
-          <button onClick={this.generateHandleButtonClick(item)}>{this.renderContent(item)}</button>
+          <div key={item.tagName} style={{ position: 'relative' }}>
+            <button onClick={this.generateHandleButtonClick(item)}>
+              {this.renderContent(item)}
+            </button>
+            {item.type === 'custom' && this.renderCustom(item)}
+          </div>
         ))}
       </div>
     )

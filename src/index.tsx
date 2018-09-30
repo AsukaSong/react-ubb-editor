@@ -5,7 +5,15 @@ import Core, { IndexProps } from './components'
 import { defaultConfig } from './config'
 import { Provider } from './context'
 import createAction from './createAction'
-import { IConfig, IUBBButtonConfig, IUBBConfig, IUBBCustomConfig, IUBBExtendConfig } from './types'
+// prettier-ignore
+import {
+  IConfig,
+  ICustomComponentProps,
+  IUBBButtonConfig,
+  IUBBConfig,
+  IUBBCustomConfig,
+  IUBBExtendConfig,
+} from './types'
 
 export default function createEditor(extraConfig: IConfig = {}, ignoreDefaultConfig = false) {
   let configs!: IUBBConfig[]
@@ -38,4 +46,11 @@ export default function createEditor(extraConfig: IConfig = {}, ignoreDefaultCon
   return Editor
 }
 
-export { IUBBConfig, IUBBButtonConfig, IUBBExtendConfig, IUBBCustomConfig, createAction }
+export {
+  IUBBConfig,
+  IUBBButtonConfig,
+  IUBBExtendConfig,
+  IUBBCustomConfig,
+  ICustomComponentProps,
+  createAction,
+}
