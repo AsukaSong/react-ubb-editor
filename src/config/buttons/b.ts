@@ -1,8 +1,8 @@
 import { faBold } from '@fortawesome/free-solid-svg-icons'
-import { IUBBButtonConfig } from '../../types'
+import { ConfigType, IUBBButtonConfig } from '../../types'
 
 const config: IUBBButtonConfig = {
-  type: 'button',
+  type: ConfigType.Button,
   tagName: 'b',
   title: '加粗',
   icon: faBold,

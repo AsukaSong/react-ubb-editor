@@ -12,6 +12,8 @@ import u from './buttons/u'
 import color from './customs/color'
 import size from './customs/size'
 
+import url from './extends/url'
+
 // prettier-ignore
 export const defaultConfig: IUBBConfig[] = [
   b,
@@ -24,4 +26,5 @@ export const defaultConfig: IUBBConfig[] = [
   replyview,
   size,
   color,
-] // TODO
+  url,
+] // TODO:

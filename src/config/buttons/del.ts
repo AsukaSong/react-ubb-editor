@@ -1,8 +1,8 @@
 import { faStrikethrough } from '@fortawesome/free-solid-svg-icons'
-import { IUBBButtonConfig } from '../../types'
+import { ConfigType, IUBBButtonConfig } from '../../types'
 
 const config: IUBBButtonConfig = {
-  type: 'button',
+  type: ConfigType.Button,
   tagName: 'del',
   title: '删除线',
   icon: faStrikethrough,

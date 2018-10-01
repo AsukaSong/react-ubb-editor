@@ -1,8 +1,8 @@
 import { faAlignCenter } from '@fortawesome/free-solid-svg-icons'
-import { IUBBButtonConfig } from '../../types'
+import { ConfigType, IUBBButtonConfig } from '../../types'
 
 const config: IUBBButtonConfig = {
-  type: 'button',
+  type: ConfigType.Button,
   tagName: 'center',
   title: '居中',
   icon: faAlignCenter,

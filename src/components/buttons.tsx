@@ -3,7 +3,7 @@ import bindAll from 'lodash-decorators/bindAll'
 import * as React from 'react'
 import { IConfigProps, withConfig } from '../context'
 import createAction from '../createAction'
-import { IAction, IUBBConfig, IUBBCustomConfig } from '../types'
+import { ConfigType, IAction, IUBBConfig, IUBBCustomConfig } from '../types'
 
 interface IProps extends IConfigProps {
   dispatch: (action: IAction) => void
@@ -20,11 +20,11 @@ class Buttons extends React.Component<IProps> {
 
   generateHandleButtonClick(config: IUBBConfig) {
     switch (config.type) {
-      case 'button':
+      case ConfigType.Button:
         return () => this.props.dispatch(createAction(config))
-      case 'extend':
+      case ConfigType.Extend:
         return () => this.props.onExtendButtonClick(config.tagName)
-      case 'custom':
+      case ConfigType.Custom:
         return () => this.props.onCustomButtonClick(config.tagName)
     }
   }
@@ -56,7 +56,7 @@ class Buttons extends React.Component<IProps> {
             <button onClick={this.generateHandleButtonClick(item)}>
               {this.renderContent(item)}
             </button>
-            {item.type === 'custom' && this.renderCustom(item)}
+            {item.type === ConfigType.Custom && this.renderCustom(item)}
           </div>
         ))}
       </div>

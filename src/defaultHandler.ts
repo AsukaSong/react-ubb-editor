@@ -1,10 +1,13 @@
-import { handler } from './types'
+import { ConfigType, handler } from './types'
 
 const defaultHandler: handler = (state, action) => {
   const { start, end, value } = state
   const { tagName, payload = {}, type } = action
 
-  const { shouldEnter = type === 'extend', shouldSelect = type === 'button' } = action
+  const {
+    shouldEnter = type === ConfigType.Extend,
+    shouldSelect = type === ConfigType.Button,
+  } = action
 
   const before = value.slice(0, start)
   const after = value.slice(end, value.length)

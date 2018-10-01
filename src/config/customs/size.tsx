@@ -1,7 +1,7 @@
 import { faTextHeight } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 import createAction from '../../createAction'
-import { ICustomComponentProps, IUBBCustomConfig } from '../../types'
+import { ConfigType, ICustomComponentProps, IUBBCustomConfig } from '../../types'
 
 class SizePicker extends React.PureComponent<ICustomComponentProps> {
   sizes = ['1', '2', '3', '4', '5', '6', '7']
@@ -35,7 +35,7 @@ class SizePicker extends React.PureComponent<ICustomComponentProps> {
 }
 
 const config: IUBBCustomConfig = {
-  type: 'custom',
+  type: ConfigType.Custom,
   tagName: 'size',
   icon: faTextHeight,
   Component: SizePicker,

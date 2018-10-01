@@ -3,7 +3,7 @@ import bind from 'lodash-decorators/bind'
 import React from 'react'
 import { TwitterPicker } from 'react-color'
 import createAction from '../../createAction'
-import { ICustomComponentProps, IUBBCustomConfig } from '../../types'
+import { ConfigType, ICustomComponentProps, IUBBCustomConfig } from '../../types'
 
 interface IState {
   hex: string
@@ -54,7 +54,7 @@ class ColorPicker extends React.PureComponent<ICustomComponentProps, IState> {
 }
 
 const config: IUBBCustomConfig = {
-  type: 'custom',
+  type: ConfigType.Custom,
   tagName: 'color',
   icon: faEyeDropper,
   index: 100,

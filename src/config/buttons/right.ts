@@ -1,8 +1,8 @@
 import { faAlignRight } from '@fortawesome/free-solid-svg-icons'
-import { IUBBButtonConfig } from '../../types'
+import { ConfigType, IUBBButtonConfig } from '../../types'
 
 const config: IUBBButtonConfig = {
-  type: 'button',
+  type: ConfigType.Button,
   tagName: 'right',
   title: '右对齐',
   icon: faAlignRight,

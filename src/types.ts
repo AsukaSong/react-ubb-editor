@@ -5,7 +5,11 @@ import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
  * extend - expand a menu after button click
  * custom - custom how to render the menu
  */
-export type buttonType = 'button' | 'extend' | 'custom'
+export enum ConfigType {
+  Button,
+  Extend,
+  Custom,
+}
 
 /**
  * @export
@@ -44,7 +48,7 @@ export interface IAction {
    * @memberof IAction
    * @description determine which default handler to be used
    */
-  type: 'button' | 'extend' | 'custom'
+  type: ConfigType
   /**
    * @type {string}
    * @memberof IAction
@@ -97,7 +101,7 @@ interface IUBBBaseConfig {
    * @memberof IUBBBaseConfig
    * @description type of button
    */
-  type: buttonType
+  type: ConfigType
   /**
    * @type {string}
    * @memberof IUBBBaseConfig
@@ -153,7 +157,7 @@ export interface IUBBButtonConfig extends IUBBBaseConfig {
    * @memberof IUBBButtonConfig
    * @description determine which default handler to be used
    */
-  type: 'button'
+  type: ConfigType.Button
 }
 
 /**
@@ -168,7 +172,7 @@ export interface IUBBExtendConfig extends IUBBBaseConfig {
    * @memberof IUBBExtendConfig
    * @description determine which default handler to be used
    */
-  type: 'extend'
+  type: ConfigType.Extend
   /**
    * @type {({ label: string, type: 'checkbox' | 'input' }[])}
    * @memberof IUBBExtendConfig
@@ -203,7 +207,7 @@ export interface IUBBCustomConfig extends IUBBBaseConfig {
    * @type {'custom'}
    * @memberof IUBBCustomConfig
    */
-  type: 'custom'
+  type: ConfigType.Custom
   /**
    * @memberof IUBBCustomConfig
    * @description element returned will be rendered under the button
