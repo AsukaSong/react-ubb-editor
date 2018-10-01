@@ -12,6 +12,15 @@ export enum ConfigType {
 }
 
 /**
+ * Input - just input
+ * Checkbox - just checkbox
+ */
+export enum ExtnedInputType {
+  Input,
+  Checkbox,
+}
+
+/**
  * @export
  * @interface IState
  * @description state of editor
@@ -185,10 +194,15 @@ export interface IUBBExtendConfig extends IUBBBaseConfig {
      */
     label: string
     /**
+     * @description key of value in action, empty string for main value
+     * @type {string}
+     */
+    key: string
+    /**
      * @type {('checkbox' | 'input')}
      * @description which kind of input to be displayed
      */
-    type: 'checkbox' | 'input',
+    type: ExtnedInputType,
   }>
   /**
    * @memberof IUBBExtendConfig

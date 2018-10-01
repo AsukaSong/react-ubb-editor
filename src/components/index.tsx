@@ -7,11 +7,13 @@ import defaultHandler from '../defaultHandler'
 import { IAction, IState as State } from '../types'
 
 import Buttons from './buttons'
+import Extend from './extend'
 import Textarea from './textarea'
 
 export interface IndexProps {
   value: string
   onChange: (value: string) => void
+  wrappedComponentRef?: (it: Core) => void
   option?: any // TODO:
 }
 
@@ -51,6 +53,8 @@ class Core extends React.Component<props, IState> {
       },
       (n: any) => (this.message = n),
     )
+    const { wrappedComponentRef } = this.props
+    if (wrappedComponentRef) wrappedComponentRef(this)
   }
 
   componentWillReceiveProps(newProps: props) {
@@ -136,6 +140,7 @@ class Core extends React.Component<props, IState> {
           onBlur={this.handleTextareaBlur}
           value={this.state.value}
         />
+        <Extend dispatch={this.reduce} extendTagName={this.state.extendTagName} />
       </div>
     )
   }

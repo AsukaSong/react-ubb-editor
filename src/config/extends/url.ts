@@ -1,5 +1,5 @@
 import { faLink } from '@fortawesome/free-solid-svg-icons'
-import { ConfigType, IUBBExtendConfig } from '../../types'
+import { ConfigType, ExtnedInputType, IUBBExtendConfig } from '../../types'
 
 const config: IUBBExtendConfig = {
   type: ConfigType.Extend,
@@ -10,7 +10,8 @@ const config: IUBBExtendConfig = {
   inputs: [
     {
       label: '请输入URL',
-      type: 'input',
+      key: '',
+      type: ExtnedInputType.Input,
     },
   ],
 }

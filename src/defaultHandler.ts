@@ -15,7 +15,7 @@ const defaultHandler: handler = (state, action) => {
   if (payload.mainValue) {
     content += `=${payload.mainValue}`
   }
-  if (payload.subValues) {
+  if (payload.subValues && payload.subValues.length) {
     content += `,${payload.subValues.map(({ key, value }) => `${key}=${value}`).join(',')}`
   }
   content += `]${value.slice(start, end)}[/${tagName}]`
