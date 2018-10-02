@@ -1,7 +1,7 @@
 import orderBy from 'lodash/orderBy'
 import uniqBy from 'lodash/uniqBy'
 import React from 'react'
-import Core, { IndexProps } from './components'
+import Core, { IProps } from './components'
 import { defaultConfig } from './config'
 import { Provider } from './context'
 import createAction from './createAction'
@@ -30,10 +30,11 @@ export default function createEditor(extraConfig: IConfig = {}, ignoreDefaultCon
   }
 
   configs = orderBy(configs, ['index'], ['asc'])
+  const config = Object.assign({}, extraConfig, { configs })
 
   // tslint:disable-next-line
-  const Editor: React.SFC<IndexProps> = props => (
-    <Provider value={{ configs }}>
+  const Editor: React.SFC<IProps> = props => (
+    <Provider value={config}>
       <Core {...props} />
     </Provider>
   )

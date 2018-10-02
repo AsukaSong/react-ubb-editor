@@ -28,5 +28,5 @@ class Container extends React.Component {
 
 storiesOf('Editor', module)
   .add('basic use', 
-  () => <Container />
+    () => <Container />
   )

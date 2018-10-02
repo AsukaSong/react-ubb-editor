@@ -10,7 +10,7 @@
     },
     "rules": {
         "semicolon": false,
-        "no-boolean-literal-compare": true,
+        "no-boolean-literal-compare": [true],
         "import-name": [false],
         "object-literal-sort-keys": false,
         "no-shadowed-variable": false,

@@ -10,14 +10,21 @@ import Buttons from './buttons'
 import Extend from './extend'
 import Textarea from './textarea'
 
-export interface IndexProps {
+/**
+ * TODO:
+ * 1. add paste and drop event handlers for textarea
+ * 2. add display component option for editor
+ * 3. add css
+ * 4. add undo and redo buttons
+ */
+
+export interface IProps {
   value: string
   onChange: (value: string) => void
   wrappedComponentRef?: (it: Core) => void
-  option?: any // TODO:
 }
 
-type props = IndexProps & IConfigProps
+type props = IProps & IConfigProps
 
 interface IState extends State {
   extendTagName: string
@@ -67,6 +74,18 @@ class Core extends React.Component<props, IState> {
         },
         this.focusAndSelectTextarea,
       )
+    }
+  }
+
+  redo() {
+    if (this.customTextarea) {
+      this.customTextarea.redo()
+    }
+  }
+
+  undo() {
+    if (this.customTextarea) {
+      this.customTextarea.undo()
     }
   }
 
@@ -134,13 +153,13 @@ class Core extends React.Component<props, IState> {
           onExtendButtonClick={this.handleExtendButtonClick}
           onCustomButtonClick={this.handleCustomButtonClick}
         />
+        <Extend dispatch={this.reduce} extendTagName={this.state.extendTagName} />
         <Textarea
           ref={(it: any) => (this.customTextarea = it)}
           onChange={this.handleTextareaChange}
           onBlur={this.handleTextareaBlur}
           value={this.state.value}
         />
-        <Extend dispatch={this.reduce} extendTagName={this.state.extendTagName} />
       </div>
     )
   }

@@ -27,4 +27,4 @@ export const defaultConfig: IUBBConfig[] = [
   size,
   color,
   url,
-] // TODO:
+]
