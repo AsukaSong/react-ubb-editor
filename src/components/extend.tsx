@@ -65,7 +65,7 @@ class Extends extends React.Component<IProps> {
   }
 
   renderFormItem(item: IUBBExtendConfig['inputs'][0], config: IUBBExtendConfig) {
-    const key = `${config.tagName}${item.key}`
+    const key = `${config.tagName}${item.key}${item.type}`
     return (
       <Input
         data-editor={item.type}
