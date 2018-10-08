@@ -10,7 +10,7 @@ import Buttons from './buttons'
 import Extend from './extend'
 import Textarea, { IProps as TextareaProps } from './textarea'
 
-import { Root } from './styles'
+import { NoticeContainer, Root } from './styles'
 
 // @ts-ignore override interface type
 export interface IProps extends TextareaProps {
@@ -35,7 +35,7 @@ interface IState extends State {
 class Core extends React.Component<props, IState> {
   public customTextarea!: Textarea
   private root!: HTMLDivElement
-  public message: any
+  private message: any
 
   constructor(props: props) {
     super(props)
@@ -103,6 +103,15 @@ class Core extends React.Component<props, IState> {
     this.setState(prevState => ({
       isPreviewing: !prevState.isPreviewing,
     }))
+  }
+
+  notice(message: string) {
+    this.message.notice({
+      content: message,
+      style: {
+        right: 0,
+      } as React.CSSProperties,
+    })
   }
 
   private reduce(action: IAction): void {
@@ -174,7 +183,7 @@ class Core extends React.Component<props, IState> {
     const { UbbContainer } = config
 
     return (
-      <Root innerRef={(it: any) => (this.root = it)}>
+      <Root>
         <Buttons
           customTagName={customTagName}
           dispatch={this.reduce}
@@ -198,6 +207,7 @@ class Core extends React.Component<props, IState> {
           />
         )}
         {isPreviewing && UbbContainer && <UbbContainer value={value} />}
+        <NoticeContainer innerRef={(it: any) => (this.root = it)} />
       </Root>
     )
   }

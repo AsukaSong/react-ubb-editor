@@ -1,4 +1,15 @@
-import styled, { css } from 'react-emotion'
+import styled, { css, keyframes } from 'react-emotion'
+
+const slideIn = keyframes`
+  from {
+    top: 10px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+`
 
 const clear = css`
   appearance: none;
@@ -39,9 +50,13 @@ export const Input = styled('input')`
 `
 
 export const Textarea = styled('textarea')`
-  ${clear} width: 100%;
+  ${clear};
+  width: 100%;
   flex-grow: 1;
   resize: none;
+  font-size: inherit;
+  padding: 0.5rem;
+  box-sizing: border-box;
 `
 
 export const Root = styled('div')`
@@ -72,3 +87,40 @@ export const ExtendRoot = styled('div')<{ isShown: boolean }>(
     }
   `,
 )
+
+export const NoticeContainer = styled('div')`
+  position: absolute;
+  top: 2rem;
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+
+  div,
+  span {
+    width: 100%;
+    height: 2rem;
+  }
+
+  .rc-notification-notice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .rc-notification-notice-content {
+    animation: ${slideIn} 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 12px;
+    min-width: 10rem;
+    width: auto;
+    color: #222;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+`
