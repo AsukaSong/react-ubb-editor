@@ -12,13 +12,17 @@ import Textarea from './textarea'
 
 /**
  * TODO:
- * 1. add paste and drop event handlers for textarea
- * 3. add css
+ * 1. add css
  */
 
 export interface IProps {
   value: string
   onChange: (value: string) => void
+  onDrop?: (e: React.DragEvent<HTMLTextAreaElement>, dispatch: (action: IAction) => void) => void
+  onPaste?: (
+    e: React.ClipboardEvent<HTMLTextAreaElement>,
+    dispatch: (action: IAction) => void,
+  ) => void
   wrappedComponentRef?: (it: Core) => void
 }
 
@@ -148,6 +152,22 @@ class Core extends React.Component<props, IState> {
     this.setState({ start, end })
   }
 
+  private handleDrop(e: React.DragEvent<HTMLTextAreaElement>) {
+    this.customTextarea.blur()
+    const { onDrop } = this.props
+    if (onDrop) {
+      onDrop(e, this.reduce)
+    }
+  }
+
+  private handlePaste(e: React.ClipboardEvent<HTMLTextAreaElement>) {
+    this.customTextarea.blur()
+    const { onPaste } = this.props
+    if (onPaste) {
+      onPaste(e, this.reduce)
+    }
+  }
+
   public render() {
     const { customTagName, isPreviewing, extendTagName, value } = this.state
     const { config } = this.props
@@ -170,6 +190,8 @@ class Core extends React.Component<props, IState> {
             ref={(it: any) => (this.customTextarea = it)}
             onChange={this.handleTextareaChange}
             onBlur={this.handleTextareaBlur}
+            onDrop={this.handleDrop}
+            onPaste={this.handlePaste}
             value={value}
           />
         )}
