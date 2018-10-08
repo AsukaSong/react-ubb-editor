@@ -239,4 +239,5 @@ export type IUBBConfig = IUBBButtonConfig | IUBBCustomConfig | IUBBExtendConfig
 
 export interface IConfig {
   configs?: IUBBConfig[]
+  UbbContainer?: React.ComponentType<{ value: string }>
 }

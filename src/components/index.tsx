@@ -13,9 +13,7 @@ import Textarea from './textarea'
 /**
  * TODO:
  * 1. add paste and drop event handlers for textarea
- * 2. add display component option for editor
  * 3. add css
- * 4. add undo and redo buttons
  */
 
 export interface IProps {
@@ -101,6 +99,12 @@ class Core extends React.Component<props, IState> {
     })
   }
 
+  changePreviewing() {
+    this.setState(prevState => ({
+      isPreviewing: !prevState.isPreviewing,
+    }))
+  }
+
   private reduce(action: IAction): void {
     // tslint:disable-next-line
     console.log(action)
@@ -145,23 +149,31 @@ class Core extends React.Component<props, IState> {
   }
 
   public render() {
+    const { customTagName, isPreviewing, extendTagName, value } = this.state
+    const { config } = this.props
+    const { UbbContainer } = config
+
     return (
       <div ref={(it: any) => (this.root = it)}>
         <Buttons
-          customTagName={this.state.customTagName}
+          customTagName={customTagName}
           dispatch={this.reduce}
           onExtendButtonClick={this.handleExtendButtonClick}
           onCustomButtonClick={this.handleCustomButtonClick}
           redo={this.redo}
           undo={this.undo}
+          changePreviewing={this.changePreviewing}
         />
-        <Extend dispatch={this.reduce} extendTagName={this.state.extendTagName} />
-        <Textarea
-          ref={(it: any) => (this.customTextarea = it)}
-          onChange={this.handleTextareaChange}
-          onBlur={this.handleTextareaBlur}
-          value={this.state.value}
-        />
+        <Extend dispatch={this.reduce} extendTagName={extendTagName} />
+        {!isPreviewing && (
+          <Textarea
+            ref={(it: any) => (this.customTextarea = it)}
+            onChange={this.handleTextareaChange}
+            onBlur={this.handleTextareaBlur}
+            value={value}
+          />
+        )}
+        {isPreviewing && UbbContainer && <UbbContainer value={value} />}
       </div>
     )
   }

@@ -1,4 +1,4 @@
-import { faRedo, faUndo } from '@fortawesome/free-solid-svg-icons'
+import { faRedo, faUndo, faWindowMaximize } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import bindAll from 'lodash-decorators/bindAll'
 import * as React from 'react'
@@ -13,6 +13,7 @@ interface IProps extends IConfigProps {
   onCustomButtonClick: (tagName: string) => void
   redo: () => void
   undo: () => void
+  changePreviewing: () => void
 }
 
 @bindAll()
@@ -48,13 +49,12 @@ class Buttons extends React.Component<IProps> {
   }
 
   render() {
-    const {
-      config: { configs },
-    } = this.props
+    const { config } = this.props
+    const { configs: buttonConfigs, UbbContainer } = config
 
     return (
       <div style={{ display: 'flex' }}>
-        {configs.map(item => (
+        {buttonConfigs.map(item => (
           <div key={item.tagName} style={{ position: 'relative' }}>
             <button onClick={this.generateHandleButtonClick(item)}>
               {this.renderContent(item)}
@@ -72,6 +72,13 @@ class Buttons extends React.Component<IProps> {
             <Icon icon={faRedo} />
           </button>
         </div>
+        {UbbContainer && (
+          <div>
+            <button onClick={this.props.changePreviewing}>
+              <Icon icon={faWindowMaximize} />
+            </button>
+          </div>
+        )}
       </div>
     )
   }
