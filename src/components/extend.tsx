@@ -88,12 +88,11 @@ class Extends extends React.Component<IProps> {
     const { extendTagName, dispatch } = this.props
     if (!extendTagName) return <div />
     const config = this.getCurrConfig(extendTagName)
-    // tslint:disable-next-line
-    const Extra = config.ExtraComponent
+    const ExtraComponent = config.ExtraComponent
     return (
       <div>
         {this.renderForm(config)}
-        {Extra && <Extra dispatch={dispatch} />}
+        {ExtraComponent && <ExtraComponent dispatch={dispatch} />}
       </div>
     )
   }

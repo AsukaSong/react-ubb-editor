@@ -7,6 +7,8 @@ import { Provider } from './context'
 import createAction from './createAction'
 // prettier-ignore
 import {
+  ConfigType,
+  ExtnedInputType,
   IConfig,
   ICustomComponentProps,
   IUBBButtonConfig,
@@ -54,4 +56,6 @@ export {
   IUBBCustomConfig,
   ICustomComponentProps,
   createAction,
+  ConfigType,
+  ExtnedInputType,
 }
