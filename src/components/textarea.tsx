@@ -1,3 +1,4 @@
+import bindAll from 'lodash-decorators/bindAll'
 import * as React from 'react'
 import { Textarea as Text } from './styles'
 
@@ -12,6 +13,7 @@ export interface IProps
   ref?: any
 }
 
+@bindAll()
 export default class Textarea extends React.PureComponent<IProps> {
   constructor(props: IProps) {
     super(props)
@@ -61,6 +63,11 @@ export default class Textarea extends React.PureComponent<IProps> {
     }
   }
 
+  handleFocus(e: React.FocusEvent<HTMLTextAreaElement>) {
+    this.textarea.scrollTop = this.scrollTop
+    if (this.props.onFocus) this.props.onFocus(e)
+  }
+
   render() {
     return (
       <Text
@@ -68,7 +75,7 @@ export default class Textarea extends React.PureComponent<IProps> {
         {...this.props}
         onChange={e => this.changeValue(e.target.value)}
         onScroll={() => (this.scrollTop = this.textarea.scrollTop)}
-        onFocus={() => (this.textarea.scrollTop = this.scrollTop)}
+        onFocus={this.handleFocus}
         onInput={() => (this.redoStack = [])}
         onKeyDown={e => {
           if (this.props.onKeyDown) this.props.onKeyDown(e)

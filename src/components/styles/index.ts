@@ -40,12 +40,15 @@ export const Input = styled('input')`
 
 export const Textarea = styled('textarea')`
   ${clear} width: 100%;
-  height: 500px;
+  flex-grow: 1;
   resize: none;
 `
 
 export const Root = styled('div')`
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   font-size: 16px;
 `
 
@@ -61,7 +64,8 @@ export const ExtendRoot = styled('div')<{ isShown: boolean }>(
   }),
   css`
     display: flex;
-    transition: height 0.1s;
+    transition-duration: 0.1s;
+    transition-property: height;
 
     form {
       display: flex;

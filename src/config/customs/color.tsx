@@ -1,7 +1,7 @@
 import { faEyeDropper } from '@fortawesome/free-solid-svg-icons'
 import bind from 'lodash-decorators/bind'
 import React from 'react'
-import { TwitterPicker } from 'react-color'
+import { ColorResult, GithubPicker } from 'react-color'
 import createAction from '../../createAction'
 import { ConfigType, ICustomComponentProps, IUBBCustomConfig } from '../../types'
 
@@ -10,31 +10,15 @@ interface IState {
 }
 
 class ColorPicker extends React.PureComponent<ICustomComponentProps, IState> {
-  constructor(props: ICustomComponentProps) {
-    super(props)
-
-    this.state = {
-      hex: '#FF6900',
-    }
-  }
-
   @bind
-  handleColorChange({ hex }: { hex: string }) {
-    this.setState({
-      hex,
-    })
-  }
-
-  @bind
-  handleOk() {
+  handleOk(result: ColorResult) {
     const { dispatch } = this.props
-    const { hex } = this.state
 
     dispatch(
       createAction(
         config,
         {
-          mainValue: hex,
+          mainValue: result.hex,
         },
         {
           shouldSelect: true,
@@ -44,12 +28,7 @@ class ColorPicker extends React.PureComponent<ICustomComponentProps, IState> {
   }
 
   render() {
-    return (
-      <div>
-        <TwitterPicker color={this.state.hex} onChangeComplete={this.handleColorChange} />
-        <button onClick={this.handleOk}>确认</button>
-      </div>
-    )
+    return <GithubPicker onChangeComplete={this.handleOk} />
   }
 }
 

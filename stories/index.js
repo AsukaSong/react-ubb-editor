@@ -22,7 +22,11 @@ class Container extends React.Component {
   }
 
   render() {
-    return <UbbEditor value={this.state.value} onChange={this.onChange} />
+    return (
+      <div style={{ height: 500 }}>
+        <UbbEditor value={this.state.value} onChange={this.onChange} />
+      </div>
+    )
   }
 }
 

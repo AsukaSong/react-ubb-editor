@@ -106,10 +106,14 @@ class Core extends React.Component<props, IState> {
   }
 
   private reduce(action: IAction): void {
-    // tslint:disable-next-line
-    console.log(action)
     const handler = this.getHandlerByTagName(action.tagName)
-    this.setState(prevState => handler(prevState, action), this.focusAndSelectTextarea)
+    this.setState(
+      prevState => handler(prevState, action),
+      () => {
+        this.focusAndSelectTextarea()
+        this.props.onChange(this.state.value)
+      },
+    )
     this.clearExtendAndCustom()
   }
 
@@ -188,6 +192,7 @@ class Core extends React.Component<props, IState> {
             onChange={this.handleTextareaChange}
             onBlur={this.handleTextareaBlur}
             onDrop={this.handleDrop}
+            onFocus={this.clearExtendAndCustom}
             onPaste={this.handlePaste}
             value={value}
           />

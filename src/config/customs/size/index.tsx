@@ -1,7 +1,10 @@
 import { faTextHeight } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
-import createAction from '../../createAction'
-import { ConfigType, ICustomComponentProps, IUBBCustomConfig } from '../../types'
+
+import createAction from '../../../createAction'
+import { ConfigType, ICustomComponentProps, IUBBCustomConfig } from '../../../types'
+
+import { Button, Root, Triangle, TriangleBack } from './styles'
 
 class SizePicker extends React.PureComponent<ICustomComponentProps> {
   sizes = ['1', '2', '3', '4', '5', '6', '7']
@@ -23,13 +26,15 @@ class SizePicker extends React.PureComponent<ICustomComponentProps> {
 
   render() {
     return (
-      <div>
+      <Root>
+        <TriangleBack />
+        <Triangle />
         {this.sizes.map(item => (
-          <button onClick={this.generateHandleClick(item)} key={item}>
+          <Button onClick={this.generateHandleClick(item)} key={item}>
             {item}
-          </button>
+          </Button>
         ))}
-      </div>
+      </Root>
     )
   }
 }
