@@ -6,8 +6,8 @@ import * as React from 'react'
 
 import { IConfigProps, withConfig } from '../context'
 import createAction from '../createAction'
-import { ConfigType, IAction, IUBBExtendConfig } from '../types'
-import { Button, Input } from './styles'
+import { ConfigType, ExtendValueType, IAction, IUBBExtendConfig } from '../types'
+import { Button, ExtendRoot, Input } from './styles'
 
 interface IProps extends IConfigProps {
   extendTagName: string
@@ -32,59 +32,70 @@ class Extends extends React.Component<IProps> {
     e.preventDefault()
     const { dispatch, extendTagName } = this.props
     const config = this.getCurrConfig(extendTagName)
-    const formData = dropRight(Array.from(e.target as HTMLFormElement), 2).map(
-      (item: HTMLInputElement) => ({
-        key: item.name,
-        value: item.value,
-        isMain: !item.name,
-      }),
-    )
+    const payload: IAction['payload'] = {
+      subValues: [],
+    }
 
-    const mainValues = formData.filter(item => item.isMain)
-    if (mainValues.length > 1) throw new Error('A tag may have only one mainValue')
-    const mainValue = mainValues.pop()
-    const subValues = formData.filter(item => !item.isMain)
+    const formData = dropRight(Array.from(e.target as HTMLFormElement), 2) as HTMLInputElement[]
+    for (const item of formData) {
+      switch (parseInt(item.dataset.editor!, 10)) {
+        case ExtendValueType.Content:
+          payload.content = item.value
+          break
+        case ExtendValueType.Main:
+          payload.mainValue = item.value
+          break
+        case ExtendValueType.Sub:
+          payload.subValues!.push({
+            key: item.name,
+            value: item.value,
+          })
+          break
+        default:
+          break
+      }
+    }
 
-    dispatch(
-      createAction(config, {
-        subValues,
-        mainValue: mainValue ? mainValue.value : undefined,
-      }),
-    )
+    dispatch(createAction(config, payload))
   }
 
   renderFormItem(item: IUBBExtendConfig['inputs'][0], config: IUBBExtendConfig) {
     const key = `${config.tagName}${item.key}`
     return (
-      <Input key={key} name={item.key === '' ? undefined : item.key} placeholder={item.label} />
+      <Input
+        data-editor={item.type}
+        key={key}
+        name={item.key === '' ? undefined : item.key}
+        placeholder={item.label}
+      />
     )
   }
 
-  renderForm(config: IUBBExtendConfig): React.ReactNode {
+  renderContent(extendTagName: string): React.ReactNode {
+    if (!extendTagName) return
+    const { dispatch } = this.props
+    const config = this.getCurrConfig(extendTagName)
+    const ExtraComponent = config.ExtraComponent
+
     return (
-      <form onSubmit={this.handleFormSubmit}>
-        {config.inputs.map(item => this.renderFormItem(item, config))}
-        <Button type="submit">
-          <Icon icon={faCheck} />
-        </Button>
-        <Button type="reset">
-          <Icon icon={faTimes} />
-        </Button>
-      </form>
+      <>
+        <form onSubmit={this.handleFormSubmit}>
+          {config.inputs.map(item => this.renderFormItem(item, config))}
+          <Button type="submit">
+            <Icon icon={faCheck} />
+          </Button>
+          <Button type="reset">
+            <Icon icon={faTimes} />
+          </Button>
+        </form>
+        {ExtraComponent && <ExtraComponent dispatch={dispatch} />}
+      </>
     )
   }
 
   render() {
-    const { extendTagName, dispatch } = this.props
-    if (!extendTagName) return <div />
-    const config = this.getCurrConfig(extendTagName)
-    const ExtraComponent = config.ExtraComponent
-    return (
-      <div>
-        {this.renderForm(config)}
-        {ExtraComponent && <ExtraComponent dispatch={dispatch} />}
-      </div>
-    )
+    const { extendTagName } = this.props
+    return <ExtendRoot isShown={!!extendTagName}>{this.renderContent(extendTagName)}</ExtendRoot>
   }
 }
 

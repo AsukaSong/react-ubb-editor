@@ -11,6 +11,12 @@ export enum ConfigType {
   Custom,
 }
 
+export enum ExtendValueType {
+  Main,
+  Sub,
+  Content,
+}
+
 /**
  * @export
  * @interface IState
@@ -73,7 +79,12 @@ export interface IAction {
     subValues?: Array<{
       key: string
       value: string | boolean,
-    }>,
+    }>
+    /**
+     * @type {string}
+     * @example content of '[url]foo[/url]' is 'foo'
+     */
+    content?: string,
   }
   /**
    * @description after insert the value, whether to select the content
@@ -174,21 +185,25 @@ export interface IUBBExtendConfig extends IUBBBaseConfig {
    */
   type: ConfigType.Extend
   /**
-   * @type {({ label: string, type: 'checkbox' | 'input' }[])}
    * @memberof IUBBExtendConfig
    * @description inputs that will be displayed in extra menu
    */
   inputs: Array<{
     /**
      * @type {string}
-     * @description label for checkbox and placeholder for input
+     * @description placeholder for input
      */
     label: string
     /**
      * @description key of value in action, empty string for main value
      * @type {string}
      */
-    key: string,
+    key: string
+    /**
+     * @description
+     * @type {ExtendValueType}
+     */
+    type: ExtendValueType,
   }>
   /**
    * @memberof IUBBExtendConfig

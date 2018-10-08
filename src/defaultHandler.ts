@@ -18,7 +18,7 @@ const defaultHandler: handler = (state, action) => {
   if (payload.subValues && payload.subValues.length) {
     content += `,${payload.subValues.map(({ key, value }) => `${key}=${value}`).join(',')}`
   }
-  content += `]${value.slice(start, end)}[/${tagName}]`
+  content += `]${payload.content || value.slice(start, end)}[/${tagName}]`
   if (shouldEnter) {
     content += '\n'
   }

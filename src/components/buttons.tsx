@@ -5,7 +5,7 @@ import * as React from 'react'
 import { IConfigProps, withConfig } from '../context'
 import createAction from '../createAction'
 import { ConfigType, IAction, IUBBConfig, IUBBCustomConfig } from '../types'
-import { Button, ButtonContainer } from './styles'
+import { Button, ButtonContainer, ButtonRoot } from './styles'
 
 interface IProps extends IConfigProps {
   dispatch: (action: IAction) => void
@@ -54,7 +54,7 @@ class Buttons extends React.Component<IProps> {
     const { configs: buttonConfigs, UbbContainer } = config
 
     return (
-      <div style={{ display: 'flex' }}>
+      <ButtonRoot>
         {buttonConfigs.map(item => (
           <ButtonContainer key={item.tagName}>
             <Button title={item.title} onClick={this.generateHandleButtonClick(item)}>
@@ -81,7 +81,7 @@ class Buttons extends React.Component<IProps> {
             </Button>
           </ButtonContainer>
         )}
-      </div>
+      </ButtonRoot>
     )
   }
 }
