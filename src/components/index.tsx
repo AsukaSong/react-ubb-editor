@@ -191,9 +191,10 @@ class Core extends React.Component<props, IState> {
           onCustomButtonClick={this.handleCustomButtonClick}
           redo={this.redo}
           undo={this.undo}
+          message={this.notice}
           changePreviewing={this.changePreviewing}
         />
-        <Extend dispatch={this.reduce} extendTagName={extendTagName} />
+        <Extend dispatch={this.reduce} message={this.notice} extendTagName={extendTagName} />
         {!isPreviewing && (
           <Textarea
             {...this.props}

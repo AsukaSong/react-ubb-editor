@@ -4,11 +4,10 @@ import bindAll from 'lodash-decorators/bindAll'
 import * as React from 'react'
 import { IConfigProps, withConfig } from '../context'
 import createAction from '../createAction'
-import { ConfigType, IAction, IUBBConfig, IUBBCustomConfig } from '../types'
+import { ConfigType, ICustomComponentProps, IUBBConfig, IUBBCustomConfig } from '../types'
 import { Button, ButtonContainer, ButtonRoot } from './styles'
 
-interface IProps extends IConfigProps {
-  dispatch: (action: IAction) => void
+interface IProps extends IConfigProps, ICustomComponentProps {
   customTagName: string
   onExtendButtonClick: (tagName: string) => void
   onCustomButtonClick: (tagName: string) => void
@@ -35,7 +34,7 @@ class Buttons extends React.Component<IProps> {
   }
 
   renderCustom(config: IUBBCustomConfig) {
-    const { customTagName, dispatch } = this.props
+    const { customTagName, dispatch, message } = this.props
     const Component = config.Component
     return (
       <div
@@ -44,7 +43,7 @@ class Buttons extends React.Component<IProps> {
           display: customTagName === config.tagName ? '' : 'none',
         }}
       >
-        <Component dispatch={dispatch} />
+        <Component dispatch={dispatch} message={message} />
       </div>
     )
   }

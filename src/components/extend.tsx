@@ -6,12 +6,17 @@ import * as React from 'react'
 
 import { IConfigProps, withConfig } from '../context'
 import createAction from '../createAction'
-import { ConfigType, ExtendValueType, IAction, IUBBExtendConfig } from '../types'
+import {
+  ConfigType,
+  ExtendValueType,
+  IAction,
+  ICustomComponentProps,
+  IUBBExtendConfig,
+} from '../types'
 import { Button, ExtendRoot, Input } from './styles'
 
-interface IProps extends IConfigProps {
+interface IProps extends IConfigProps, ICustomComponentProps {
   extendTagName: string
-  dispatch: (action: IAction) => void
 }
 
 @bindAll()
@@ -73,7 +78,7 @@ class Extends extends React.Component<IProps> {
 
   renderContent(extendTagName: string): React.ReactNode {
     if (!extendTagName) return
-    const { dispatch } = this.props
+    const { dispatch, message } = this.props
     const config = this.getCurrConfig(extendTagName)
     const ExtraComponent = config.ExtraComponent
 
@@ -88,7 +93,7 @@ class Extends extends React.Component<IProps> {
             <Icon icon={faTimes} />
           </Button>
         </form>
-        {ExtraComponent && <ExtraComponent dispatch={dispatch} />}
+        {ExtraComponent && <ExtraComponent message={message} dispatch={dispatch} />}
       </>
     )
   }

@@ -234,6 +234,7 @@ export type dispatch = (action: IAction) => void
 
 export interface ICustomComponentProps {
   dispatch: dispatch
+  message: (message: string) => void
 }
 
 export type IUBBConfig = IUBBButtonConfig | IUBBCustomConfig | IUBBExtendConfig
