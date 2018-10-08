@@ -152,6 +152,8 @@ class Core extends React.Component<props, IState> {
           dispatch={this.reduce}
           onExtendButtonClick={this.handleExtendButtonClick}
           onCustomButtonClick={this.handleCustomButtonClick}
+          redo={this.redo}
+          undo={this.undo}
         />
         <Extend dispatch={this.reduce} extendTagName={this.state.extendTagName} />
         <Textarea

@@ -1,3 +1,4 @@
+import { faRedo, faUndo } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import bindAll from 'lodash-decorators/bindAll'
 import * as React from 'react'
@@ -10,6 +11,8 @@ interface IProps extends IConfigProps {
   customTagName: string
   onExtendButtonClick: (tagName: string) => void
   onCustomButtonClick: (tagName: string) => void
+  redo: () => void
+  undo: () => void
 }
 
 @bindAll()
@@ -59,6 +62,16 @@ class Buttons extends React.Component<IProps> {
             {item.type === ConfigType.Custom && this.renderCustom(item)}
           </div>
         ))}
+        <div>
+          <button onClick={this.props.undo}>
+            <Icon icon={faUndo} />
+          </button>
+        </div>
+        <div>
+          <button onClick={this.props.redo}>
+            <Icon icon={faRedo} />
+          </button>
+        </div>
       </div>
     )
   }
