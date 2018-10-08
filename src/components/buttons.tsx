@@ -5,6 +5,7 @@ import * as React from 'react'
 import { IConfigProps, withConfig } from '../context'
 import createAction from '../createAction'
 import { ConfigType, IAction, IUBBConfig, IUBBCustomConfig } from '../types'
+import { Button, ButtonContainer } from './styles'
 
 interface IProps extends IConfigProps {
   dispatch: (action: IAction) => void
@@ -19,7 +20,7 @@ interface IProps extends IConfigProps {
 @bindAll()
 class Buttons extends React.Component<IProps> {
   renderContent(config: IUBBConfig): JSX.Element {
-    return config.icon ? <Icon icon={config.icon} /> : <span>{config.label}</span>
+    return config.icon ? <Icon icon={config.icon} size="lg" /> : <span>{config.label}</span>
   }
 
   generateHandleButtonClick(config: IUBBConfig) {
@@ -55,29 +56,30 @@ class Buttons extends React.Component<IProps> {
     return (
       <div style={{ display: 'flex' }}>
         {buttonConfigs.map(item => (
-          <div key={item.tagName} style={{ position: 'relative' }}>
-            <button onClick={this.generateHandleButtonClick(item)}>
+          <ButtonContainer key={item.tagName}>
+            <Button title={item.title} onClick={this.generateHandleButtonClick(item)}>
               {this.renderContent(item)}
-            </button>
+            </Button>
             {item.type === ConfigType.Custom && this.renderCustom(item)}
-          </div>
+          </ButtonContainer>
         ))}
-        <div>
-          <button onClick={this.props.undo}>
+        <div style={{ flexGrow: 1 }} />
+        <ButtonContainer>
+          <Button title="撤销" onClick={this.props.undo}>
             <Icon icon={faUndo} />
-          </button>
-        </div>
-        <div>
-          <button onClick={this.props.redo}>
+          </Button>
+        </ButtonContainer>
+        <ButtonContainer>
+          <Button title="重做" onClick={this.props.redo}>
             <Icon icon={faRedo} />
-          </button>
-        </div>
+          </Button>
+        </ButtonContainer>
         {UbbContainer && (
-          <div>
-            <button onClick={this.props.changePreviewing}>
+          <ButtonContainer>
+            <Button title="预览" onClick={this.props.changePreviewing}>
               <Icon icon={faWindowMaximize} />
-            </button>
-          </div>
+            </Button>
+          </ButtonContainer>
         )}
       </div>
     )

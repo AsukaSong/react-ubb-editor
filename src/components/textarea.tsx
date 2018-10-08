@@ -1,13 +1,15 @@
 import * as React from 'react'
+import { Textarea as Text } from './styles'
 
 // @ts-ignore override interface type
-interface IProps
+export interface IProps
   extends React.DetailedHTMLProps<
       React.TextareaHTMLAttributes<HTMLTextAreaElement>,
       HTMLTextAreaElement
     > {
   onChange: (value: string) => void
   value: string
+  ref?: any
 }
 
 export default class Textarea extends React.PureComponent<IProps> {
@@ -61,8 +63,8 @@ export default class Textarea extends React.PureComponent<IProps> {
 
   render() {
     return (
-      <textarea
-        ref={it => (this.textarea = it as HTMLTextAreaElement)}
+      <Text
+        innerRef={(it: any) => (this.textarea = it)}
         {...this.props}
         onChange={e => this.changeValue(e.target.value)}
         onScroll={() => (this.scrollTop = this.textarea.scrollTop)}

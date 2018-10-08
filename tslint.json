@@ -21,7 +21,8 @@
         "no-angle-bracket-type-assertion": false,
         "jsx-no-lambda": false,
         "jsx-no-multiline-js": false,
-        "ter-arrow-parens": false
+        "ter-arrow-parens": false,
+        "variable-name": false
     },
     "rulesDirectory": []
 }

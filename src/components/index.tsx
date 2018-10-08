@@ -2,22 +2,21 @@ import bindAll from 'lodash-decorators/bindAll'
 // @ts-ignore there's no types for rc-notification
 import Notification from 'rc-notification'
 import React from 'react'
+import styled from 'react-emotion'
 import { IConfigProps, withConfig } from '../context'
 import defaultHandler from '../defaultHandler'
 import { IAction, IState as State } from '../types'
 
 import Buttons from './buttons'
 import Extend from './extend'
-import Textarea from './textarea'
+import Textarea, { IProps as TextareaProps } from './textarea'
 
-/**
- * TODO:
- * 1. add css
- */
+const Root = styled('div')`
+  width: 100%;
+`
 
-export interface IProps {
-  value: string
-  onChange: (value: string) => void
+// @ts-ignore override interface type
+export interface IProps extends TextareaProps {
   onDrop?: (e: React.DragEvent<HTMLTextAreaElement>, dispatch: (action: IAction) => void) => void
   onPaste?: (
     e: React.ClipboardEvent<HTMLTextAreaElement>,
@@ -174,7 +173,7 @@ class Core extends React.Component<props, IState> {
     const { UbbContainer } = config
 
     return (
-      <div ref={(it: any) => (this.root = it)}>
+      <Root innerRef={(it: any) => (this.root = it)}>
         <Buttons
           customTagName={customTagName}
           dispatch={this.reduce}
@@ -187,6 +186,7 @@ class Core extends React.Component<props, IState> {
         <Extend dispatch={this.reduce} extendTagName={extendTagName} />
         {!isPreviewing && (
           <Textarea
+            {...this.props}
             ref={(it: any) => (this.customTextarea = it)}
             onChange={this.handleTextareaChange}
             onBlur={this.handleTextareaBlur}
@@ -196,7 +196,7 @@ class Core extends React.Component<props, IState> {
           />
         )}
         {isPreviewing && UbbContainer && <UbbContainer value={value} />}
-      </div>
+      </Root>
     )
   }
 }

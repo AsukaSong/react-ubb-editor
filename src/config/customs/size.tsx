@@ -40,6 +40,7 @@ const config: IUBBCustomConfig = {
   icon: faTextHeight,
   Component: SizePicker,
   index: 90,
+  title: '字号',
 }
 
 export default config

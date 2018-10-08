@@ -6,7 +6,8 @@ import * as React from 'react'
 
 import { IConfigProps, withConfig } from '../context'
 import createAction from '../createAction'
-import { ConfigType, ExtnedInputType, IAction, IUBBExtendConfig } from '../types'
+import { ConfigType, IAction, IUBBExtendConfig } from '../types'
+import { Button, Input } from './styles'
 
 interface IProps extends IConfigProps {
   extendTagName: string
@@ -54,32 +55,21 @@ class Extends extends React.Component<IProps> {
 
   renderFormItem(item: IUBBExtendConfig['inputs'][0], config: IUBBExtendConfig) {
     const key = `${config.tagName}${item.key}`
-    switch (item.type) {
-      case ExtnedInputType.Input:
-        return (
-          <input key={key} name={item.key === '' ? undefined : item.key} placeholder={item.label} />
-        )
-      case ExtnedInputType.Checkbox:
-        const id = `ubb-editor-${config.tagName}-${item.key}`
-        return (
-          <React.Fragment key={key}>
-            <input id={id} type="checkbox" name={item.key} />
-            <label htmlFor={id}>{item.label}</label>
-          </React.Fragment>
-        )
-    }
+    return (
+      <Input key={key} name={item.key === '' ? undefined : item.key} placeholder={item.label} />
+    )
   }
 
   renderForm(config: IUBBExtendConfig): React.ReactNode {
     return (
       <form onSubmit={this.handleFormSubmit}>
         {config.inputs.map(item => this.renderFormItem(item, config))}
-        <button type="submit">
+        <Button type="submit">
           <Icon icon={faCheck} />
-        </button>
-        <button type="reset">
+        </Button>
+        <Button type="reset">
           <Icon icon={faTimes} />
-        </button>
+        </Button>
       </form>
     )
   }

@@ -8,7 +8,6 @@ import createAction from './createAction'
 // prettier-ignore
 import {
   ConfigType,
-  ExtnedInputType,
   IConfig,
   ICustomComponentProps,
   IUBBButtonConfig,
@@ -34,7 +33,6 @@ export default function createEditor(extraConfig: IConfig = {}, ignoreDefaultCon
   configs = orderBy(configs, ['index'], ['asc'])
   const config = Object.assign({}, extraConfig, { configs })
 
-  // tslint:disable-next-line
   const Editor: React.SFC<IProps> = props => (
     <Provider value={config}>
       <Core {...props} />
@@ -57,5 +55,4 @@ export {
   ICustomComponentProps,
   createAction,
   ConfigType,
-  ExtnedInputType,
 }

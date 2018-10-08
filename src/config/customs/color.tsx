@@ -59,6 +59,7 @@ const config: IUBBCustomConfig = {
   icon: faEyeDropper,
   index: 100,
   Component: ColorPicker,
+  title: '颜色',
 }
 
 export default config
