@@ -3,6 +3,8 @@
 [![Storybook](https://github.com/storybooks/press/blob/master/badges/storybook.svg)](https://asukasong.github.io/react-ubb-editor/)
 
 A ubb editor based on react
+<br />
+See more at https://asukasong.github.io/react-ubb-editor/
 
 ## Install
 
