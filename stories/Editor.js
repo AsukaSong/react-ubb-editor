@@ -42,7 +42,7 @@ storiesOf('Editor', module)
       }
     })(
       () => ( 
-        <Layout><UbbEditor value="some value" onChange={action('change')} /></Layout>
+        <Layout><UbbEditor onChange={action('change')} /></Layout>
       )
     )
   )

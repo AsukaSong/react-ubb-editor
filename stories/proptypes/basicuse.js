@@ -4,7 +4,7 @@ export default [
     propType: 'string',
     required: false,
     description: 'value of editor',
-    defaultValue: 'empty string',
+    defaultValue: 'undefined',
   },
   {
     property: 'onChange',

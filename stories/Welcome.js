@@ -5,7 +5,8 @@ import ReactMarkdown from 'react-markdown'
 import Layout from './components/Layout'
 import Head from './components/Head'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import { duotoneLight } from 'react-syntax-highlighter/styles/prism';
+import { prism } from 'react-syntax-highlighter/styles/prism';
+import 'highlight.js/styles/xcode.css'
 
 storiesOf('Welcome')
   .addDecorator(Layout)
@@ -19,7 +20,7 @@ storiesOf('Welcome')
             return <H>{children}</H>
           },
           code: ({ language, value }) => {
-            return <SyntaxHighlighter style={duotoneLight} language={language}>{value}</SyntaxHighlighter>
+            return <SyntaxHighlighter style={prism} language={language}>{value}</SyntaxHighlighter>
           }
         }}
       />
