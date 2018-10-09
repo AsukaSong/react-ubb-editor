@@ -37,7 +37,6 @@ interface IState extends State {
 class Core extends React.Component<props, IState> {
   static defaultProps = {
     onChange: () => null,
-    value: '',
   }
 
   public customTextarea!: Textarea
@@ -212,7 +211,7 @@ class Core extends React.Component<props, IState> {
             onDrop={this.handleDrop}
             onFocus={this.clearExtendAndCustom}
             onPaste={this.handlePaste}
-            value={value}
+            value={this.props.value || value}
           />
         )}
         {isPreviewing && UbbContainer && <UbbContainer value={value} />}
