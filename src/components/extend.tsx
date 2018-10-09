@@ -13,7 +13,7 @@ import {
   ICustomComponentProps,
   IUBBExtendConfig,
 } from '../types'
-import { Button, ExtendRoot, Input } from './styles'
+import { Button, Divider, ExtendRoot, Input } from './styles'
 
 interface IProps extends IConfigProps, ICustomComponentProps {
   extendTagName: string
@@ -67,12 +67,16 @@ class Extends extends React.Component<IProps> {
   renderFormItem(item: IUBBExtendConfig['inputs'][0], config: IUBBExtendConfig) {
     const key = `${config.tagName}${item.key}${item.type}`
     return (
-      <Input
-        data-editor={item.type}
-        key={key}
-        name={item.key === '' ? undefined : item.key}
-        placeholder={item.label}
-      />
+      <>
+        <Input
+          data-editor={item.type}
+          key={key}
+          name={item.key === '' ? undefined : item.key}
+          placeholder={item.label}
+          valueType={item.type}
+        />
+        <Divider margin="0 5px" />
+      </>
     )
   }
 

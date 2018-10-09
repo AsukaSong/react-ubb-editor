@@ -14,6 +14,7 @@ interface IProps extends IConfigProps, ICustomComponentProps {
   redo: () => void
   undo: () => void
   changePreviewing: () => void
+  isPreviewing: boolean
 }
 
 @bindAll()
@@ -49,14 +50,18 @@ class Buttons extends React.Component<IProps> {
   }
 
   render() {
-    const { config } = this.props
+    const { config, isPreviewing } = this.props
     const { configs: buttonConfigs, UbbContainer } = config
 
     return (
       <ButtonRoot>
         {buttonConfigs.map(item => (
           <ButtonContainer key={item.tagName}>
-            <Button title={item.title} onClick={this.generateHandleButtonClick(item)}>
+            <Button
+              disabled={isPreviewing}
+              title={item.title}
+              onClick={this.generateHandleButtonClick(item)}
+            >
               {this.renderContent(item)}
             </Button>
             {item.type === ConfigType.Custom && this.renderCustom(item)}

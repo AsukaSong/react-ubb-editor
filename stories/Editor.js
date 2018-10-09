@@ -1,7 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { action } from '@storybook/addon-actions'
 import LayoutDecorator, { Layout } from './components/Layout'
 
 import creatEditor from '../src/index'
@@ -41,8 +40,6 @@ storiesOf('Editor', module)
         }
       }
     })(
-      () => ( 
-        <Layout><UbbEditor onChange={action('change')} /></Layout>
-      )
+      () => <UbbEditor />
     )
   )

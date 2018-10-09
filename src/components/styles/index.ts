@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from 'react-emotion'
+import { ExtendValueType } from '../../types'
 
 const slideIn = keyframes`
   from {
@@ -39,14 +40,31 @@ export const Button = styled('button')`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:disabled {
+    color: #aaa;
+    cursor: not-allowed;
+  }
 `
 
 export const ButtonContainer = styled('div')`
   position: relative;
 `
 
-export const Input = styled('input')`
+export const Input = styled('input')<{ valueType: ExtendValueType }>`
   ${clear};
+  width: ${props => (props.valueType === ExtendValueType.Sub ? '5rem' : '15rem')};
+`
+
+export const Divider = styled('span')<{ margin: string }>`
+  display: inline-flex;
+  align-items: center;
+  color: #ddd;
+  margin: ${props => props.margin};
+
+  &:after {
+    content: '|';
+  }
 `
 
 export const Textarea = styled('textarea')`
@@ -66,12 +84,15 @@ export const Root = styled('div')`
   display: flex;
   flex-direction: column;
   font-size: 16px;
+  border: 1px solid rgb(238, 238, 238);
+  border-radius: 2px;
 `
 
 export const ButtonRoot = styled('div')`
   width: 100%;
   height: 2em;
   display: flex;
+  border-bottom: 1px solid rgb(238, 238, 238);
 `
 
 export const ExtendRoot = styled('div')<{ isShown: boolean }>(
@@ -82,6 +103,8 @@ export const ExtendRoot = styled('div')<{ isShown: boolean }>(
     display: flex;
     transition-duration: 0.1s;
     transition-property: height;
+    padding: 0 0.5rem;
+    border-bottom: 1px solid rgb(238, 238, 238);
 
     form {
       display: flex;

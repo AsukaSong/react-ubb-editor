@@ -200,6 +200,7 @@ class Core extends React.Component<props, IState> {
           undo={this.undo}
           message={this.notice}
           changePreviewing={this.changePreviewing}
+          isPreviewing={isPreviewing}
         />
         <Extend dispatch={this.reduce} message={this.notice} extendTagName={extendTagName} />
         {!isPreviewing && (
