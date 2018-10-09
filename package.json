@@ -1,8 +1,8 @@
 {
-  "name": "react-ubb-editor",
+  "name": "@cc98/react-ubb-editor",
   "version": "1.0.0",
   "description": "A ubb editor component based on react",
-  "browser": "./lib/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "precommit": "lint-staged",
     "start": "start-storybook -p 9000 -c .storybook",
@@ -15,7 +15,7 @@
     "ubb",
     "editor"
   ],
-  "homepage": "https://github.com/AsukaSong/react-ubb-editor",
+  "homepage": "https://asukasong.github.io/react-ubb-editor/",
   "repository": {
     "type": "git",
     "url": "https://github.com/AsukaSong/react-ubb-editor"
