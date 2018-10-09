@@ -1,10 +1,8 @@
 # @CC98/react-ubb-editor
 
+[![Storybook](https://github.com/storybooks/press/blob/master/badges/storybook.svg)](https://asukasong.github.io/react-ubb-editor/)
+
 A ubb editor based on react
-
-## Feature
-
-tbd
 
 ## Install
 
