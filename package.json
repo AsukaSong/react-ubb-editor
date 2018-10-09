@@ -7,7 +7,8 @@
     "precommit": "lint-staged",
     "start": "start-storybook -p 9000 -c .storybook",
     "build": "rimraf lib && tsc",
-    "test": "jest"
+    "test": "jest",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "keywords": [
     "react",
@@ -29,6 +30,7 @@
     "@storybook/addon-info": "4.0.0-alpha.21",
     "@storybook/cli": "4.0.0-alpha.21",
     "@storybook/react": "4.0.0-alpha.21",
+    "@storybook/storybook-deployer": "^2.3.0",
     "@types/jest": "^23.3.2",
     "@types/lodash": "^4.14.116",
     "@types/react": "^16.4.14",
@@ -44,6 +46,7 @@
     "prop-types": "^15.6.2",
     "react-docgen-typescript-loader": "^3.0.0",
     "react-markdown": "^4.0.2",
+    "react-syntax-highlighter": "^9.0.0",
     "rimraf": "^2.6.2",
     "ts-jest": "^23.1.4",
     "tslint": "^5.11.0",

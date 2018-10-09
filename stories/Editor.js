@@ -1,8 +1,8 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
+import React from 'react'
+import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { action } from '@storybook/addon-actions'
-import PropTypes from 'prop-types'
+import LayoutDecorator, { Layout } from './components/Layout'
 
 import creatEditor from '../src/index'
 
@@ -10,12 +10,15 @@ import Table from './components/Table'
 import types from './proptypes/basicuse'
 
 const UbbEditor = creatEditor()
+UbbEditor.displayName = 'Editor'
 
 storiesOf('Editor', module)
+  .addDecorator(LayoutDecorator)
   .add('basic use', 
     withInfo({
       inline: true,
       TableComponent: Table(types),
+      propTablesExclude: [Layout],
       styles: {
         header: {
           h1: {
@@ -39,7 +42,7 @@ storiesOf('Editor', module)
       }
     })(
       () => ( 
-        <UbbEditor value="some value" onChange={action('change')} />
+        <Layout><UbbEditor value="some value" onChange={action('change')} /></Layout>
       )
     )
   )
