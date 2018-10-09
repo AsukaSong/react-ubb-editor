@@ -2,7 +2,8 @@
 import { configure } from '@storybook/react';
 
 const loadStories = () => {
-  require('../stories/index')
+  require('../stories/Welcome'),
+  require('../stories/Editor')
 }
 
 configure(loadStories, module)

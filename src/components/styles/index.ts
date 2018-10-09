@@ -52,6 +52,7 @@ export const Input = styled('input')`
 export const Textarea = styled('textarea')`
   ${clear};
   width: 100%;
+  min-height: 100px;
   flex-grow: 1;
   resize: none;
   font-size: inherit;

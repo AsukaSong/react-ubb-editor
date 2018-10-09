@@ -20,6 +20,8 @@ export interface IProps extends TextareaProps {
     dispatch: (action: IAction) => void,
   ) => void
   wrappedComponentRef?: (it: Core) => void
+  onChange?: (value: string) => void
+  value?: string
 }
 
 type props = IProps & IConfigProps
@@ -33,6 +35,11 @@ interface IState extends State {
 
 @bindAll()
 class Core extends React.Component<props, IState> {
+  static defaultProps = {
+    onChange: () => null,
+    value: '',
+  }
+
   public customTextarea!: Textarea
   private root!: HTMLDivElement
   private message: any
@@ -47,7 +54,7 @@ class Core extends React.Component<props, IState> {
       isPreviewing: false,
       message: '',
       start: 0,
-      value: props.value,
+      value: props.value!,
     }
   }
 
@@ -63,12 +70,13 @@ class Core extends React.Component<props, IState> {
   }
 
   componentWillReceiveProps(newProps: props) {
-    if (this.state.value !== newProps.value) {
+    const { value } = newProps
+    if (value && this.state.value !== value) {
       this.setState(
         {
-          end: newProps.value.length,
-          start: newProps.value.length,
-          value: newProps.value,
+          value,
+          end: value.length,
+          start: value.length,
         },
         this.focusAndSelectTextarea,
       )
@@ -120,7 +128,7 @@ class Core extends React.Component<props, IState> {
       prevState => handler(prevState, action),
       () => {
         this.focusAndSelectTextarea()
-        this.props.onChange(this.state.value)
+        this.props.onChange!(this.state.value)
       },
     )
     this.clearExtendAndCustom()
@@ -139,7 +147,7 @@ class Core extends React.Component<props, IState> {
     this.setState({
       value,
     })
-    this.props.onChange(value)
+    this.props.onChange!(value)
   }
 
   private handleExtendButtonClick(extendTagName: string) {
