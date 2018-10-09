@@ -8,7 +8,15 @@ See more at https://asukasong.github.io/react-ubb-editor/
 
 ## Install
 
-to be published
+with yarn
+~~~bash
+yarn add @cc98/react-ubb-editor
+~~~
+
+or with npm
+~~~bash
+npm install --save @cc98/react-ubb-editor
+~~~
 
 ## Usage
 
