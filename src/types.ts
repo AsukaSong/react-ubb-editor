@@ -225,7 +225,7 @@ export interface IUBBCustomConfig extends IUBBBaseConfig {
   type: ConfigType.Custom
   /**
    * @memberof IUBBCustomConfig
-   * @description element returned will be rendered under the button
+   * @description will be rendered under the button
    */
   Component: React.ComponentClass<ICustomComponentProps>
 }

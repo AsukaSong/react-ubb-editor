@@ -40,7 +40,8 @@ setDefaults({
 const loadStories = () => {
   require('../stories/Welcome'),
   require('../stories/Editor'),
-  require('../stories/Buttons')
+  require('../stories/Buttons'),
+  require('../stories/Customs')
 }
 
 configure(loadStories, module)
