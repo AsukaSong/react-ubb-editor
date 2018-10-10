@@ -1,7 +1,6 @@
 ### Source
 ```jsx
 const UbbEditor = creatEditor()
-UbbEditor.displayName = 'Editor'
 
 class Container extends React.Component {
   componentDidMount() {

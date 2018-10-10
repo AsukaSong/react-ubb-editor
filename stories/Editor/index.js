@@ -8,7 +8,6 @@ import Table from '../components/Table'
 import types from '../types/basicuse'
 
 const UbbEditor = creatEditor()
-UbbEditor.displayName = 'Editor'
 
 class Container extends React.Component {
   componentDidMount() {
@@ -21,6 +20,10 @@ class Container extends React.Component {
     return <UbbEditor wrappedComponentRef={this.getRef} />
   }
 }
+
+
+UbbEditor.displayName = 'Editor'
+Container.displayName = 'Container'
 
 storiesOf('Editor', module)
   .addDecorator(LayoutDecorator)
