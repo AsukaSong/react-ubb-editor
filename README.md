@@ -2,8 +2,8 @@
 ![](https://api.travis-ci.com/AsukaSong/react-ubb-editor.svg?branch=master)
 [![npm version](https://img.shields.io/npm/v/%40cc98/react-ubb-editor.svg)](https://www.npmjs.com/package/@cc98/react-ubb-editor)
 [![npm license](https://img.shields.io/npm/l/%40cc98%2Freact-ubb-editor.svg)](http://www.wtfpl.net/)
-[![types](https://img.shields.io/npm/types/typescript.svg)](https://github.com/storybooks/storybook)
-[![develop tools](https://img.shields.io/badge/react-storybook-ff69b4.svg)](https://github.com/Microsoft/TypeScript)
+[![types](https://img.shields.io/npm/types/typescript.svg)](https://github.com/Microsoft/TypeScript)
+[![develop tools](https://img.shields.io/badge/devtool-storybook-ff69b4.svg)](https://github.com/storybooks/storybook)
 
 A ubb editor based on react
 <br />
