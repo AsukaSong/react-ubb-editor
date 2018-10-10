@@ -28,6 +28,7 @@
   "devDependencies": {
     "@storybook/addon-actions": "4.0.0-alpha.21",
     "@storybook/addon-info": "4.0.0-alpha.21",
+    "@storybook/addon-options": "4.0.0-alpha.21",
     "@storybook/cli": "4.0.0-alpha.21",
     "@storybook/react": "4.0.0-alpha.21",
     "@storybook/storybook-deployer": "^2.3.0",

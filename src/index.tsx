@@ -52,6 +52,7 @@ export {
   IUBBButtonConfig,
   IUBBExtendConfig,
   IUBBCustomConfig,
+  IConfig,
   ICustomComponentProps,
   createAction,
   ConfigType,

@@ -2,10 +2,32 @@
 import { configure } from '@storybook/react'
 import React from 'react'
 import { setDefaults } from '@storybook/addon-info'
-import ReactMarkdown from 'react-markdown'
+import { setOptions } from '@storybook/addon-options'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { prism } from 'react-syntax-highlighter/styles/prism';
 import 'highlight.js/styles/xcode.css'
+import styled from 'react-emotion'
+
+const Head = level => styled(`h${level}`)`
+border-bottom: 1px solid #eaecef;
+`
+
+const Table = styled('table')`
+  border-collapse: collapse;
+
+  td {
+    border: 1px solid #ccc;
+    padding: 0 10px;
+  }
+
+  th {
+    border: 1px solid #ccc;
+  }
+`
+
+setOptions({
+  showAddonPanel: false,
+})
 
 setDefaults({
   inline: true,
@@ -33,7 +55,9 @@ setDefaults({
   components: {
     code: ({ language, code }) => {
       return <SyntaxHighlighter style={prism} language={language}>{code}</SyntaxHighlighter>
-    }
+    },
+    table: ({ children }) => <Table>{children}</Table>,
+    h3: ({ children }) => <h3>{children}</h3>
   }
 })
 

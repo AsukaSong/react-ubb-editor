@@ -29,6 +29,7 @@ storiesOf('Editor', module)
   .addDecorator(LayoutDecorator)
   .add('basic use', 
     withInfo({
+      text: require('./basicuse.md'),
       TableComponent: Table(types),
     })(
       () => <UbbEditor />

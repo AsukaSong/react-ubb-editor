@@ -42,7 +42,7 @@ yarn start
 ~~~
 `
 
-storiesOf('Welcome')
+storiesOf('Welcome', module)
   .addDecorator(Layout)
   .add('readme', () => (
     <div style={{ padding: '1rem' }}>
