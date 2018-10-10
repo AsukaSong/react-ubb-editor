@@ -1,8 +1,14 @@
 language: node_js
-
 node_js:
-  - "8"
-
+- '8'
 script:
-  - yarn test
-  - yarn run deploy-storybook -- --ci
+- yarn test
+- yarn run deploy-storybook -- --ci
+deploy:
+  provider: npm
+  email: yansongdong@gmail.com
+  api_key:
+    secure: Hw1LElK8ZcHi8szwIFEFU6uA3nYebRfaBjQCCmi75Qvq/k1VtiA9zismiRtWyLUw6WwpunOvT7Ftp666HSr5h7AYrFmVJwOwRROSKRnEWKoCLDOZ9egomeK6LjGaIILjN836CcWzCcJ4DZ4fHoBqzxwON24nLaPF7JT79Vlcfry1S44zO1FVwgGJDQ+SGYtJ6kpAxIlDT52chDpCHW2icvlsZtKRN1lkBBRHfqKWhHavB22Wy/QNgDOSoEgxaLoLgW3oDTB0M4FMahJ9/jDonl8IMOay3KRcIcaFW05VfbQAkdwpivZ2PI4ozvzmsO6J2aH4yFo69etwHYNC1DlOk8Hn7hhmM0fhTsaqopGbKjhPMCPldloRqLiQfIhDcg08m0fyAitSBn3z6wFHjf1y4SDRqYWWLZIrRl206QKBGvtuwG2cEQan+QbjITT8jnv60Wbl9y3vMnLPCh0d8vRVZWYX6YtF1t1QnGXnyp+PxBr0pXZmMdnaw02QcoK6Si/01AywMm0sX41eG7z13qezyr1S4s77BFDMD+4UmWClKd48dnuTNgFhR8SKfuwbk8eR6pGhed9blPqZeZ9oXgn5XCjXNlwABwl8i6U710NltYVowHu0DY/D41S4CtQw70mVVjkCVulOspUYgB84xagRUkzN1qr7egtvLw9fZEh68NY=
+  on:
+    tags: true
+    repo: AsukaSong/react-ubb-editor

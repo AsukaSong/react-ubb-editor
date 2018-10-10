@@ -93,5 +93,8 @@
       "tslint --fix",
       "git add"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
