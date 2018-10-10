@@ -1,6 +1,6 @@
 import React from 'react';
 // @ts-ignore
-import { storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react'
 import ReactMarkdown from 'react-markdown'
 import Layout from './components/Layout'
 import Head from './components/Head'
