@@ -20,7 +20,12 @@ interface IProps extends IConfigProps, ICustomComponentProps {
 @bindAll()
 class Buttons extends React.Component<IProps> {
   renderContent(config: IUBBConfig): JSX.Element {
-    return config.icon ? <Icon icon={config.icon} size="lg" /> : <span>{config.label}</span>
+    return (
+      <span>
+        {config.label}
+        {config.icon ? <Icon icon={config.icon} size="lg" /> : null}
+      </span>
+    )
   }
 
   generateHandleButtonClick(config: IUBBConfig) {

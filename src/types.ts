@@ -140,7 +140,7 @@ interface IUBBBaseConfig {
   /**
    * @type {React.ReactNode}
    * @memberof IUBBBaseConfig
-   * @description will be displayed inside the button if there's no icon given
+   * @description will be displayed inside the button
    */
   label?: React.ReactNode
   /**
