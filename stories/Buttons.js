@@ -7,7 +7,7 @@ import { faBold } from '@fortawesome/free-solid-svg-icons'
 import creatEditor from '../src/index'
 
 import Table from './components/Table'
-import types from './proptypes/basicuse'
+import types from './types/basicuse'
 
 const config = {
   configs: [
