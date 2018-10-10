@@ -3,11 +3,12 @@
 [![npm version](https://img.shields.io/npm/v/%40cc98/react-ubb-editor.svg)](https://www.npmjs.com/package/@cc98/react-ubb-editor)
 [![types](https://img.shields.io/npm/types/typescript.svg)](https://github.com/Microsoft/TypeScript)
 [![develop tools](https://img.shields.io/badge/devtool-storybook-ff69b4.svg)](https://github.com/storybooks/storybook)
+[![npm license](https://img.shields.io/npm/l/%40cc98%2Freact-ubb-editor.svg)](http://www.wtfpl.net/)
+<br />
 [![BCH compliance](https://bettercodehub.com/edge/badge/AsukaSong/react-ubb-editor?branch=master)](https://bettercodehub.com/)
 [![CodeFactor](https://www.codefactor.io/repository/github/asukasong/react-ubb-editor/badge)](https://www.codefactor.io/repository/github/asukasong/react-ubb-editor)
 [![dependencies Status](https://david-dm.org/asukasong/react-ubb-editor/status.svg)](https://david-dm.org/asukasong/react-ubb-editor)
 [![devDependencies Status](https://david-dm.org/asukasong/react-ubb-editor/dev-status.svg)](https://david-dm.org/asukasong/react-ubb-editor?type=dev)
-[![npm license](https://img.shields.io/npm/l/%40cc98%2Freact-ubb-editor.svg)](http://www.wtfpl.net/)
 
 A ubb editor based on react
 <br />
