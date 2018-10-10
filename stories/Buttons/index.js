@@ -43,7 +43,7 @@ storiesOf('Buttons', module)
   .add('attach extra button',
     withInfo({
       text: require('./attachextrabutton.md'),
-      TableComponent: Table(types),
+      propTablesExclude: [UbbEditor2],
     })(
       () => <UbbEditor2 />
     )
@@ -51,7 +51,7 @@ storiesOf('Buttons', module)
   .add('replace all',
     withInfo({
       text: require('./replaceall.md'),
-      TableComponent: Table(types),
+      propTablesExclude: [UbbEditor],
     })(
       () => <UbbEditor />
     )

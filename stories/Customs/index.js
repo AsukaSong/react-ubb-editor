@@ -1,12 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import LayoutDecorator from '../components/Layout'
 import { faUpload } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 
 import creatEditor from '../../src/index'
-
+import LayoutDecorator from '../components/Layout'
 import Table from '../components/Table'
 import types from '../types/basicuse'
 
@@ -37,7 +36,7 @@ storiesOf('Customs', module)
   .add('upload', 
     withInfo({
       text: require('./upload.md'),
-      TableComponent: Table(types),
+      propTablesExclude: [UbbEditor],
     })(
       () => <UbbEditor />
     )
