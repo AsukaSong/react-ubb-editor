@@ -43,6 +43,7 @@ interface IState extends State {
 class Core extends React.Component<props, IState> {
   static defaultProps = {
     onChange: () => null,
+    defaultValue: '',
   }
 
   public customTextarea!: Textarea
@@ -59,7 +60,7 @@ class Core extends React.Component<props, IState> {
       isPreviewing: false,
       message: '',
       start: 0,
-      value: props.value! || props.defaultValue!,
+      value: props.value || props.defaultValue!,
     }
   }
 

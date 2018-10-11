@@ -65,6 +65,7 @@ const loadStories = () => {
   require('../stories/Welcome'),
   require('../stories/Editor'),
   require('../stories/Buttons'),
+  require('../stories/Extends'),
   require('../stories/Customs')
 }
 

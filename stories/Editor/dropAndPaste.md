@@ -2,7 +2,7 @@
 ```jsx
 const UbbEditor = creatEditor()
 
-class Container2 extends React.Component {
+class Container extends React.Component {
   handleDrop(e, dispatch) {
     const files = e.dataTransfer.files
     if(files.length > 0) {
