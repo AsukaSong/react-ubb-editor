@@ -4,6 +4,7 @@ node_js:
 script:
 - yarn test
 - yarn run deploy-storybook -- --ci
+- yarn run codecov
 deploy:
   provider: npm
   email: yansongdong@gmail.com
