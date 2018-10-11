@@ -1,5 +1,6 @@
 # @CC98/react-ubb-editor
-![](https://api.travis-ci.com/AsukaSong/react-ubb-editor.svg?branch=master)
+![ci](https://api.travis-ci.com/AsukaSong/react-ubb-editor.svg?branch=master)
+[![codecov](https://codecov.io/gh/AsukaSong/react-ubb-editor/branch/master/graph/badge.svg)](https://codecov.io/gh/AsukaSong/react-ubb-editor)
 [![npm version](https://img.shields.io/npm/v/%40cc98/react-ubb-editor.svg)](https://www.npmjs.com/package/@cc98/react-ubb-editor)
 [![types](https://img.shields.io/npm/types/typescript.svg)](https://github.com/Microsoft/TypeScript)
 [![develop tools](https://img.shields.io/badge/devtool-storybook-ff69b4.svg)](https://github.com/storybooks/storybook)
