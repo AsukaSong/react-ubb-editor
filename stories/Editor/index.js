@@ -61,13 +61,13 @@ storiesOf('Editor', module)
   .addDecorator(LayoutDecorator)
   .add('basic use', 
     withInfo({
-      text: require('./basicuse.md'),
+      text: require('./basicUse.md'),
       TableComponent: Table(types),
     })(
       () => <UbbEditor />
     )
   )
-  .add('wrappedComponentRef',
+  .add('wrapped component ref',
     withInfo({
       text: require('./wrappedComponentRef.md'),
       propTablesExclude: [Container],
@@ -75,7 +75,7 @@ storiesOf('Editor', module)
       () => <Container />
     )
   )
-  .add('dropAndPaste',
+  .add('drop and paste',
     withInfo({
       text: require('./dropAndPaste.md'),
       propTablesExclude: [Container2]

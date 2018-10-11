@@ -42,7 +42,7 @@ storiesOf('Buttons', module)
   .addDecorator(LayoutDecorator)
   .add('attach extra button',
     withInfo({
-      text: require('./attachextrabutton.md'),
+      text: require('./attachExtraButton.md'),
       propTablesExclude: [UbbEditor2],
     })(
       () => <UbbEditor2 />
@@ -50,7 +50,7 @@ storiesOf('Buttons', module)
   )
   .add('replace all',
     withInfo({
-      text: require('./replaceall.md'),
+      text: require('./replaceAll.md'),
       propTablesExclude: [UbbEditor],
     })(
       () => <UbbEditor />
