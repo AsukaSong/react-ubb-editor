@@ -39,11 +39,6 @@ export default function createEditor(extraConfig: IConfig = {}, ignoreDefaultCon
     </Provider>
   )
 
-  Editor.defaultProps = {
-    onChange: () => null,
-    value: '',
-  }
-
   return Editor
 }
 

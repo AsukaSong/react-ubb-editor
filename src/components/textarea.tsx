@@ -56,6 +56,13 @@ export default class Textarea extends React.PureComponent<IProps> {
     this.textarea.scrollTop = this.scrollTop
   }
 
+  componentDidMount() {
+    if (this.props.value !== this.valueStack[this.valueStack.length - 1]) {
+      this.valueStack.push(this.props.value)
+      this.redoStack = []
+    }
+  }
+
   componentWillReceiveProps(newProps: IProps) {
     if (newProps.value !== this.valueStack[this.valueStack.length - 1]) {
       this.valueStack.push(newProps.value)
@@ -73,6 +80,7 @@ export default class Textarea extends React.PureComponent<IProps> {
       <Text
         innerRef={(it: any) => (this.textarea = it)}
         {...this.props}
+        defaultValue={undefined}
         onChange={e => this.changeValue(e.target.value)}
         onScroll={() => (this.scrollTop = this.textarea.scrollTop)}
         onFocus={this.handleFocus}
