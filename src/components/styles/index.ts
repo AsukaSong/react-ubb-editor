@@ -86,6 +86,7 @@ export const Root = styled('div')`
   font-size: 16px;
   border: 1px solid rgb(238, 238, 238);
   border-radius: 2px;
+  position: relative;
 `
 
 export const ButtonRoot = styled('div')`
