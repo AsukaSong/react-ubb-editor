@@ -22,6 +22,7 @@ export interface IProps extends TextareaProps {
   wrappedComponentRef?: (it: Core) => void
   onChange?: (value: string) => void
   value?: string
+  defaultValue?: string
 }
 
 type props = IProps & IConfigProps
@@ -53,7 +54,7 @@ class Core extends React.Component<props, IState> {
       isPreviewing: false,
       message: '',
       start: 0,
-      value: props.value!,
+      value: props.value! || props.defaultValue!,
     }
   }
 
