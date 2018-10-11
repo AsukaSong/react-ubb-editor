@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 
@@ -14,16 +14,48 @@ class Container extends React.Component {
     this.editor.focusAndSelectTextarea()
   }
 
+  message = () => {
+    this.editor.notice('a simple message')
+  }
+
   getRef = it => this.editor = it
 
   render() {
-    return <UbbEditor wrappedComponentRef={this.getRef} />
+    return (
+      <Fragment>
+        <UbbEditor wrappedComponentRef={this.getRef} />
+        <button onClick={this.message}>message</button>
+      </Fragment>
+    )
+  }
+}
+
+class Container2 extends React.Component {
+  handleDrop(e, dispatch) {
+    const files = e.dataTransfer.files
+    if(files.length > 0) {
+      e.preventDefault()
+      dispatch({
+        type: 0,
+        tagName: 'file',
+        payload: {
+          content: Array.from(files)[0].name
+        }
+      })
+    }
+  }
+
+  render() {
+    return (
+      <UbbEditor defaultValue="drop file here" onDrop={this.handleDrop} />
+    )
   }
 }
 
 
 UbbEditor.displayName = 'Editor'
 Container.displayName = 'Container'
+Container2.displayName = 'Container'
 
 storiesOf('Editor', module)
   .addDecorator(LayoutDecorator)
@@ -41,5 +73,13 @@ storiesOf('Editor', module)
       propTablesExclude: [Container],
     })(
       () => <Container />
+    )
+  )
+  .add('dropAndPaste',
+    withInfo({
+      text: require('./dropAndPaste.md'),
+      propTablesExclude: [Container2]
+    })(
+      () => <Container2 />
     )
   )

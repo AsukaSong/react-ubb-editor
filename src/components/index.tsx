@@ -14,10 +14,15 @@ import { NoticeContainer, Root } from './styles'
 
 // @ts-ignore override interface type
 export interface IProps extends TextareaProps {
-  onDrop?: (e: React.DragEvent<HTMLTextAreaElement>, dispatch: (action: IAction) => void) => void
+  onDrop?: (
+    e: React.DragEvent<HTMLTextAreaElement>,
+    dispatch: (action: IAction) => void,
+    notice: (message: string) => void,
+  ) => void
   onPaste?: (
     e: React.ClipboardEvent<HTMLTextAreaElement>,
     dispatch: (action: IAction) => void,
+    notice: (message: string) => void,
   ) => void
   wrappedComponentRef?: (it: Core) => void
   onChange?: (value: string) => void
@@ -173,7 +178,7 @@ class Core extends React.Component<props, IState> {
     this.customTextarea.blur()
     const { onDrop } = this.props
     if (onDrop) {
-      onDrop(e, this.reduce)
+      onDrop(e, this.reduce, this.notice)
     }
   }
 
@@ -181,7 +186,7 @@ class Core extends React.Component<props, IState> {
     this.customTextarea.blur()
     const { onPaste } = this.props
     if (onPaste) {
-      onPaste(e, this.reduce)
+      onPaste(e, this.reduce, this.notice)
     }
   }
 
