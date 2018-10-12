@@ -172,6 +172,16 @@ describe('editor core component', () => {
     expect(wrapper.state('value')).toBe('[url][/url]\n')
   })
 
+  it('insert value after click 4', () => {
+    const wrapper = mount(
+      <Core config={{ configs: defaultConfig }} />,
+    ) as ReactWrapper<props, IState, Core>
+    const button = wrapper.find(color.Component).first().instance() as any
+    button.handleOk({ hex: '#000000' })
+
+    expect(wrapper.state('value')).toBe('[color=#000000][/color]')
+  })
+
   it('show custom after click', () => {
     const wrapper = mount(
       <Core config={{ configs: defaultConfig }} />,
