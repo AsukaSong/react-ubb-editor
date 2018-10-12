@@ -19,4 +19,129 @@ describe('editor core component', () => {
     expect(wrapper.state('value')).toBe('some value')
     expect(core.focusAndSelectTextarea).toHaveProperty('callCount', 1)
   })
+
+  it('invoke change handler', () => {
+    const test = {
+      handleChange: () => null,
+    }
+    sinon.spy(test, 'handleChange')
+    const event = { target: { value: 'some value' } }
+    const wrapper = mount(
+      <Core config={{ configs: defaultConfig }} onChange={test.handleChange} />,
+    ) as ReactWrapper<props, IState, Core>
+    const textarea = wrapper.find('textarea').first()
+    textarea.simulate('change', event)
+
+    expect(test.handleChange).toHaveProperty('callCount', 1)
+  })
+
+  it('invoke paste handler', () => {
+    const test = {
+      handlePaste: () => null,
+    }
+    sinon.spy(test, 'handlePaste')
+    const wrapper = mount(
+      <Core config={{ configs: defaultConfig }} onPaste={test.handlePaste} />,
+    ) as ReactWrapper<props, IState, Core>
+    const textarea = wrapper.find('textarea').first()
+    textarea.simulate('paste')
+
+    expect(test.handlePaste).toHaveProperty('callCount', 1)
+  })
+
+  it('invoke drop handler', () => {
+    const test = {
+      handleDrop: () => null,
+    }
+    sinon.spy(test, 'handleDrop')
+    const wrapper = mount(
+      <Core config={{ configs: defaultConfig }} onDrop={test.handleDrop} />,
+    ) as ReactWrapper<props, IState, Core>
+    const textarea = wrapper.find('textarea').first()
+    textarea.simulate('drop')
+
+    expect(test.handleDrop).toHaveProperty('callCount', 1)
+  })
+
+  it('record textarea select range after blur', () => {
+    const wrapper = mount(
+      <Core config={{ configs: defaultConfig }} value="12345"/>,
+    ) as ReactWrapper<props, IState, Core>
+
+    const textarea = wrapper.find('textarea').first()
+    // @ts-ignore
+    textarea.getDOMNode().setSelectionRange(0, 4)
+    textarea.simulate('blur')
+
+    expect(wrapper.state('start')).toBe(0)
+    expect(wrapper.state('end')).toBe(4)
+  })
+
+  it('insert value after click', () => {
+    const wrapper = mount(
+      <Core config={{ configs: defaultConfig }} />,
+    ) as ReactWrapper<props, IState, Core>
+
+    const button = wrapper.find('button[title="加粗"]').first()
+    button.simulate('click')
+
+    expect(wrapper.state('value')).toBe('[b][/b]')
+  })
+
+  it('show extend after click', () => {
+    const wrapper = mount(
+      <Core config={{ configs: defaultConfig }} />,
+    ) as ReactWrapper<props, IState, Core>
+
+    const button = wrapper.find('button[title="插入url"]').first()
+
+    button.simulate('click')
+    expect(wrapper.state('extendTagName')).toBe('url')
+
+    button.simulate('click')
+    expect(wrapper.state('extendTagName')).toBe('')
+  })
+
+  it('show custom after click', () => {
+    const wrapper = mount(
+      <Core config={{ configs: defaultConfig }} />,
+    ) as ReactWrapper<props, IState, Core>
+
+    const button = wrapper.find('button[title="颜色"]').first()
+
+    button.simulate('click')
+    expect(wrapper.state('customTagName')).toBe('color')
+
+    button.simulate('click')
+    expect(wrapper.state('customTagName')).toBe('')
+  })
+
+  it('show change previewing', () => {
+    const wrapper = mount(
+      <Core config={{ configs: defaultConfig }} />,
+    )
+
+    const core = wrapper.instance() as Core
+
+    expect(wrapper.state('isPreviewing')).toBeFalsy()
+
+    core.changePreviewing()
+    expect(wrapper.state('isPreviewing')).toBeTruthy()
+  })
+
+  it('undo and redo', () => {
+    const event = { target: { value: 'test' } }
+    const wrapper = mount(
+      <Core config={{ configs: defaultConfig }} />,
+    ) as ReactWrapper<props, IState, Core>
+    const textarea = wrapper.find('textarea').first()
+    textarea.simulate('change', event)
+    const core = wrapper.instance()
+
+    expect(wrapper.state('value')).toBe('test')
+    core.undo()
+    expect(wrapper.state('value')).toBe('')
+    core.redo()
+    expect(wrapper.state('value')).toBe('test')
+  })
 })

@@ -8,6 +8,7 @@ import createAction from './createAction'
 // prettier-ignore
 import {
   ConfigType,
+  ExtendValueType,
   IConfig,
   ICustomComponentProps,
   IUBBButtonConfig,
@@ -51,4 +52,5 @@ export {
   ICustomComponentProps,
   createAction,
   ConfigType,
+  ExtendValueType,
 }

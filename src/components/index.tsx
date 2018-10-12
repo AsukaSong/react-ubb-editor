@@ -48,7 +48,7 @@ export class Core extends React.Component<props, IState> {
 
   public customTextarea!: Textarea
   private root!: HTMLDivElement
-  private message: any
+  public message: any
 
   constructor(props: props) {
     super(props)
@@ -164,10 +164,10 @@ export class Core extends React.Component<props, IState> {
   }
 
   private handleCustomButtonClick(customTagName: string) {
-    this.setState({
-      customTagName,
+    this.setState(prevState => ({
+      customTagName: prevState.customTagName === customTagName ? '' : customTagName,
       extendTagName: '',
-    })
+    }))
   }
 
   private handleTextareaBlur(e: React.FocusEvent<HTMLTextAreaElement>) {

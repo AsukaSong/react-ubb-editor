@@ -20,7 +20,7 @@ const props: IProps = {
   message: () => null,
 }
 
-describe('editor core component', () => {
+describe('editor buttons component', () => {
   it('render buttons by config', () => {
     const wrapper = mount(
       <Buttons {...props} />,

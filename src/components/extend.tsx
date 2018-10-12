@@ -1,7 +1,6 @@
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import bindAll from 'lodash-decorators/bindAll'
-import dropRight from 'lodash/dropRight'
 import * as React from 'react'
 
 import { IConfigProps, withConfig } from '../context'
@@ -15,7 +14,7 @@ import {
 } from '../types'
 import { Button, Divider, ExtendRoot, Input } from './styles'
 
-interface IProps extends IConfigProps, ICustomComponentProps {
+export interface IProps extends IConfigProps, ICustomComponentProps {
   extendTagName: string
 }
 
@@ -41,7 +40,7 @@ export class Extends extends React.Component<IProps> {
       subValues: [],
     }
 
-    const formData = dropRight(Array.from(e.target as HTMLFormElement), 2) as HTMLInputElement[]
+    const formData = Array.from((e.target as HTMLFormElement).querySelectorAll('input'))
     for (const item of formData) {
       switch (parseInt(item.dataset.editor!, 10)) {
         case ExtendValueType.Content:
@@ -56,8 +55,6 @@ export class Extends extends React.Component<IProps> {
             value: item.value,
           })
           break
-        default:
-          break
       }
     }
 
@@ -67,16 +64,15 @@ export class Extends extends React.Component<IProps> {
   renderFormItem(item: IUBBExtendConfig['inputs'][0], config: IUBBExtendConfig) {
     const key = `${config.tagName}${item.key}${item.type}`
     return (
-      <>
+      <React.Fragment key={key}>
         <Input
           data-editor={item.type}
-          key={key}
           name={item.key === '' ? undefined : item.key}
           placeholder={item.label}
           valueType={item.type}
         />
         <Divider margin="0 5px" />
-      </>
+      </React.Fragment>
     )
   }
 
