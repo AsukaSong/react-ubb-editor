@@ -90,15 +90,11 @@ export class Core extends React.Component<props, IState> {
   }
 
   redo() {
-    if (this.customTextarea) {
-      this.customTextarea.redo()
-    }
+    this.customTextarea.redo()
   }
 
   undo() {
-    if (this.customTextarea) {
-      this.customTextarea.undo()
-    }
+    this.customTextarea.undo()
   }
 
   focusAndSelectTextarea() {
@@ -183,6 +179,11 @@ export class Core extends React.Component<props, IState> {
     }
   }
 
+  private handleFocus(e: React.FocusEvent<HTMLTextAreaElement>) {
+    this.clearExtendAndCustom()
+    if (this.props.onFocus) this.props.onFocus(e)
+  }
+
   private handlePaste(e: React.ClipboardEvent<HTMLTextAreaElement>) {
     this.customTextarea.blur()
     const { onPaste } = this.props
@@ -217,7 +218,7 @@ export class Core extends React.Component<props, IState> {
             onChange={this.handleTextareaChange}
             onBlur={this.handleTextareaBlur}
             onDrop={this.handleDrop}
-            onFocus={this.clearExtendAndCustom}
+            onFocus={this.handleFocus}
             onPaste={this.handlePaste}
             value={this.props.value || value}
           />
