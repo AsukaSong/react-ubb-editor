@@ -2,6 +2,7 @@ import bindAll from 'lodash-decorators/bindAll'
 // @ts-ignore there's no types for rc-notification
 import Notification from 'rc-notification'
 import React from 'react'
+
 import { IConfigProps, withConfig } from '../context'
 import defaultHandler from '../defaultHandler'
 import { IAction, IState as State } from '../types'
@@ -10,7 +11,8 @@ import Buttons from './buttons'
 import Extend from './extend'
 import Textarea, { IProps as TextareaProps } from './textarea'
 
-import { NoticeContainer, Root } from './styles'
+import NoticeContainer from './styles/NoticeContainer'
+import Root from './styles/Root'
 
 // @ts-ignore override interface type
 export interface IProps extends TextareaProps {

@@ -1,6 +1,6 @@
 import bindAll from 'lodash-decorators/bindAll'
 import * as React from 'react'
-import { Textarea as Text } from './styles'
+import Text from './styles/Textarea'
 
 // @ts-ignore override interface type
 export interface IProps

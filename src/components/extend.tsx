@@ -12,7 +12,11 @@ import {
   ICustomComponentProps,
   IUBBExtendConfig,
 } from '../types'
-import { Button, Divider, ExtendRoot, Input } from './styles'
+
+import Button from './styles/Button'
+import Divider from './styles/Divider'
+import ExtendRoot from './styles/ExtendRoot'
+import Input from './styles/Input'
 
 export interface IProps extends IConfigProps, ICustomComponentProps {
   extendTagName: string

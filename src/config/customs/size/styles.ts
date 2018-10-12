@@ -1,5 +1,5 @@
 import styled from 'react-emotion'
-import { Button as button } from '../../../components/styles'
+import button from '../../../components/styles/Button'
 
 export const Triangle = styled('div')`
   position: absolute;

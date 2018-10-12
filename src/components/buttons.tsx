@@ -2,10 +2,14 @@ import { faRedo, faUndo, faWindowMaximize } from '@fortawesome/free-solid-svg-ic
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import bindAll from 'lodash-decorators/bindAll'
 import * as React from 'react'
+
 import { IConfigProps, withConfig } from '../context'
 import createAction from '../createAction'
 import { ConfigType, ICustomComponentProps, IUBBConfig, IUBBCustomConfig } from '../types'
-import { Button, ButtonContainer, ButtonRoot } from './styles'
+
+import Button from './styles/Button'
+import ButtonContainer from './styles/ButtonContainer'
+import ButtonRoot from './styles/ButtonRoot'
 
 export interface IProps extends IConfigProps, ICustomComponentProps {
   customTagName: string
