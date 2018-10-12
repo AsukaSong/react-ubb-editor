@@ -3,7 +3,7 @@ import React from 'react'
 import sinon from 'sinon'
 import { ExtendValueType, ICustomComponentProps, IUBBExtendConfig } from '../../src'
 import { Extends, IProps } from '../../src/components/extend'
-import { ExtendRoot } from '../../src/components/styles'
+import ExtendRoot from '../../src/components/styles/ExtendRoot'
 import { defaultConfig } from '../../src/config'
 
 const props: IProps = {
