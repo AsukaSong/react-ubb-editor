@@ -30,9 +30,9 @@ export interface IProps extends TextareaProps {
   defaultValue?: string
 }
 
-type props = IProps & IConfigProps
+export type props = IProps & IConfigProps
 
-interface IState extends State {
+export interface IState extends State {
   extendTagName: string
   customTagName: string
   message: string
@@ -40,7 +40,7 @@ interface IState extends State {
 }
 
 @bindAll()
-class Core extends React.Component<props, IState> {
+export class Core extends React.Component<props, IState> {
   static defaultProps = {
     onChange: () => null,
     defaultValue: '',

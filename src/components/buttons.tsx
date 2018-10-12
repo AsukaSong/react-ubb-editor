@@ -7,7 +7,7 @@ import createAction from '../createAction'
 import { ConfigType, ICustomComponentProps, IUBBConfig, IUBBCustomConfig } from '../types'
 import { Button, ButtonContainer, ButtonRoot } from './styles'
 
-interface IProps extends IConfigProps, ICustomComponentProps {
+export interface IProps extends IConfigProps, ICustomComponentProps {
   customTagName: string
   onExtendButtonClick: (tagName: string) => void
   onCustomButtonClick: (tagName: string) => void
@@ -18,7 +18,7 @@ interface IProps extends IConfigProps, ICustomComponentProps {
 }
 
 @bindAll()
-class Buttons extends React.Component<IProps> {
+export class Buttons extends React.Component<IProps> {
   renderContent(config: IUBBConfig): JSX.Element {
     return (
       <span>

@@ -20,7 +20,7 @@ interface IProps extends IConfigProps, ICustomComponentProps {
 }
 
 @bindAll()
-class Extends extends React.Component<IProps> {
+export class Extends extends React.Component<IProps> {
   getCurrConfig(tagName: string): IUBBExtendConfig {
     const {
       config: { configs },
