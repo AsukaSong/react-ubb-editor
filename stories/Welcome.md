@@ -1,14 +1,3 @@
-import React from 'react';
-// @ts-ignore
-import { storiesOf } from '@storybook/react'
-import ReactMarkdown from 'react-markdown/with-html'
-import Layout from './components/Layout'
-import Head from './components/Head'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { prism } from 'react-syntax-highlighter/styles/prism';
-import 'highlight.js/styles/xcode.css'
-
-const code = `
 # @CC98/react-ubb-editor
 ![ci](https://api.travis-ci.com/AsukaSong/react-ubb-editor.svg?branch=master)
 [![codecov](https://codecov.io/gh/AsukaSong/react-ubb-editor/branch/master/graph/badge.svg)](https://codecov.io/gh/AsukaSong/react-ubb-editor)
@@ -51,24 +40,3 @@ git clone https://github.com/AsukaSong/react-ubb-editor.git
 cd react-ubb-editor
 yarn start
 ~~~
-`
-
-storiesOf('Welcome', module)
-  .addDecorator(Layout)
-  .add('readme', () => (
-    <div style={{ padding: '1rem' }}>
-      <ReactMarkdown
-        escapeHtml={false}
-        source={code}
-        renderers={{
-          heading: ({ level, children }) => {
-            const H = Head(level)
-            return <H>{children}</H>
-          },
-          code: ({ language, value }) => {
-            return <SyntaxHighlighter style={prism} language={language}>{value}</SyntaxHighlighter>
-          }
-        }}
-      />
-    </div>
-  ))

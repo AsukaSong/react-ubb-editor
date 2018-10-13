@@ -8,11 +8,11 @@ const config = {
       title: 'english',
       label: <span style={{ fontSize: 16 }}>E</span>,
       index: 41,
-    }
-  ]
+    },
+  ],
 }
 
-const UbbEditor = creatEditor(config, false)
+const UbbEditor = creatEditor(config)
 ~~~
 ### Button Config Type
 | name          | type                     | isRequired | default        | description                                                |

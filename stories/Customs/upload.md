@@ -1,11 +1,10 @@
 ### Source
-```jsx
-const Upload = ({ dispatch, message }) => 
-  <input
-    id="upload"
-    type="file"
-    onChange={/* dispatch action or alert message */}
-  />
+```tsx
+const Upload = () => (
+  <div style={{ display: 'none' }}>
+    <input id="upload" type="file" onChange={() => {/** dispatch action or alert message */}} />
+  </div>
+)
 
 const config = {
   configs: [
@@ -13,14 +12,14 @@ const config = {
       type: 2,
       tagName: 'upload',
       title: '上传文件',
-      label: <label htmlFor="upload"><Icon icon={faUpload}></Icon></label>,
+      label: <label style={{ cursor: 'pointer' }} htmlFor="upload"><Icon icon={faUpload} /></label>,
       index: 10,
-      Component: Upload
-    }
-  ]
+      Component: Upload,
+    },
+  ],
 }
 
-const UbbEditor = creatEditor(config, true)
+const Editor = creatEditor(config, true)
 ```
 ### Custom Config Type
 | name          | type                     | isRequired | default        | description                                                |

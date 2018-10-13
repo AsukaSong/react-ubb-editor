@@ -14,21 +14,21 @@ const Th = styled('th')`
   border: 1px solid #ccc;
 `
 
-export default (config) => () => {
+export default (config: any[]) => () => {
   const props = config.map(
     ({ property, propType, required, description, defaultValue }) => {
       return (
         <tr key={property}>
           <Td>
             {property}
-            {required ? <Red>*</Red> : null}
+            {required ? <span>*</span> : null}
           </Td>
           <Td>{propType}</Td>
           <Td>{defaultValue}</Td>
           <Td>{description}</Td>
         </tr>
       );
-    }
+    },
   );
 
   return (

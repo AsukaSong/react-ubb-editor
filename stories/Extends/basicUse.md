@@ -12,10 +12,10 @@ const config = {
         {
           label: '请输入图片URL',
           type: 2,
-        }
-      ]
-    }
-  ]
+        },
+      ],
+    },
+  ],
 }
 
 const UbbEditor = creatEditor(config, true)

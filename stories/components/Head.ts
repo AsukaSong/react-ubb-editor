@@ -1,5 +1,6 @@
 import styled from 'react-emotion'
 
-export default level => styled(`h${level}`)`
+// @ts-ignore
+export default (level: number) => styled(`h${level}`)`
   border-bottom: 1px solid #eaecef;
 `

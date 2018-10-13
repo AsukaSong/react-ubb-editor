@@ -1,16 +1,17 @@
-import React from 'react'
+
 import { faLaugh } from '@fortawesome/free-solid-svg-icons'
+import React from 'react'
 
-import creatEditor from '../../src/index'
+import creatEditor, { IAction, IState } from '../../src/index'
 
-const Emoji = ({ dispatch, message }) => {
-  const handleClick = (e) => {
+const Emoji = ({ dispatch }: { dispatch: (action: IAction) => void }) => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     dispatch({
       type: 2,
       tagName: 'emoji',
       payload: {
-        content: e.target.innerText,
-      }
+        content: (e.target as HTMLButtonElement).innerText,
+      },
     })
   }
 
@@ -21,12 +22,12 @@ const Emoji = ({ dispatch, message }) => {
   )
 }
 
-const handler = (state, action) => {
+const handler = (state: IState, action: IAction) => {
   const { start, end, value } = state
   const { payload } = action
   const before = value.slice(0, start)
   const after = value.slice(end, value.length)
-  const content = `[em:${payload.content}]`
+  const content = `[em:${payload!.content}]`
 
   return {
     start,
@@ -38,15 +39,15 @@ const handler = (state, action) => {
 const config = {
   configs: [
     {
+      handler,
       type: 2,
       tagName: 'emoji',
       title: '插入表情',
       icon: faLaugh,
       index: 10,
       Component: Emoji,
-      handler,
-    }
-  ]
+    },
+  ],
 }
 
 const Editor = creatEditor(config, true)

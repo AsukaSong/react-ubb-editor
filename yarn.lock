@@ -1338,6 +1338,13 @@
     "@types/node" "*"
     "@types/react" "*"
 
+"@types/react-syntax-highlighter@^0.0.6":
+  version "0.0.6"
+  resolved "http://registry.npm.taobao.org/@types/react-syntax-highlighter/download/@types/react-syntax-highlighter-0.0.6.tgz#df076f4aa69b46760a56606bcd6d5ca1d6a42741"
+  integrity sha1-3wdvSqabRnYKVmBrzW1codakJ0E=
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-test-renderer@^16.0.3":
   version "16.0.3"
   resolved "http://registry.npm.taobao.org/@types/react-test-renderer/download/@types/react-test-renderer-16.0.3.tgz#cce5c983d66cc5c3582e7c2f44b274ab635a8acc"
@@ -1357,6 +1364,26 @@
   version "5.0.5"
   resolved "http://registry.npm.taobao.org/@types/sinon/download/@types/sinon-5.0.5.tgz#de600fa07eb1ec9d5f55669d5bac46a75fc88115"
   integrity sha1-3mAPoH6x7J1fVWadW6xGp1/IgRU=
+
+"@types/storybook__addon-info@^3.4.2":
+  version "3.4.2"
+  resolved "http://registry.npm.taobao.org/@types/storybook__addon-info/download/@types/storybook__addon-info-3.4.2.tgz#31a27e66867f02e593579cc58f54d22e726b0925"
+  integrity sha1-MaJ+ZoZ/AuWTV5zFj1TSLnJrCSU=
+  dependencies:
+    "@types/react" "*"
+
+"@types/storybook__react@^3.0.9":
+  version "3.0.9"
+  resolved "http://registry.npm.taobao.org/@types/storybook__react/download/@types/storybook__react-3.0.9.tgz#aac193f0c037ddfc2342bd027d720553ac089a56"
+  integrity sha1-qsGT8MA33fwjQr0CfXIFU6wImlY=
+  dependencies:
+    "@types/react" "*"
+    "@types/webpack-env" "*"
+
+"@types/webpack-env@*":
+  version "1.13.6"
+  resolved "http://registry.npm.taobao.org/@types/webpack-env/download/@types/webpack-env-1.13.6.tgz#128d1685a7c34d31ed17010fc87d6a12c1de6976"
+  integrity sha1-Eo0WhafDTTHtFwEPyH1qEsHeaXY=
 
 "@webassemblyjs/ast@1.7.6":
   version "1.7.6"

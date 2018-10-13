@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react'
-import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
+import { storiesOf } from '@storybook/react'
+import React, { Fragment } from 'react'
 
-import creatEditor from '../../src/index'
+import creatEditor, { CoreType, IAction } from '../../src'
 import LayoutDecorator from '../components/Layout'
 import Table from '../components/Table'
 import types from '../types/basicuse'
@@ -10,6 +10,9 @@ import types from '../types/basicuse'
 const UbbEditor = creatEditor()
 
 class Container extends React.Component {
+  static displayName = 'Container'
+  editor!: CoreType
+
   componentDidMount() {
     this.editor.focusAndSelectTextarea()
   }
@@ -18,7 +21,7 @@ class Container extends React.Component {
     this.editor.notice('a simple message')
   }
 
-  getRef = it => this.editor = it
+  getRef = (it: CoreType) => this.editor = it
 
   render() {
     return (
@@ -30,17 +33,23 @@ class Container extends React.Component {
   }
 }
 
+// tslint:disable-next-line
 class Container2 extends React.Component {
-  handleDrop(e, dispatch) {
-    const files = e.dataTransfer.files
-    if(files.length > 0) {
+  static displayName = 'Container'
+
+  handleDrop(
+    e: React.DragEvent<HTMLTextAreaElement>,
+    dispatch: (action: IAction) => void,
+  ) {
+    const files = Array.from(e.dataTransfer.files) as File[]
+    if (files.length > 0) {
       e.preventDefault()
       dispatch({
         type: 0,
         tagName: 'file',
         payload: {
-          content: Array.from(files)[0].name
-        }
+          content: files[0].name,
+        },
       })
     }
   }
@@ -52,34 +61,34 @@ class Container2 extends React.Component {
   }
 }
 
-
 UbbEditor.displayName = 'Editor'
-Container.displayName = 'Container'
-Container2.displayName = 'Container'
 
 storiesOf('Editor', module)
   .addDecorator(LayoutDecorator)
-  .add('basic use', 
+  .add(
+    'basic use',
     withInfo({
       text: require('./basicUse.md'),
       TableComponent: Table(types),
-    })(
-      () => <UbbEditor />
-    )
+    } as any)(
+      () => <UbbEditor />,
+    ),
   )
-  .add('wrapped component ref',
+  .add(
+    'wrapped component ref',
     withInfo({
       text: require('./wrappedComponentRef.md'),
       propTablesExclude: [Container],
     })(
-      () => <Container />
-    )
+      () => <Container />,
+    ),
   )
-  .add('drop and paste',
+  .add(
+    'drop and paste',
     withInfo({
       text: require('./dropAndPaste.md'),
-      propTablesExclude: [Container2]
+      propTablesExclude: [Container2],
     })(
-      () => <Container2 />
-    )
+      () => <Container2 />,
+    ),
   )

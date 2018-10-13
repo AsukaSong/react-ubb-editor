@@ -9,4 +9,4 @@ export const Layout = styled('div')`
 
 Layout.displayName = 'Container'
 
-export default storyFn => <Layout>{storyFn()}</Layout>
+export default (storyFn: () => React.ReactNode) => <Layout>{storyFn()}</Layout>

@@ -1,18 +1,21 @@
 ### Source
-```jsx
+```tsx
 const UbbEditor = creatEditor()
 
 class Container extends React.Component {
-  handleDrop(e, dispatch) {
-    const files = e.dataTransfer.files
-    if(files.length > 0) {
+  handleDrop(
+    e: React.DragEvent<HTMLTextAreaElement>,
+    dispatch: (action: IAction) => void,
+  ) {
+    const files = Array.from(e.dataTransfer.files) as File[]
+    if (files.length > 0) {
       e.preventDefault()
       dispatch({
         type: 0,
         tagName: 'file',
         payload: {
-          content: Array.from(files)[0].name
-        }
+          content: files[0].name,
+        },
       })
     }
   }

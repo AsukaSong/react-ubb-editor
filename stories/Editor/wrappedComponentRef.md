@@ -1,8 +1,10 @@
 ### Source
-```jsx
+```tsx
 const UbbEditor = creatEditor()
 
 class Container extends React.Component {
+  editor!: CoreType
+
   componentDidMount() {
     this.editor.focusAndSelectTextarea()
   }
@@ -11,12 +13,12 @@ class Container extends React.Component {
     this.editor.notice('a simple message')
   }
 
-  getRef = it => this.editor = it
+  getRef = (it: CoreType) => this.editor = it
 
   render() {
     return (
       <Fragment>
-        <UbbEditor wrappedComponentRef={this.getRef}></UbbEditor>
+        <UbbEditor wrappedComponentRef={this.getRef} />
         <button onClick={this.message}>message</button>
       </Fragment>
     )

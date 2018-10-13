@@ -1,7 +1,7 @@
 import orderBy from 'lodash/orderBy'
 import uniqBy from 'lodash/uniqBy'
 import React from 'react'
-import Core, { IProps } from './components'
+import Core, { Core as CoreType, IProps } from './components'
 import { defaultConfig } from './config'
 import { Provider } from './context'
 import createAction from './createAction'
@@ -9,8 +9,10 @@ import createAction from './createAction'
 import {
   ConfigType,
   ExtendValueType,
+  IAction,
   IConfig,
   ICustomComponentProps,
+  IState,
   IUBBButtonConfig,
   IUBBConfig,
   IUBBCustomConfig,
@@ -53,4 +55,7 @@ export {
   createAction,
   ConfigType,
   ExtendValueType,
+  IAction,
+  IState,
+  CoreType,
 }

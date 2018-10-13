@@ -8,8 +8,8 @@ const config = {
       title: '加粗',
       icon: faBold,
       index: 10,
-    }
-  ]
+    },
+  ],
 }
 
 const UbbEditor = creatEditor(config, true)
