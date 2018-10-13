@@ -1,5 +1,6 @@
 import { css } from 'react-emotion'
 import slideIn from '../keyframes/slideIn'
+import center from '../utils/center'
 
 const content = css`
   .rc-notification-notice-content {
@@ -9,10 +10,8 @@ const content = css`
     min-width: 10rem;
     width: auto;
     color: #222;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
+    ${center};
   }
 `
 

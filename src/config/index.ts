@@ -1,5 +1,3 @@
-import { IUBBConfig } from '../types'
-
 import b from './buttons/b'
 import center from './buttons/center'
 import del from './buttons/del'
@@ -16,7 +14,7 @@ import bili from './extends/bili'
 import url from './extends/url'
 
 // prettier-ignore
-export const defaultConfig: IUBBConfig[] = [
+export const defaultConfig = [
   b,
   i,
   u,
