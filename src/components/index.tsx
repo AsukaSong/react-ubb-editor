@@ -21,12 +21,13 @@ interface ICustomProps {
   value?: string
   defaultValue?: string
 }
+
 type Omit<T, K> = Pick<T, Exclude<keyof T, K>>
 type Diff<T, U> = T extends U ? never : T
-type GetNames<T, A extends React.SyntheticEvent<any>> = {
-  [K in keyof T]: T[K] extends ((event: A) => void) | undefined ? K : never
+type GetNames<T> = {
+  [K in keyof T]: T[K] extends ((event: any) => void) | undefined ? K : never
 }[keyof T]
-type FunctionProperties<T> = Pick<T, Diff<GetNames<T, any>, undefined>>
+type FunctionProperties<T> = Pick<T, Diff<GetNames<T>, undefined>>
 type AddParams<T> = {
   [K in keyof T]: T[K] extends ((event: infer U) => void) | undefined
     ? (event: U, dispatch: (action: IAction) => void, message: (message: string) => void) => void
