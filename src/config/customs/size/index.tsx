@@ -4,7 +4,10 @@ import React from 'react'
 import createAction from '../../../createAction'
 import { ConfigType, ICustomComponentProps, IUBBCustomConfig } from '../../../types'
 
-import { Button, Root, Triangle, TriangleBack } from './styles'
+import Button from './styles/Button'
+import Root from './styles/Root'
+import Triangle from './styles/Triangle'
+import TriangleBack from './styles/TriangleBack'
 
 class SizePicker extends React.PureComponent<ICustomComponentProps> {
   sizes = ['1', '2', '3', '4', '5', '6', '7']

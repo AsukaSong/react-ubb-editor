@@ -1,5 +1,15 @@
-import styled from 'react-emotion'
-import slideIn from './keyframes/slideIn'
+import styled, { css } from 'react-emotion'
+
+import content from './notice/content'
+import notice from './notice/notice'
+
+const other = css`
+  div,
+  span {
+    width: 100%;
+    height: 2rem;
+  }
+`
 
 const NoticeContainer = styled('div')`
   position: absolute;
@@ -10,32 +20,9 @@ const NoticeContainer = styled('div')`
   align-items: center;
   pointer-events: none;
 
-  div,
-  span {
-    width: 100%;
-    height: 2rem;
-  }
-
-  .rc-notification-notice {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 10px;
-  }
-
-  .rc-notification-notice-content {
-    animation: ${slideIn} 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 12px;
-    min-width: 10rem;
-    width: auto;
-    color: #222;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
+  ${other}
+  ${notice}
+  ${content}
 `
 
 export default NoticeContainer
