@@ -8,6 +8,7 @@
     "start": "start-storybook -p 9000 -c .storybook",
     "build": "rimraf lib && tsc",
     "test": "jest",
+    "test:ci": "jest && codecov",
     "deploy-storybook": "storybook-to-ghpages"
   },
   "keywords": [
