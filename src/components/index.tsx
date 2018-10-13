@@ -15,23 +15,27 @@ import NoticeContainer from './styles/NoticeContainer'
 import Root from './styles/Root'
 
 // @ts-ignore override interface type
-export interface IProps extends TextareaProps {
-  onDrop?: (
-    e: React.DragEvent<HTMLTextAreaElement>,
-    dispatch: (action: IAction) => void,
-    notice: (message: string) => void,
-  ) => void
-  onPaste?: (
-    e: React.ClipboardEvent<HTMLTextAreaElement>,
-    dispatch: (action: IAction) => void,
-    notice: (message: string) => void,
-  ) => void
+interface ICustomProps {
   wrappedComponentRef?: (it: Core) => void
   onChange?: (value: string) => void
   value?: string
   defaultValue?: string
 }
+type Omit<T, K> = Pick<T, Exclude<keyof T, K>>
+type Diff<T, U> = T extends U ? never : T
+type GetNames<T, A extends React.SyntheticEvent<any>> = {
+  [K in keyof T]: T[K] extends ((event: A) => void) | undefined ? K : never
+}[keyof T]
+type FunctionProperties<T> = Pick<T, Diff<GetNames<T, any>, undefined>>
+type AddParams<T> = {
+  [K in keyof T]: T[K] extends ((event: infer U) => void) | undefined
+    ? (event: U, dispatch: (action: IAction) => void, message: (message: string) => void) => void
+    : never
+}
 
+type EventWithParams = AddParams<FunctionProperties<Omit<TextareaProps, 'onChange'>>>
+type OtherProps = Omit<Omit<TextareaProps, 'onChange'>, keyof EventWithParams | keyof ICustomProps>
+export type IProps = EventWithParams & OtherProps & ICustomProps
 export type props = IProps & IConfigProps
 
 export interface IState extends State {
@@ -173,31 +177,28 @@ export class Core extends React.Component<props, IState> {
     this.setState({ start, end })
   }
 
-  private handleDrop(e: React.DragEvent<HTMLTextAreaElement>) {
-    this.customTextarea.blur()
-    const { onDrop } = this.props
-    if (onDrop) {
-      onDrop(e, this.reduce, this.notice)
-    }
-  }
-
   private handleFocus(e: React.FocusEvent<HTMLTextAreaElement>) {
     this.clearExtendAndCustom()
-    if (this.props.onFocus) this.props.onFocus(e)
-  }
-
-  private handlePaste(e: React.ClipboardEvent<HTMLTextAreaElement>) {
-    this.customTextarea.blur()
-    const { onPaste } = this.props
-    if (onPaste) {
-      onPaste(e, this.reduce, this.notice)
-    }
+    if (this.props.onFocus) this.props.onFocus(e, this.reduce, this.notice)
   }
 
   public render() {
     const { customTagName, isPreviewing, extendTagName, value } = this.state
     const { config } = this.props
     const { UbbContainer } = config
+    const props = new Proxy(
+      { ...this.props },
+      {
+        get: (props: props, key: keyof props) => {
+          if (typeof props[key] === 'function') {
+            return (e: Event) => {
+              ; (props[key] as any)(e, this.reduce, this.notice)
+            }
+          }
+          return props[key]
+        },
+      },
+    ) as any
 
     return (
       <Root>
@@ -215,17 +216,15 @@ export class Core extends React.Component<props, IState> {
         <Extend dispatch={this.reduce} message={this.notice} extendTagName={extendTagName} />
         {!isPreviewing && (
           <Textarea
-            {...this.props}
+            {...props}
             ref={(it: any) => (this.customTextarea = it)}
             onChange={this.handleTextareaChange}
             onBlur={this.handleTextareaBlur}
-            onDrop={this.handleDrop}
             onFocus={this.handleFocus}
-            onPaste={this.handlePaste}
             value={this.props.value || value}
           />
         )}
-        {isPreviewing && UbbContainer && <UbbContainer value={value} />}
+        {isPreviewing && UbbContainer && <UbbContainer value={this.props.value || value} />}
         <NoticeContainer innerRef={(it: any) => (this.root = it)} />
       </Root>
     )

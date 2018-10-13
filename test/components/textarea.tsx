@@ -71,4 +71,16 @@ describe('editor buttons component', () => {
     textarea.simulate('keydown')
     expect(test.handleKeyDown).toHaveProperty('callCount', 1)
   })
+
+  it('blur', () => {
+    const wrapper = mount(
+      <Textarea {...props} />,
+    ) as ReactWrapper<IProps, null, Textarea>
+    const textarea = wrapper.find('textarea').first()
+    // @ts-ignore
+    textarea.getDOMNode().focus()
+    expect(document.activeElement.tagName).toBe('TEXTAREA')
+    wrapper.instance().blur()
+    expect(document.activeElement.tagName).toBe('BODY')
+  })
 })

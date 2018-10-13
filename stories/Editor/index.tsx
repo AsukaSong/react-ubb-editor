@@ -36,14 +36,17 @@ class Container extends React.Component {
 // tslint:disable-next-line
 class Container2 extends React.Component {
   static displayName = 'Container'
+  it!: CoreType
 
   handleDrop(
     e: React.DragEvent<HTMLTextAreaElement>,
     dispatch: (action: IAction) => void,
+    message: (message: string) => void,
   ) {
     const files = Array.from(e.dataTransfer.files) as File[]
     if (files.length > 0) {
       e.preventDefault()
+      this.it.customTextarea.blur()
       dispatch({
         type: 0,
         tagName: 'file',
@@ -51,12 +54,17 @@ class Container2 extends React.Component {
           content: files[0].name,
         },
       })
+      message('上传成功')
     }
   }
 
   render() {
     return (
-      <UbbEditor defaultValue="drop file here" onDrop={this.handleDrop} />
+      <UbbEditor
+        wrappedComponentRef={it => this.it = it}
+        defaultValue="drop file here"
+        onDrop={this.handleDrop}
+      />
     )
   }
 }

@@ -3,7 +3,7 @@ import { IAction, IUBBConfig } from './types'
 
 // prettier-ignore
 const createAction: (
-  config: IUBBConfig,
+  config: Pick<IUBBConfig, 'tagName' | 'type' | 'defaultAction'>,
   payload?: IAction['payload'],
   customAction?: Omit<IAction, 'payload' | 'tagName' | 'type'>,
 ) => IAction = (config, payload, customAction) => {

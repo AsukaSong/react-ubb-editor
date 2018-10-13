@@ -11,6 +11,7 @@ const content = css`
     width: auto;
     color: #222;
     position: relative;
+    font-size: 14px;
     ${center};
   }
 `
