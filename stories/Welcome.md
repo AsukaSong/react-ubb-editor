@@ -1,5 +1,6 @@
 # @CC98/react-ubb-editor
-![ci](https://api.travis-ci.com/AsukaSong/react-ubb-editor.svg?branch=master)
+[![Build Status](https://travis-ci.org/AsukaSong/react-ubb-editor.svg?branch=master)](https://travis-ci.org/AsukaSong/react-ubb-editor)
+[![CircleCI](https://circleci.com/gh/AsukaSong/react-ubb-editor.svg?style=shield)](https://circleci.com/gh/AsukaSong/react-ubb-editor)
 [![codecov](https://codecov.io/gh/AsukaSong/react-ubb-editor/branch/master/graph/badge.svg)](https://codecov.io/gh/AsukaSong/react-ubb-editor)
 [![npm version](https://img.shields.io/npm/v/%40cc98/react-ubb-editor.svg)](https://www.npmjs.com/package/@cc98/react-ubb-editor)
 [![types](https://img.shields.io/npm/types/typescript.svg)](https://github.com/Microsoft/TypeScript)
