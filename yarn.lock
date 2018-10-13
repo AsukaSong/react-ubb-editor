@@ -1372,6 +1372,11 @@
   dependencies:
     "@types/react" "*"
 
+"@types/storybook__addon-options@^3.2.2":
+  version "3.2.2"
+  resolved "http://registry.npm.taobao.org/@types/storybook__addon-options/download/@types/storybook__addon-options-3.2.2.tgz#f42f81414fa9692cf20d947e9b49c60c4bdfbc4d"
+  integrity sha1-9C+BQU+paSzyDZR+m0nGDEvfvE0=
+
 "@types/storybook__react@^3.0.9":
   version "3.0.9"
   resolved "http://registry.npm.taobao.org/@types/storybook__react/download/@types/storybook__react-3.0.9.tgz#aac193f0c037ddfc2342bd027d720553ac089a56"

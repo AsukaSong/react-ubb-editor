@@ -1,16 +1,12 @@
-// @ts-ignore
-import { configure } from '@storybook/react'
-import React from 'react'
 import { setDefaults } from '@storybook/addon-info'
 import { setOptions } from '@storybook/addon-options'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { prism } from 'react-syntax-highlighter/styles/prism';
-import 'highlight.js/styles/xcode.css'
+import { configure } from '@storybook/react'
+import React from 'react'
 import styled from 'react-emotion'
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { prism } from 'react-syntax-highlighter/styles/prism'
 
-const Head = level => styled(`h${level}`)`
-border-bottom: 1px solid #eaecef;
-`
+import 'highlight.js/styles/xcode.css'
 
 const Table = styled('table')`
   border-collapse: collapse;
@@ -34,32 +30,32 @@ setDefaults({
   styles: {
     header: {
       h1: {
-        marginRight: "20px",
-        fontSize: "25px",
-        display: "inline"
+        marginRight: '20px',
+        fontSize: '25px',
+        display: 'inline',
       },
       body: {
         paddingTop: 0,
-        paddingBottom: 0
+        paddingBottom: 0,
       },
       h2: {
-        display: "inline",
-        color: "#999"
-      }
+        display: 'inline',
+        color: '#999',
+      },
     },
     infoBody: {
-      padding: "0px 5px",
-      lineHeight: "2"
-    }
+      padding: '0px 5px',
+      lineHeight: '2',
+    },
   },
   components: {
-    code: ({ language, code }) => {
+    code: ({ language, code }: { language: string, code: string }) => {
       return <SyntaxHighlighter style={prism} language={language}>{code}</SyntaxHighlighter>
     },
-    table: ({ children }) => <Table>{children}</Table>,
-    h3: ({ children }) => <h3>{children}</h3>
-  }
-})
+    table: ({ children }: { children: React.ReactChildren }) => <Table>{children}</Table>,
+    h3: ({ children }: { children: React.ReactChildren }) => <h3>{children}</h3>,
+  },
+} as any)
 
 const loadStories = () => {
   require('../stories/Welcome'),

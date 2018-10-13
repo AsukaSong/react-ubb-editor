@@ -43,6 +43,7 @@
     "@types/react-test-renderer": "^16.0.3",
     "@types/sinon": "^5.0.5",
     "@types/storybook__addon-info": "^3.4.2",
+    "@types/storybook__addon-options": "^3.2.2",
     "@types/storybook__react": "^3.0.9",
     "awesome-typescript-loader": "^5.2.1",
     "babel-core": "^7.0.0-beta.41",
@@ -91,7 +92,8 @@
     "collectCoverage": true,
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "/lib/"
+      "/lib/",
+      "/test/setup.ts"
     ],
     "testRegex": "(/test/.*|\\.(test|spec))\\.(ts|tsx)$",
     "moduleFileExtensions": [
@@ -100,7 +102,7 @@
       "js",
       "json"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>test/setup.js",
+    "setupTestFrameworkScriptFile": "<rootDir>test/setup.ts",
     "snapshotSerializers": [
       "jest-emotion/serializer"
     ]
