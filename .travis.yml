@@ -3,6 +3,7 @@ node_js:
 - '8'
 script:
 - yarn run deploy-storybook -- --ci
+- yarn run build
 deploy:
   provider: npm
   email: yansongdong@gmail.com
