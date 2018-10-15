@@ -1,6 +1,6 @@
 import config from '../../../src/config/extends/url'
 
-const handler = config.handler
+const handler = config.handler!
 
 describe('url handler', () => {
   it('dont use defalut', () => {

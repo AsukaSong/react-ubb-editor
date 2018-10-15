@@ -1,4 +1,4 @@
-import { mount, ReactWrapper, render, shallow } from 'enzyme'
+import { mount, ReactWrapper } from 'enzyme'
 import React from 'react'
 import sinon from 'sinon'
 import { Core, IState, props } from '../../src/components'
@@ -6,7 +6,7 @@ import { defaultConfig } from '../../src/config'
 import color from '../../src/config/customs/color'
 import size from '../../src/config/customs/size'
 
-const Render = (props) => <span>{props.value}</span>
+const Render = (props: any) => <span>{props.value}</span>
 
 describe('editor core component', () => {
   it('render without crash', () => {
@@ -20,10 +20,11 @@ describe('editor core component', () => {
   })
 
   it('get innerRef', () => {
-    let ref
-    const wrapper = mount(
+    let ref;
+
+    mount(
       <Core config={{ configs: defaultConfig }} wrappedComponentRef={it => ref = it} />,
-    ) as ReactWrapper<props, IState, Core>
+    )
 
     expect(ref).toBeInstanceOf(Core)
   })
@@ -234,7 +235,6 @@ describe('editor core component', () => {
     ) as ReactWrapper<props, IState, Core>
     const textarea = wrapper.find('textarea').first()
     textarea.simulate('change', event)
-    const core = wrapper.instance()
 
     expect(wrapper.state('value')).toBe('test')
     textarea.simulate('keydown', {

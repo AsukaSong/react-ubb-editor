@@ -1,4 +1,4 @@
-import { mount, ReactWrapper, render, shallow } from 'enzyme'
+import { mount, ReactWrapper } from 'enzyme'
 import React from 'react'
 import sinon from 'sinon'
 import Textarea, { IProps } from '../../src/components/textarea'
@@ -79,8 +79,8 @@ describe('editor buttons component', () => {
     const textarea = wrapper.find('textarea').first()
     // @ts-ignore
     textarea.getDOMNode().focus()
-    expect(document.activeElement.tagName).toBe('TEXTAREA')
+    expect(document.activeElement!.tagName).toBe('TEXTAREA')
     wrapper.instance().blur()
-    expect(document.activeElement.tagName).toBe('BODY')
+    expect(document.activeElement!.tagName).toBe('BODY')
   })
 })

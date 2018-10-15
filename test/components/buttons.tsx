@@ -1,4 +1,4 @@
-import { mount, ReactWrapper, render, shallow } from 'enzyme'
+import { mount, ReactWrapper } from 'enzyme'
 import React from 'react'
 import sinon from 'sinon'
 import { Buttons, IProps } from '../../src/components/buttons'
@@ -33,7 +33,7 @@ describe('editor buttons component', () => {
     wrapper.setProps({
       config: {
         configs: defaultConfig,
-        UbbContainer: ({ value }) => <span>value</span>,
+        UbbContainer: ({ value }) => <span>{value}</span>,
       },
     })
 

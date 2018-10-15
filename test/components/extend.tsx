@@ -1,4 +1,4 @@
-import { mount, ReactWrapper, render, shallow } from 'enzyme'
+import { mount, ReactWrapper } from 'enzyme'
 import React from 'react'
 import sinon from 'sinon'
 import { ExtendValueType, ICustomComponentProps, IUBBExtendConfig } from '../../src'
