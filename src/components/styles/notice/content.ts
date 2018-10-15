@@ -10,7 +10,6 @@ const content = css`
     min-width: 10rem;
     width: auto;
     color: #222;
-    position: relative;
     font-size: 14px;
     ${center};
   }
