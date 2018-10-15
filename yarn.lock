@@ -891,24 +891,24 @@
     reflect-metadata "^0.1.12"
     tslib "^1.8.1"
 
-"@fortawesome/fontawesome-common-types@^0.2.4":
-  version "0.2.4"
-  resolved "http://registry.npm.taobao.org/@fortawesome/fontawesome-common-types/download/@fortawesome/fontawesome-common-types-0.2.4.tgz#7c560ff732c6c7c7c179ae25227ce5449e6f6d65"
-  integrity sha1-fFYP9zLGx8fBea4lInzlRJ5vbWU=
+"@fortawesome/fontawesome-common-types@^0.2.6":
+  version "0.2.6"
+  resolved "http://registry.npm.taobao.org/@fortawesome/fontawesome-common-types/download/@fortawesome/fontawesome-common-types-0.2.6.tgz#3f26b9d1bf2d057dfe0f448fe4a2c372508e97f0"
+  integrity sha1-Pya50b8tBX3+D0SP5KLDclCOl/A=
 
-"@fortawesome/fontawesome-svg-core@^1.2.4":
-  version "1.2.4"
-  resolved "http://registry.npm.taobao.org/@fortawesome/fontawesome-svg-core/download/@fortawesome/fontawesome-svg-core-1.2.4.tgz#2e40c65e66c7ad5aabc179a2d7c5827b1599905c"
-  integrity sha1-LkDGXmbHrVqrwXmi18WCexWZkFw=
+"@fortawesome/fontawesome-svg-core@^1.2.6":
+  version "1.2.6"
+  resolved "http://registry.npm.taobao.org/@fortawesome/fontawesome-svg-core/download/@fortawesome/fontawesome-svg-core-1.2.6.tgz#6314da68ff1018633a861ae9fe59e006c4f759a9"
+  integrity sha1-YxTaaP8QGGM6hhrp/lngBsT3Wak=
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.4"
+    "@fortawesome/fontawesome-common-types" "^0.2.6"
 
-"@fortawesome/free-solid-svg-icons@^5.3.1":
-  version "5.3.1"
-  resolved "http://registry.npm.taobao.org/@fortawesome/free-solid-svg-icons/download/@fortawesome/free-solid-svg-icons-5.3.1.tgz#9660bece3c4850d58f1653e26c1693487ff74b08"
-  integrity sha1-lmC+zjxIUNWPFlPibBaTSH/3Swg=
+"@fortawesome/free-solid-svg-icons@^5.4.1":
+  version "5.4.1"
+  resolved "http://registry.npm.taobao.org/@fortawesome/free-solid-svg-icons/download/@fortawesome/free-solid-svg-icons-5.4.1.tgz#9aa1a07176a16886aa176fc0c9d809ab1697fd47"
+  integrity sha1-mqGgcXahaIaqF2/AydgJqxaX/Uc=
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.4"
+    "@fortawesome/fontawesome-common-types" "^0.2.6"
 
 "@fortawesome/react-fontawesome@^0.1.3":
   version "0.1.3"
@@ -1296,20 +1296,15 @@
     "@types/cheerio" "*"
     "@types/react" "*"
 
-"@types/jest@^23.0.2":
+"@types/jest@^23.0.2", "@types/jest@^23.3.5":
   version "23.3.5"
   resolved "http://registry.npm.taobao.org/@types/jest/download/@types/jest-23.3.5.tgz#870a1434208b60603745bfd214fc3fc675142364"
   integrity sha1-hwoUNCCLYGA3Rb/SFPw/xnUUI2Q=
 
-"@types/jest@^23.3.2":
-  version "23.3.2"
-  resolved "http://registry.npm.taobao.org/@types/jest/download/@types/jest-23.3.2.tgz#07b90f6adf75d42c34230c026a2529e56c249dbb"
-  integrity sha1-B7kPat911Cw0IwwCaiUp5Wwknbs=
-
-"@types/lodash@^4.14.116":
-  version "4.14.116"
-  resolved "http://registry.npm.taobao.org/@types/lodash/download/@types/lodash-4.14.116.tgz#5ccf215653e3e8c786a58390751033a9adca0eb9"
-  integrity sha1-XM8hVlPj6MeGpYOQdRAzqa3KDrk=
+"@types/lodash@^4.14.117":
+  version "4.14.117"
+  resolved "http://registry.npm.taobao.org/@types/lodash/download/@types/lodash-4.14.117.tgz#695a7f514182771a1e0f4345d189052ee33c8778"
+  integrity sha1-aVp/UUGCdxoeD0NF0YkFLuM8h3g=
 
 "@types/node@*":
   version "10.10.1"
@@ -1330,10 +1325,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-dom@^16.0.7":
-  version "16.0.7"
-  resolved "http://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-16.0.7.tgz#54d0f867a76b90597e8432030d297982f25c20ba"
-  integrity sha1-VND4Z6drkFl+hDIDDSl5gvJcILo=
+"@types/react-dom@^16.0.9":
+  version "16.0.9"
+  resolved "http://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-16.0.9.tgz#73ceb7abe6703822eab6600e65c5c52efd07fb91"
+  integrity sha1-c863q+ZwOCLqtmAOZcXFLv0H+5E=
   dependencies:
     "@types/node" "*"
     "@types/react" "*"
@@ -1352,10 +1347,18 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.4.14":
+"@types/react@*":
   version "16.4.14"
   resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-16.4.14.tgz#47c604c8e46ed674bbdf4aabf82b34b9041c6a04"
   integrity sha1-R8YEyORu1nS730qr+Cs0uQQcagQ=
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
+
+"@types/react@^16.4.16":
+  version "16.4.16"
+  resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-16.4.16.tgz#99f91b1200ae8c2062030402006d3b3c3a177043"
+  integrity sha1-mfkbEgCujCBiAwQCAG07PDoXcEM=
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
@@ -5630,7 +5633,12 @@ he@1.1.1, he@^1.1.1:
   resolved "http://registry.npm.taobao.org/he/download/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
   integrity sha1-k0EP0hsAlzUVH4howvJx80J+I/0=
 
-highlight.js@^9.12.0, highlight.js@~9.12.0:
+highlight.js@^9.13.0:
+  version "9.13.0"
+  resolved "http://registry.npm.taobao.org/highlight.js/download/highlight.js-9.13.0.tgz#ee96d5c5f4c456e440f2dbdb2752211dff56f671"
+  integrity sha1-7pbVxfTEVuRA8tvbJ1IhHf9W9nE=
+
+highlight.js@~9.12.0:
   version "9.12.0"
   resolved "http://registry.npm.taobao.org/highlight.js/download/highlight.js-9.12.0.tgz#e6d9dbe57cbefe60751f02af336195870c90c01e"
   integrity sha1-5tnb5Xy+/mB1HwKvM2GVhwyQwB4=
@@ -5758,10 +5766,10 @@ humps@^2.0.1:
   resolved "http://registry.npm.taobao.org/humps/download/humps-2.0.1.tgz#dd02ea6081bd0568dc5d073184463957ba9ef9aa"
   integrity sha1-3QLqYIG9BWjcXQcxhEY5V7qe+ao=
 
-husky@^1.0.1:
-  version "1.0.1"
-  resolved "http://registry.npm.taobao.org/husky/download/husky-1.0.1.tgz#749bc6b3a14bdc9cab73d8cc827b92fcd691fac6"
-  integrity sha1-dJvGs6FL3Jyrc9jMgnuS/NaR+sY=
+husky@^1.1.2:
+  version "1.1.2"
+  resolved "http://registry.npm.taobao.org/husky/download/husky-1.1.2.tgz#574c2bb16958db8a8120b63306efaff110525c23"
+  integrity sha1-V0wrsWlY24qBILYzBu+v8RBSXCM=
   dependencies:
     cosmiconfig "^5.0.6"
     execa "^0.9.0"
@@ -7290,10 +7298,15 @@ loglevelnext@^1.0.1:
     es6-symbol "^3.1.1"
     object.assign "^4.1.0"
 
-lolex@^2.3.2, lolex@^2.7.5:
+lolex@^2.3.2:
   version "2.7.5"
   resolved "http://registry.npm.taobao.org/lolex/download/lolex-2.7.5.tgz#113001d56bfc7e02d56e36291cc5c413d1aa0733"
   integrity sha1-ETAB1Wv8fgLVbjYpHMXEE9GqBzM=
+
+lolex@^3.0.0:
+  version "3.0.0"
+  resolved "http://registry.npm.taobao.org/lolex/download/lolex-3.0.0.tgz#f04ee1a8aa13f60f1abd7b0e8f4213ec72ec193e"
+  integrity sha1-8E7hqKoT9g8avXsOj0IT7HLsGT4=
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1:
   version "1.4.0"
@@ -9041,15 +9054,15 @@ react-docgen@^3.0.0-rc.1:
     node-dir "^0.1.10"
     recast "^0.15.0"
 
-react-dom@^16.5.1:
-  version "16.5.1"
-  resolved "http://registry.npm.taobao.org/react-dom/download/react-dom-16.5.1.tgz#29d0c5a01ed3b6b4c14309aa91af6ec4eb4f292c"
-  integrity sha1-KdDFoB7TtrTBQwmqka9uxOtPKSw=
+react-dom@^16.5.2:
+  version "16.5.2"
+  resolved "http://registry.npm.taobao.org/react-dom/download/react-dom-16.5.2.tgz#b69ee47aa20bab5327b2b9d7c1fe2a30f2cfa9d7"
+  integrity sha1-tp7keqILq1MnsrnXwf4qMPLPqdc=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    schedule "^0.4.0"
+    schedule "^0.5.0"
 
 react-emotion@^9.2.12:
   version "9.2.12"
@@ -9092,10 +9105,10 @@ react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
   resolved "http://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
 
-react-markdown@^4.0.2:
-  version "4.0.2"
-  resolved "http://registry.npm.taobao.org/react-markdown/download/react-markdown-4.0.2.tgz#6e0f672a3f9a84f6eed05aac1d9cf6ec639b561c"
-  integrity sha1-bg9nKj+ahPbu0FqsHZz27GObVhw=
+react-markdown@^4.0.3:
+  version "4.0.3"
+  resolved "http://registry.npm.taobao.org/react-markdown/download/react-markdown-4.0.3.tgz#8851f9265d0322bb5d60ab2766b3ab48cdbeb890"
+  integrity sha1-iFH5Jl0DIrtdYKsnZrOrSM2+uJA=
   dependencies:
     html-to-react "^1.3.3"
     mdast-add-list-metadata "1.0.1"
@@ -9170,15 +9183,15 @@ react-transition-group@^2.0.0:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
-react@^16.5.1:
-  version "16.5.1"
-  resolved "http://registry.npm.taobao.org/react/download/react-16.5.1.tgz#8cb8e9f8cdcb4bde41c9a138bfbf907e66132372"
-  integrity sha1-jLjp+M3LS95ByaE4v7+QfmYTI3I=
+react@^16.5.2:
+  version "16.5.2"
+  resolved "http://registry.npm.taobao.org/react/download/react-16.5.2.tgz#19f6b444ed139baa45609eee6dc3d318b3895d42"
+  integrity sha1-Gfa0RO0Tm6pFYJ7ubcPTGLOJXUI=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    schedule "^0.4.0"
+    schedule "^0.5.0"
 
 reactcss@^1.2.0:
   version "1.2.3"
@@ -9732,13 +9745,6 @@ sax@^1.2.4:
   resolved "http://registry.npm.taobao.org/sax/download/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha1-KBYjTiN4vdxOU1T6tcqold9xANk=
 
-schedule@^0.4.0:
-  version "0.4.0"
-  resolved "http://registry.npm.taobao.org/schedule/download/schedule-0.4.0.tgz#fa20cfd0bfbf91c47d02272fd7096780d3170bbb"
-  integrity sha1-+iDP0L+/kcR9Aicv1wlngNMXC7s=
-  dependencies:
-    object-assign "^4.1.1"
-
 schedule@^0.5.0:
   version "0.5.0"
   resolved "http://registry.npm.taobao.org/schedule/download/schedule-0.5.0.tgz#c128fffa0b402488b08b55ae74bb9df55cc29cc8"
@@ -9931,17 +9937,17 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   resolved "http://registry.npm.taobao.org/signal-exit/download/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
   integrity sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
 
-sinon@^6.3.5:
-  version "6.3.5"
-  resolved "http://registry.npm.taobao.org/sinon/download/sinon-6.3.5.tgz#0f6d6a5b4ebaad1f6e8e019395542d1d02c144a0"
-  integrity sha1-D21qW066rR9ujgGTlVQtHQLBRKA=
+sinon@^7.0.0:
+  version "7.0.0"
+  resolved "http://registry.npm.taobao.org/sinon/download/sinon-7.0.0.tgz#99f2e5198d90a01ccbcebd4dc181a24827cb90dd"
+  integrity sha1-mfLlGY2QoBzLzr1NwYGiSCfLkN0=
   dependencies:
     "@sinonjs/commons" "^1.0.2"
     "@sinonjs/formatio" "^3.0.0"
     "@sinonjs/samsam" "^2.1.2"
     diff "^3.5.0"
     lodash.get "^4.4.2"
-    lolex "^2.7.5"
+    lolex "^3.0.0"
     nise "^1.4.5"
     supports-color "^5.5.0"
     type-detect "^4.0.8"
@@ -10765,10 +10771,10 @@ typescript-template-language-service-decorator@^1.7.1:
   resolved "http://registry.npm.taobao.org/typescript-template-language-service-decorator/download/typescript-template-language-service-decorator-1.7.1.tgz#60f825b6b2bab725c9a73eaff65cb598e81a1bc8"
   integrity sha1-YPgltrK6tyXJpz6v9ly1mOgaG8g=
 
-typescript@^3.0.3:
-  version "3.0.3"
-  resolved "http://registry.npm.taobao.org/typescript/download/typescript-3.0.3.tgz#4853b3e275ecdaa27f78fda46dc273a7eb7fc1c8"
-  integrity sha1-SFOz4nXs2qJ/eP2kbcJzp+t/wcg=
+typescript@^3.1.3:
+  version "3.1.3"
+  resolved "http://registry.npm.taobao.org/typescript/download/typescript-3.1.3.tgz#01b70247a6d3c2467f70c45795ef5ea18ce191d5"
+  integrity sha1-AbcCR6bTwkZ/cMRXle9eoYzhkdU=
 
 ua-parser-js@^0.7.18:
   version "0.7.18"
