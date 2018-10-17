@@ -248,4 +248,20 @@ describe('editor core component', () => {
     })
     expect(wrapper.state('value')).toBe('test')
   })
+
+  it('clear all shown after blur', done => {
+    const wrapper = mount(
+      <Core config={{ configs: defaultConfig }} />,
+    ) as ReactWrapper<props, IState, Core>
+    wrapper.find('button[title="插入url"]').simulate('click')
+    expect(wrapper.state('extendTagName')).toBe('url')
+    wrapper.instance().handleRootBlur()
+    setTimeout(
+      () => {
+        expect(wrapper.state('extendTagName')).toBe('')
+        done()
+      },
+      500,
+    )
+  })
 })

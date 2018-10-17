@@ -55,6 +55,7 @@ export class Core extends React.Component<props, IState> {
 
   public customTextarea!: Textarea
   private root!: HTMLDivElement
+  private timer!: number
   public message: any
 
   constructor(props: props) {
@@ -183,6 +184,16 @@ export class Core extends React.Component<props, IState> {
     if (this.props.onFocus) this.props.onFocus(e, this.reduce, this.notice)
   }
 
+  handleRootBlur() {
+    this.timer = setTimeout(() => {
+      this.clearExtendAndCustom()
+    })
+  }
+
+  handleRootFocus() {
+    clearTimeout(this.timer)
+  }
+
   public render() {
     const { customTagName, isPreviewing, extendTagName, value } = this.state
     const { config } = this.props
@@ -202,7 +213,7 @@ export class Core extends React.Component<props, IState> {
     ) as any
 
     return (
-      <Root>
+      <Root onFocus={this.handleRootFocus} onBlur={this.handleRootBlur}>
         <Buttons
           customTagName={customTagName}
           dispatch={this.reduce}
