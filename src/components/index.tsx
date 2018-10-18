@@ -47,7 +47,7 @@ export interface IState extends State {
 }
 
 @bindAll()
-export class Core extends React.Component<props, IState> {
+export class Core extends React.PureComponent<props, IState> {
   static defaultProps = {
     onChange: () => null,
     defaultValue: '',

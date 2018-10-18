@@ -37,7 +37,7 @@ const config: IUBBExtendConfig = {
       key: 'sub',
     },
   ],
-  ExtraComponent: class extends React.Component<ICustomComponentProps> {
+  ExtraComponent: class extends React.PureComponent<ICustomComponentProps> {
     render() {
       return <input />
     }

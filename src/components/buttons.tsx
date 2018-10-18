@@ -22,7 +22,7 @@ export interface IProps extends IConfigProps, ICustomComponentProps {
 }
 
 @bindAll()
-export class Buttons extends React.Component<IProps> {
+export class Buttons extends React.PureComponent<IProps> {
   renderContent(config: IUBBConfig): JSX.Element {
     return (
       <span>

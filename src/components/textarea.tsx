@@ -32,7 +32,7 @@ export default class Textarea extends React.PureComponent<IProps> {
     if (this.valueStack.length === 1) {
       return
     }
-    let prevValue = this.valueStack.pop() as string
+    let prevValue = this.valueStack.pop()!
     this.redoStack.push(prevValue)
     prevValue = this.valueStack[this.valueStack.length - 1]
     this.props.onChange(prevValue)
