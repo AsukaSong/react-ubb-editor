@@ -11,6 +11,10 @@ import Button from './styles/Button'
 import ButtonContainer from './styles/ButtonContainer'
 import ButtonRoot from './styles/ButtonRoot'
 
+interface IMap<T> {
+  [key: string]: T
+}
+
 export interface IProps extends IConfigProps, ICustomComponentProps {
   customTagName: string
   onExtendButtonClick: (tagName: string) => void
@@ -23,6 +27,8 @@ export interface IProps extends IConfigProps, ICustomComponentProps {
 
 @bindAll()
 export class Buttons extends React.PureComponent<IProps> {
+  handlerMap: IMap<() => void | undefined> = {}
+
   renderContent(config: IUBBConfig): JSX.Element {
     return (
       <span>
@@ -33,14 +39,21 @@ export class Buttons extends React.PureComponent<IProps> {
   }
 
   generateHandleButtonClick(config: IUBBConfig) {
+    let handler = this.handlerMap[config.tagName]
+    if (handler) return handler
     switch (config.type) {
       case ConfigType.Button:
-        return () => this.props.dispatch(createAction(config))
+        handler = () => this.props.dispatch(createAction(config))
+        break
       case ConfigType.Extend:
-        return () => this.props.onExtendButtonClick(config.tagName)
+        handler = () => this.props.onExtendButtonClick(config.tagName)
+        break
       case ConfigType.Custom:
-        return () => this.props.onCustomButtonClick(config.tagName)
+        handler = () => this.props.onCustomButtonClick(config.tagName)
+        break
     }
+    this.handlerMap[config.tagName] = handler
+    return handler
   }
 
   renderCustom(config: IUBBCustomConfig) {
