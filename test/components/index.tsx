@@ -151,10 +151,10 @@ describe('editor core component', () => {
     const button = wrapper.find('button[title="插入url"]').first()
 
     button.simulate('click')
-    expect(wrapper.state('extendTagName')).toBe('url')
+    expect(wrapper.state('extendConfig')).toHaveProperty('tagName', 'url')
 
     button.simulate('click')
-    expect(wrapper.state('extendTagName')).toBe('')
+    expect(wrapper.state('extendConfig')).toBeNull()
   })
 
   it('insert value after click 3', () => {
@@ -165,7 +165,7 @@ describe('editor core component', () => {
     const button = wrapper.find('button[title="插入url"]').first()
 
     button.simulate('click')
-    expect(wrapper.state('extendTagName')).toBe('url')
+    expect(wrapper.state('extendConfig')).toHaveProperty('tagName', 'url')
 
     const form = wrapper.find('form').first()
     form.simulate('submit')
@@ -254,11 +254,11 @@ describe('editor core component', () => {
       <Core config={{ configs: defaultConfig }} />,
     ) as ReactWrapper<props, IState, Core>
     wrapper.find('button[title="插入url"]').simulate('click')
-    expect(wrapper.state('extendTagName')).toBe('url')
+    expect(wrapper.state('extendConfig')).toHaveProperty('tagName', 'url')
     wrapper.instance().handleRootBlur()
     setTimeout(
       () => {
-        expect(wrapper.state('extendTagName')).toBe('')
+        expect(wrapper.state('extendConfig')).toBeNull()
         done()
       },
       500,

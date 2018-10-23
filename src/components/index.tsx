@@ -5,7 +5,7 @@ import React from 'react'
 
 import { IConfigProps, withConfig } from '../context'
 import defaultHandler from '../defaultHandler'
-import { IAction, IState as State } from '../types'
+import { IAction, IState as State, IUBBExtendConfig } from '../types'
 
 import Buttons from './buttons'
 import Extend from './extend'
@@ -40,7 +40,7 @@ export type IProps = EventWithParams & OtherProps & ICustomProps
 export type props = IProps & IConfigProps
 
 export interface IState extends State {
-  extendTagName: string
+  extendConfig: IUBBExtendConfig | null
   customTagName: string
   message: string
   isPreviewing: boolean
@@ -64,7 +64,7 @@ export class Core extends React.PureComponent<props, IState> {
     this.state = {
       customTagName: '',
       end: 0,
-      extendTagName: '',
+      extendConfig: null,
       isPreviewing: false,
       message: '',
       start: 0,
@@ -113,7 +113,7 @@ export class Core extends React.PureComponent<props, IState> {
   clearExtendAndCustom() {
     this.setState({
       customTagName: '',
-      extendTagName: '',
+      extendConfig: null,
     })
   }
 
@@ -145,12 +145,16 @@ export class Core extends React.PureComponent<props, IState> {
   }
 
   private getHandlerByTagName(tagName: string) {
+    const config = this.getConfigByTagName(tagName)
+    if (config && config.handler) return config.handler
+    return defaultHandler
+  }
+
+  private getConfigByTagName(tagName: string) {
     const {
       config: { configs },
     } = this.props
-    const config = configs.filter(item => item.tagName === tagName).pop()
-    if (config && config.handler) return config.handler
-    return defaultHandler
+    return configs.filter(item => item.tagName === tagName).pop()
   }
 
   private handleTextareaChange(value: string) {
@@ -162,7 +166,10 @@ export class Core extends React.PureComponent<props, IState> {
 
   private handleExtendButtonClick(extendTagName: string) {
     this.setState(prevState => ({
-      extendTagName: prevState.extendTagName === extendTagName ? '' : extendTagName,
+      extendConfig:
+        prevState.extendConfig && prevState.extendConfig.tagName === extendTagName
+          ? null
+          : (this.getConfigByTagName(extendTagName) as IUBBExtendConfig),
       customTagName: '',
     }))
   }
@@ -170,7 +177,7 @@ export class Core extends React.PureComponent<props, IState> {
   private handleCustomButtonClick(customTagName: string) {
     this.setState(prevState => ({
       customTagName: prevState.customTagName === customTagName ? '' : customTagName,
-      extendTagName: '',
+      extendConfig: null,
     }))
   }
 
@@ -195,7 +202,7 @@ export class Core extends React.PureComponent<props, IState> {
   }
 
   public render() {
-    const { customTagName, isPreviewing, extendTagName, value } = this.state
+    const { customTagName, isPreviewing, extendConfig, value } = this.state
     const { config } = this.props
     const { UbbContainer } = config
     const props = new Proxy(
@@ -225,7 +232,7 @@ export class Core extends React.PureComponent<props, IState> {
           changePreviewing={this.changePreviewing}
           isPreviewing={isPreviewing}
         />
-        <Extend dispatch={this.reduce} message={this.notice} extendTagName={extendTagName} />
+        <Extend dispatch={this.reduce} message={this.notice} extendConfig={extendConfig} />
         {!isPreviewing && (
           <Textarea
             {...props}

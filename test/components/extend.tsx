@@ -5,9 +5,10 @@ import { ExtendValueType, ICustomComponentProps, IUBBExtendConfig } from '../../
 import { Extends, IProps } from '../../src/components/extend'
 import ExtendRoot from '../../src/components/styles/ExtendRoot'
 import { defaultConfig } from '../../src/config'
+import url from '../../src/config/extends/url'
 
 const props: IProps = {
-  extendTagName: '',
+  extendConfig: null,
   config: {
     configs: defaultConfig,
   },
@@ -44,18 +45,6 @@ const config: IUBBExtendConfig = {
   },
 }
 
-// tslint:disable-next-line
-class ErrorBoundary extends React.Component {
-  componentDidCatch() {
-    return
-  }
-
-  render() {
-    const { children } = this.props
-    return children
-  }
-}
-
 describe('editor extend component', () => {
   it('render content by tagName', () => {
     const wrapper = mount(
@@ -66,25 +55,12 @@ describe('editor extend component', () => {
     expect(root.prop('isShown')).toBeFalsy()
 
     wrapper.setProps({
-      extendTagName: 'url',
+      extendConfig: url,
     })
 
     root = wrapper.find(ExtendRoot).first()
     expect(root.prop('isShown')).toBeTruthy()
     expect(wrapper.find('input').length).toBe(1)
-  })
-
-  it('throw error with no config', () => {
-    sinon.spy(ErrorBoundary.prototype, 'componentDidCatch')
-    mount(
-      <ErrorBoundary>
-        <Extends
-          {...props}
-          extendTagName="img"
-        />
-      </ErrorBoundary>,
-    )
-    expect(ErrorBoundary.prototype.componentDidCatch).toHaveProperty('callCount', 1)
   })
 
   it('callback after form submit', () => {
@@ -99,7 +75,7 @@ describe('editor extend component', () => {
         config={{
           configs: [...defaultConfig, config],
         }}
-        extendTagName="img"
+        extendConfig={config}
         dispatch={test.dispatch}
       />,
     ) as ReactWrapper<IProps, null, Extends>
@@ -119,7 +95,7 @@ describe('editor extend component', () => {
         config={{
           configs: [...defaultConfig, config],
         }}
-        extendTagName="img"
+        extendConfig={config}
       />,
     ) as ReactWrapper<IProps, null, Extends>
     expect(wrapper.find('input').length).toBe(4)

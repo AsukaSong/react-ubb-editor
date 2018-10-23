@@ -5,13 +5,7 @@ import * as React from 'react'
 
 import { IConfigProps, withConfig } from '../context'
 import createAction from '../createAction'
-import {
-  ConfigType,
-  ExtendValueType,
-  IAction,
-  ICustomComponentProps,
-  IUBBExtendConfig,
-} from '../types'
+import { ExtendValueType, IAction, ICustomComponentProps, IUBBExtendConfig } from '../types'
 
 import Button from './styles/Button'
 import Divider from './styles/Divider'
@@ -19,27 +13,14 @@ import ExtendRoot from './styles/ExtendRoot'
 import Input from './styles/Input'
 
 export interface IProps extends IConfigProps, ICustomComponentProps {
-  extendTagName: string
+  extendConfig: IUBBExtendConfig | null
 }
 
 @bindAll()
 export class Extends extends React.PureComponent<IProps> {
-  getCurrConfig(tagName: string): IUBBExtendConfig {
-    const {
-      config: { configs },
-    } = this.props
-    const config = configs.filter(item => item.tagName === tagName).pop()
-    if (config && config.type === ConfigType.Extend) {
-      return config
-    }
-
-    throw new Error(`connot find config for ${tagName}`)
-  }
-
   handleFormSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    const { dispatch, extendTagName } = this.props
-    const config = this.getCurrConfig(extendTagName)
+    const { dispatch, extendConfig: config } = this.props
     const payload: IAction['payload'] = {
       subValues: [],
     }
@@ -62,7 +43,7 @@ export class Extends extends React.PureComponent<IProps> {
       }
     }
 
-    dispatch(createAction(config, payload))
+    dispatch(createAction(config!, payload))
   }
 
   renderFormItem(item: IUBBExtendConfig['inputs'][0], config: IUBBExtendConfig) {
@@ -80,10 +61,9 @@ export class Extends extends React.PureComponent<IProps> {
     )
   }
 
-  renderContent(extendTagName: string): React.ReactNode {
-    if (!extendTagName) return
+  renderContent(config: IUBBExtendConfig): React.ReactNode {
+    if (!config) return null
     const { dispatch, message } = this.props
-    const config = this.getCurrConfig(extendTagName)
     const ExtraComponent = config.ExtraComponent
 
     return (
@@ -103,8 +83,8 @@ export class Extends extends React.PureComponent<IProps> {
   }
 
   render() {
-    const { extendTagName } = this.props
-    return <ExtendRoot isShown={!!extendTagName}>{this.renderContent(extendTagName)}</ExtendRoot>
+    const { extendConfig } = this.props
+    return <ExtendRoot isShown={!!extendConfig}>{this.renderContent(extendConfig!)}</ExtendRoot>
   }
 }
 
