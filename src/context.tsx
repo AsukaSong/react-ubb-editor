@@ -15,13 +15,10 @@ const context = React.createContext({
 
 const { Provider, Consumer } = context
 
-function withConfig<P extends IConfigProps>( // tslint:disable-next-line
-  Component: React.ComponentType<P>
-): React.ComponentType<Omit<P, keyof IConfigProps>> {
-  // tslint:disable-next-line
-  return function(props) {
-    return <Consumer>{config => <Component {...props} config={config} />}</Consumer>
-  }
-}
+const withConfig: <P extends IConfigProps>(
+  Component: React.ComponentType<P>,
+) => React.ComponentType<Omit<P, keyof IConfigProps>> = Component => props => (
+  <Consumer>{config => <Component {...props} config={config} />}</Consumer>
+)
 
 export { Provider, withConfig }

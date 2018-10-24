@@ -36,11 +36,6 @@ export default class Textarea extends React.PureComponent<IProps, IState> {
       valueStack: props.value === '' ? [''] : ['', props.value],
       redoStack: [],
     }
-
-    this.undo = this.undo.bind(this)
-    this.redo = this.redo.bind(this)
-    this.blur = this.blur.bind(this)
-    this.changeValue = this.changeValue.bind(this)
   }
 
   private scrollTop: number = 0

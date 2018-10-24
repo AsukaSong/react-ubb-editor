@@ -69,7 +69,7 @@ export class Core extends React.PureComponent<props, IState> {
   public customTextarea!: Textarea
   private root!: HTMLDivElement
   private timer!: number
-  public message: any
+  private message: any
 
   constructor(props: props) {
     super(props)
@@ -206,7 +206,7 @@ export class Core extends React.PureComponent<props, IState> {
     clearTimeout(this.timer)
   }
 
-  public render() {
+  render() {
     const { customTagName, isPreviewing, extendConfig, value } = this.state
     const { config } = this.props
     const { UbbContainer } = config
