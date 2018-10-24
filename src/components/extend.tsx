@@ -3,7 +3,6 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import bindAll from 'lodash-decorators/bindAll'
 import * as React from 'react'
 
-import { IConfigProps, withConfig } from '../context'
 import createAction from '../createAction'
 import { ExtendValueType, IAction, ICustomComponentProps, IUBBExtendConfig } from '../types'
 
@@ -12,12 +11,12 @@ import Divider from './styles/Divider'
 import ExtendRoot from './styles/ExtendRoot'
 import Input from './styles/Input'
 
-export interface IProps extends IConfigProps, ICustomComponentProps {
+export interface IProps extends ICustomComponentProps {
   extendConfig: IUBBExtendConfig | null
 }
 
 @bindAll()
-export class Extends extends React.PureComponent<IProps> {
+export default class Extends extends React.PureComponent<IProps> {
   handleFormSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     const { dispatch, extendConfig: config } = this.props
@@ -87,5 +86,3 @@ export class Extends extends React.PureComponent<IProps> {
     return <ExtendRoot isShown={!!extendConfig}>{this.renderContent(extendConfig!)}</ExtendRoot>
   }
 }
-
-export default withConfig(Extends)

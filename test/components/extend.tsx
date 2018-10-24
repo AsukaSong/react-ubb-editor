@@ -2,16 +2,12 @@ import { mount, ReactWrapper } from 'enzyme'
 import React from 'react'
 import sinon from 'sinon'
 import { ExtendValueType, ICustomComponentProps, IUBBExtendConfig } from '../../src'
-import { Extends, IProps } from '../../src/components/extend'
+import Extends, { IProps } from '../../src/components/extend'
 import ExtendRoot from '../../src/components/styles/ExtendRoot'
-import { defaultConfig } from '../../src/config'
 import url from '../../src/config/extends/url'
 
 const props: IProps = {
   extendConfig: null,
-  config: {
-    configs: defaultConfig,
-  },
   dispatch: () => null,
   message: () => null,
 }
@@ -72,9 +68,6 @@ describe('editor extend component', () => {
     const wrapper = mount(
       <Extends
         {...props}
-        config={{
-          configs: [...defaultConfig, config],
-        }}
         extendConfig={config}
         dispatch={test.dispatch}
       />,
@@ -92,9 +85,6 @@ describe('editor extend component', () => {
     const wrapper = mount(
       <Extends
         {...props}
-        config={{
-          configs: [...defaultConfig, config],
-        }}
         extendConfig={config}
       />,
     ) as ReactWrapper<IProps, null, Extends>

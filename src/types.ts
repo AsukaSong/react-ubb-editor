@@ -17,6 +17,10 @@ export enum ExtendValueType {
   Content,
 }
 
+export interface IMap<T> {
+  [key: string]: T
+}
+
 /**
  * @export
  * @interface IState

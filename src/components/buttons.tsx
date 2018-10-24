@@ -5,15 +5,11 @@ import * as React from 'react'
 
 import { IConfigProps, withConfig } from '../context'
 import createAction from '../createAction'
-import { ConfigType, ICustomComponentProps, IUBBConfig, IUBBCustomConfig } from '../types'
+import { ConfigType, ICustomComponentProps, IMap, IUBBConfig, IUBBCustomConfig } from '../types'
 
 import Button from './styles/Button'
 import ButtonContainer from './styles/ButtonContainer'
 import ButtonRoot from './styles/ButtonRoot'
-
-interface IMap<T> {
-  [key: string]: T
-}
 
 export interface IProps extends IConfigProps, ICustomComponentProps {
   customTagName: string
