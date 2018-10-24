@@ -48,6 +48,12 @@ describe('editor core component', () => {
       value: 'some value',
     })
     expect(core.focusAndSelectTextarea).toHaveProperty('callCount', 1)
+
+    wrapper.setProps({
+      value: '',
+    })
+    expect(wrapper.state('value')).toBe('')
+    expect(core.focusAndSelectTextarea).toHaveProperty('callCount', 2)
   })
 
   it('invoke change handler', () => {

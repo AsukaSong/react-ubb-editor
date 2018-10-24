@@ -55,7 +55,7 @@ export class Core extends React.PureComponent<props, IState> {
 
   static getDerivedStateFromProps(nextProps: IProps, prevState: IState) {
     const { value } = nextProps
-    if (value && prevState.value !== value) {
+    if (value !== undefined && prevState.value !== value) {
       return {
         value,
         end: value.length,
