@@ -13,10 +13,30 @@ export interface IProps
   ref?: any
 }
 
+interface IState {
+  valueStack: string[]
+  redoStack: string[]
+}
+
 @bindAll()
-export default class Textarea extends React.PureComponent<IProps> {
+export default class Textarea extends React.PureComponent<IProps, IState> {
+  static getDerivedStateFromProps(nextProps: IProps, prevState: IState) {
+    if (nextProps.value !== prevState.valueStack[prevState.valueStack.length - 1]) {
+      prevState.valueStack.push(nextProps.value)
+      prevState.redoStack = []
+      return prevState
+    }
+    return null
+  }
+
   constructor(props: IProps) {
     super(props)
+
+    this.state = {
+      valueStack: props.value === '' ? [''] : ['', props.value],
+      redoStack: [],
+    }
+
     this.undo = this.undo.bind(this)
     this.redo = this.redo.bind(this)
     this.blur = this.blur.bind(this)
@@ -25,23 +45,21 @@ export default class Textarea extends React.PureComponent<IProps> {
 
   private scrollTop: number = 0
   textarea!: HTMLTextAreaElement
-  private valueStack: string[] = ['']
-  private redoStack: string[] = []
 
   undo() {
-    if (this.valueStack.length === 1) {
+    if (this.state.valueStack.length === 1) {
       return
     }
-    let prevValue = this.valueStack.pop()!
-    this.redoStack.push(prevValue)
-    prevValue = this.valueStack[this.valueStack.length - 1]
+    let prevValue = this.state.valueStack.pop()!
+    this.state.redoStack.push(prevValue)
+    prevValue = this.state.valueStack[this.state.valueStack.length - 1]
     this.props.onChange(prevValue)
   }
 
   redo() {
-    const prevValue = this.redoStack.pop()
+    const prevValue = this.state.redoStack.pop()
     if (prevValue) {
-      this.valueStack.push(prevValue)
+      this.state.valueStack.push(prevValue)
       this.props.onChange(prevValue)
     }
   }
@@ -52,22 +70,8 @@ export default class Textarea extends React.PureComponent<IProps> {
 
   private changeValue(value: string) {
     this.props.onChange(value)
-    this.valueStack.push(value)
+    this.state.valueStack.push(value)
     this.textarea.scrollTop = this.scrollTop
-  }
-
-  componentDidMount() {
-    if (this.props.value !== this.valueStack[this.valueStack.length - 1]) {
-      this.valueStack.push(this.props.value)
-      this.redoStack = []
-    }
-  }
-
-  componentWillReceiveProps(newProps: IProps) {
-    if (newProps.value !== this.valueStack[this.valueStack.length - 1]) {
-      this.valueStack.push(newProps.value)
-      this.redoStack = []
-    }
   }
 
   handleFocus(e: React.FocusEvent<HTMLTextAreaElement>) {
@@ -84,7 +88,7 @@ export default class Textarea extends React.PureComponent<IProps> {
         onChange={e => this.changeValue(e.target.value)}
         onScroll={() => (this.scrollTop = this.textarea.scrollTop)}
         onFocus={this.handleFocus}
-        onInput={() => (this.redoStack = [])}
+        onInput={() => this.setState({ redoStack: [] })}
         onKeyDown={e => {
           if (this.props.onKeyDown) this.props.onKeyDown(e)
           if (e.key === 'z' && e.ctrlKey) this.undo()

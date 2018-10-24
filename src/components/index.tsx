@@ -14,7 +14,6 @@ import Textarea, { IProps as TextareaProps } from './textarea'
 import NoticeContainer from './styles/NoticeContainer'
 import Root from './styles/Root'
 
-// @ts-ignore override interface type
 interface ICustomProps {
   wrappedComponentRef?: (it: Core) => void
   onChange?: (value: string) => void
@@ -44,6 +43,7 @@ export interface IState extends State {
   customTagName: string
   message: string
   isPreviewing: boolean
+  fromProps: boolean
 }
 
 @bindAll()
@@ -51,6 +51,19 @@ export class Core extends React.PureComponent<props, IState> {
   static defaultProps = {
     onChange: () => null,
     defaultValue: '',
+  }
+
+  static getDerivedStateFromProps(nextProps: IProps, prevState: IState) {
+    const { value } = nextProps
+    if (value && prevState.value !== value) {
+      return {
+        value,
+        end: value.length,
+        start: value.length,
+        fromProps: true,
+      }
+    }
+    return null
   }
 
   public customTextarea!: Textarea
@@ -69,6 +82,7 @@ export class Core extends React.PureComponent<props, IState> {
       message: '',
       start: 0,
       value: props.value || props.defaultValue!,
+      fromProps: false,
     }
   }
 
@@ -83,18 +97,9 @@ export class Core extends React.PureComponent<props, IState> {
     if (wrappedComponentRef) wrappedComponentRef(this)
   }
 
-  componentWillReceiveProps(newProps: props) {
-    const { value } = newProps
-    if (value && this.state.value !== value) {
-      this.setState(
-        {
-          value,
-          end: value.length,
-          start: value.length,
-        },
-        this.focusAndSelectTextarea,
-      )
-    }
+  componentDidUpdate() {
+    // select after change value from props
+    if (this.state.fromProps) this.focusAndSelectTextarea()
   }
 
   redo() {
