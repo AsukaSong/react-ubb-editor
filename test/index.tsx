@@ -3,7 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import createEditor from '../src'
-import { defaultConfig } from '../src/config'
+import defaultConfig from '../src/config'
 
 const Editor = createEditor()
 

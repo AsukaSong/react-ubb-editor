@@ -2,7 +2,7 @@ import { mount, ReactWrapper } from 'enzyme'
 import React from 'react'
 import sinon from 'sinon'
 import { Buttons, IProps } from '../../src/components/buttons'
-import { defaultConfig } from '../../src/config'
+import defaultConfig from '../../src/config'
 import colorConfig from '../../src/config/customs/color'
 
 const props: IProps = {

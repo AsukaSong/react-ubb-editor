@@ -2,7 +2,7 @@ import orderBy from 'lodash/orderBy'
 import uniqBy from 'lodash/uniqBy'
 import React from 'react'
 import Core, { Core as CoreType, IProps } from './components'
-import { defaultConfig } from './config'
+import defaultConfig from './config'
 import { Provider } from './context'
 import createAction from './createAction'
 // prettier-ignore

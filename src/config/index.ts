@@ -13,18 +13,4 @@ import size from './customs/size'
 import bili from './extends/bili'
 import url from './extends/url'
 
-// prettier-ignore
-export const defaultConfig = [
-  b,
-  i,
-  u,
-  del,
-  left,
-  center,
-  right,
-  replyview,
-  size,
-  color,
-  url,
-  bili,
-]
+export default [b, i, u, del, left, center, right, replyview, size, color, url, bili]

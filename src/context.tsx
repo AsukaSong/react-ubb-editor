@@ -1,6 +1,6 @@
 import { Omit } from 'lodash'
 import * as React from 'react'
-import { defaultConfig } from './config'
+import defaultConfig from './config'
 import { IConfig, IUBBConfig } from './types'
 
 export interface IConfigProps {

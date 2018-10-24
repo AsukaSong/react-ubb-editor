@@ -2,7 +2,7 @@ import { mount, ReactWrapper } from 'enzyme'
 import React from 'react'
 import sinon from 'sinon'
 import { Core, IState, props } from '../../src/components'
-import { defaultConfig } from '../../src/config'
+import defaultConfig from '../../src/config'
 import color from '../../src/config/customs/color'
 import size from '../../src/config/customs/size'
 
