@@ -1,5 +1,5 @@
 import { Omit } from 'lodash'
-import * as React from 'react'
+import React from 'react'
 import config from './config'
 import { ConfigMap, IConfig } from './types'
 

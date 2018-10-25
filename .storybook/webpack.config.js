@@ -1,5 +1,4 @@
-const path = require("path");
-const ROOT_PATH = path.resolve(process.cwd())
+const path = require("path")
 
 module.exports = (baseConfig, env, defaultConfig) => {
 
@@ -10,7 +9,7 @@ module.exports = (baseConfig, env, defaultConfig) => {
       require.resolve("awesome-typescript-loader"),
       require.resolve("react-docgen-typescript-loader")
     ],
-  });
+  })
   defaultConfig.resolve.extensions.push(".ts", ".tsx")
   return defaultConfig
 }

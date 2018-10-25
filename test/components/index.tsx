@@ -20,7 +20,7 @@ describe('editor core component', () => {
   })
 
   it('get innerRef', () => {
-    let ref;
+    let ref
 
     mount(
       <Core config={{ configs: defaultConfig }} wrappedComponentRef={it => ref = it} />,

@@ -1,7 +1,7 @@
 import { faRedo, faUndo, faWindowMaximize } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import bindAll from 'lodash-decorators/bindAll'
-import * as React from 'react'
+import React from 'react'
 
 import { IConfigProps, withConfig } from '../context'
 import createAction from '../createAction'

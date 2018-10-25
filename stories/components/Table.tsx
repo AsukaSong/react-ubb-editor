@@ -27,9 +27,9 @@ export default (config: any[]) => () => {
           <Td>{defaultValue}</Td>
           <Td>{description}</Td>
         </tr>
-      );
+      )
     },
-  );
+  )
 
   return (
     <Table>
