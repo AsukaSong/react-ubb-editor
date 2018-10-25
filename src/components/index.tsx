@@ -159,7 +159,7 @@ export class Core extends React.PureComponent<props, IState> {
     const {
       config: { configs },
     } = this.props
-    return configs.filter(item => item.tagName === tagName).pop()
+    return configs[tagName]
   }
 
   private handleTextareaChange(value: string) {

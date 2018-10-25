@@ -1,16 +1,16 @@
 import { Omit } from 'lodash'
 import * as React from 'react'
-import defaultConfig from './config'
-import { IConfig, IUBBConfig } from './types'
+import config from './config'
+import { ConfigMap, IConfig } from './types'
 
 export interface IConfigProps {
-  config: IConfig & {
-    configs: IUBBConfig[],
+  config: Omit<IConfig, 'configs'> & {
+    configs: ConfigMap,
   }
 }
 
 const context = React.createContext({
-  configs: defaultConfig,
+  configs: config,
 })
 
 const { Provider, Consumer } = context

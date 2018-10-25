@@ -13,4 +13,15 @@ import size from './customs/size'
 import bili from './extends/bili'
 import url from './extends/url'
 
-export default [b, i, u, del, left, center, right, replyview, size, color, url, bili]
+import { ConfigMap } from '../types'
+
+const defaultConfig = [b, i, u, del, left, center, right, replyview, size, color, url, bili]
+
+// convert array to map
+export default defaultConfig.reduce(
+  (map, item) => {
+    map[item.tagName] = item
+    return map
+  },
+  {} as ConfigMap,
+)

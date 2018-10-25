@@ -242,6 +242,7 @@ export interface ICustomComponentProps {
 }
 
 export type IUBBConfig = IUBBButtonConfig | IUBBCustomConfig | IUBBExtendConfig
+export type ConfigMap = IMap<IUBBConfig>
 
 export interface IConfig {
   configs?: IUBBConfig[]

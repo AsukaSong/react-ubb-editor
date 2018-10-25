@@ -28,7 +28,7 @@ describe('editor buttons component', () => {
 
     let buttons = wrapper.find('button[title]')
 
-    expect(buttons).toHaveProperty('length', defaultConfig.length + 2)
+    expect(buttons).toHaveProperty('length', Object.keys(defaultConfig).length + 2)
 
     wrapper.setProps({
       config: {
@@ -39,7 +39,7 @@ describe('editor buttons component', () => {
 
     buttons = wrapper.find('button[title]')
 
-    expect(buttons).toHaveProperty('length', defaultConfig.length + 3)
+    expect(buttons).toHaveProperty('length', Object.keys(defaultConfig).length + 3)
   })
 
   it('render custom div', () => {

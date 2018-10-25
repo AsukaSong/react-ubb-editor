@@ -25,7 +25,7 @@ describe('editor factory', () => {
     const Editor = createEditor({ configs: [] }, true)
     const wrapper = shallow(<Editor />)
 
-    expect(wrapper.prop('value').configs).toEqual([])
+    expect(wrapper.prop('value').configs).toEqual({})
   })
 
   it('contain extra config', () => {
@@ -38,7 +38,7 @@ describe('editor factory', () => {
     ]})
     const wrapper = shallow(<Editor />)
 
-    expect(wrapper.prop('value').configs[0].tagName).toBe('english')
+    expect(wrapper.prop('value').configs).toHaveProperty('english')
   })
 
   it('throw error', () => {

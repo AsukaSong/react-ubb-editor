@@ -1,8 +1,6 @@
-import orderBy from 'lodash/orderBy'
-import uniqBy from 'lodash/uniqBy'
 import React from 'react'
 import Core, { Core as CoreType, IProps } from './components'
-import defaultConfig from './config'
+import configMap from './config'
 import { Provider } from './context'
 import createAction from './createAction'
 // prettier-ignore
@@ -20,20 +18,19 @@ import {
 } from './types'
 
 export default function createEditor(extraConfig: IConfig = {}, ignoreDefaultConfig = false) {
-  let configs!: IUBBConfig[]
+  let configs = { ...configMap }
 
   if (ignoreDefaultConfig) {
     if (!extraConfig.configs) {
       throw new Error('need extra config with ignoreDefaultConfig specified')
     }
-    configs = extraConfig.configs
-  } else if (extraConfig.configs) {
-    configs = uniqBy([...extraConfig.configs, ...defaultConfig], 'tagName')
-  } else {
-    configs = defaultConfig
+    configs = {}
   }
 
-  configs = orderBy(configs, ['index'], ['asc'])
+  if (extraConfig.configs) {
+    extraConfig.configs.forEach(item => (configs[item.tagName] = item))
+  }
+
   const config = Object.assign({}, extraConfig, { configs })
 
   const Editor: React.SFC<IProps> = props => (
