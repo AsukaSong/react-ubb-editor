@@ -67,9 +67,6 @@
   },
   "include": [
     "src/**/*",
-    "test/**/*",
-    "stories/**/*",
-    ".storybook/*"
   ],
   "exclude": [
     "node_modules",
