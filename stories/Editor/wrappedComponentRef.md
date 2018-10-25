@@ -27,10 +27,10 @@ class Container extends React.Component {
 ```
 
 ### Instance Method
-| name                   | type                      |
-| ---------------------- | ------------------------- |
-| undo                   | () => void                |
-| redo                   | () => void                |
-| focusAndSelectTextarea | () => void                |
-| clearExtendAndCustom   | () => void                |
-| notice                 | (message: string) => void |
+| name                   | type                                                  |
+| ---------------------- | ----------------------------------------------------- |
+| undo                   | () => void                                            |
+| redo                   | () => void                                            |
+| focusAndSelectTextarea | (start?: number, end?: number) => void                |
+| clearExtendAndCustom   | () => void                                            |
+| notice                 | (message: string) => void                             |

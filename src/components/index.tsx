@@ -110,9 +110,11 @@ export class Core extends React.PureComponent<props, IState> {
     this.customTextarea.undo()
   }
 
-  focusAndSelectTextarea() {
+  focusAndSelectTextarea(start = this.state.start, end = this.state.end) {
+    const newState = { start, end }
     this.customTextarea.textarea.focus()
-    this.customTextarea.textarea.setSelectionRange(this.state.start, this.state.end)
+    this.customTextarea.textarea.setSelectionRange(start, end)
+    this.setState(newState)
   }
 
   clearExtendAndCustom() {

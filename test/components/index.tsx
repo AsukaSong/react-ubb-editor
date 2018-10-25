@@ -56,6 +56,17 @@ describe('editor core component', () => {
     expect(core.focusAndSelectTextarea).toHaveProperty('callCount', 2)
   })
 
+  it('select range after call', () => {
+    const wrapper = mount(
+      <Core value="" config={{ configs: defaultConfig }} />,
+    ) as ReactWrapper<props, IState, Core>
+    const core = wrapper.instance()
+    core.focusAndSelectTextarea(0, 10)
+
+    expect(wrapper.state('start')).toBe(0)
+    expect(wrapper.state('end')).toBe(10)
+  })
+
   it('invoke change handler', () => {
     const test = {
       handleChange: () => null,
