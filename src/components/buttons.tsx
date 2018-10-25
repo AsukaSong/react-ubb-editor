@@ -73,20 +73,22 @@ export class Buttons extends React.PureComponent<IProps> {
 
     return (
       <ButtonRoot>
-        {Object.keys(buttonConfigs)
-          .map(item => buttonConfigs[item])
-          .map(item => (
-            <ButtonContainer key={item.tagName}>
-              <Button
-                disabled={isPreviewing}
-                title={item.title}
-                onClick={this.generateHandleButtonClick(item)}
-              >
-                {this.renderContent(item)}
-              </Button>
-              {item.type === ConfigType.Custom && this.renderCustom(item)}
-            </ButtonContainer>
-          ))}
+        <ButtonRoot>
+          {Object.keys(buttonConfigs)
+            .map(item => buttonConfigs[item])
+            .map(item => (
+              <ButtonContainer index={item.index} key={item.tagName}>
+                <Button
+                  disabled={isPreviewing}
+                  title={item.title}
+                  onClick={this.generateHandleButtonClick(item)}
+                >
+                  {this.renderContent(item)}
+                </Button>
+                {item.type === ConfigType.Custom && this.renderCustom(item)}
+              </ButtonContainer>
+            ))}
+        </ButtonRoot>
         <div style={{ flexGrow: 1 }} />
         <ButtonContainer>
           <Button title="撤销" onClick={this.props.undo}>
