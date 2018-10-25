@@ -3,7 +3,6 @@ import Core, { Core as CoreType, IProps } from './components'
 import configMap from './config'
 import { Provider } from './context'
 import createAction from './createAction'
-// prettier-ignore
 import {
   ConfigType,
   ExtendValueType,
@@ -31,10 +30,8 @@ export default function createEditor(extraConfig: IConfig = {}, ignoreDefaultCon
     extraConfig.configs.forEach(item => (configs[item.tagName] = item))
   }
 
-  const config = Object.assign({}, extraConfig, { configs })
-
   const Editor: React.SFC<IProps> = props => (
-    <Provider value={config}>
+    <Provider value={{ ...extraConfig, configs }}>
       <Core {...props} />
     </Provider>
   )
