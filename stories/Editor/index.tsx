@@ -64,6 +64,7 @@ class Container2 extends React.Component {
         wrappedComponentRef={it => this.it = it}
         defaultValue="drop file here"
         onDrop={this.handleDrop}
+        disabled={true}
       />
     )
   }

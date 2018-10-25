@@ -10,12 +10,19 @@ import u from './buttons/u'
 import color from './customs/color'
 import size from './customs/size'
 
+import audio from './extends/audio'
 import bili from './extends/bili'
 import url from './extends/url'
+import video from './extends/video'
 
 import { ConfigMap } from '../types'
 
-const defaultConfig = [b, i, u, del, left, center, right, replyview, size, color, url, bili]
+// prettier-ignore
+const defaultConfig = [
+  b, i, u, del, left, center, right, replyview, // buttons
+  size, color, // customs
+  url, bili, video, audio, // extends
+]
 
 // convert array to map
 export default defaultConfig.reduce(

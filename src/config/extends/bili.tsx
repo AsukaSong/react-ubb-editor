@@ -6,7 +6,7 @@ const config: IUBBExtendConfig = {
   tagName: 'bili',
   title: '插入bilibili视频',
   label: <span style={{ fontSize: 16 }}>Bili</span>,
-  index: 120,
+  index: 130,
   inputs: [
     {
       label: '输入bilibili网站视频AV号（数字）',
