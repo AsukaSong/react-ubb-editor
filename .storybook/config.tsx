@@ -4,7 +4,9 @@ import { configure } from '@storybook/react'
 import React from 'react'
 import styled from 'react-emotion'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import { prism } from 'react-syntax-highlighter/styles/prism'
+
+// @ts-ignore
+import prism from 'react-syntax-highlighter/dist/styles/prism/prism'
 
 import 'highlight.js/styles/xcode.css'
 
