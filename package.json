@@ -8,7 +8,7 @@
     "start": "start-storybook -p 9000 -c .storybook",
     "build": "rimraf lib && tsc",
     "test": "jest",
-    "test:ci": "jest && codecov && cat ./coverage/lcov.info | codacy-coverage",
+    "test:ci": "jest && codecov && cat ./coverage/lcov.info | codacy-coverage -t 0cf952cd94bf4f779943d1217aa9caa4",
     "deploy-storybook": "storybook-to-ghpages"
   },
   "keywords": [
