@@ -9,6 +9,7 @@
 <br />
 [![BCH compliance](https://bettercodehub.com/edge/badge/AsukaSong/react-ubb-editor?branch=master)](https://bettercodehub.com/)
 [![CodeFactor](https://www.codefactor.io/repository/github/asukasong/react-ubb-editor/badge)](https://www.codefactor.io/repository/github/asukasong/react-ubb-editor)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=AsukaSong/react-ubb-editor)](https://dependabot.com)
 [![dependencies Status](https://david-dm.org/asukasong/react-ubb-editor/status.svg)](https://david-dm.org/asukasong/react-ubb-editor)
 [![devDependencies Status](https://david-dm.org/asukasong/react-ubb-editor/dev-status.svg)](https://david-dm.org/asukasong/react-ubb-editor?type=dev)
 
