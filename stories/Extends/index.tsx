@@ -53,17 +53,7 @@ const config2 = {
   configs: [
     {
       ExtraComponent,
-      type: 1,
-      tagName: 'img',
-      title: '插入图片',
-      icon: faImage,
-      index: 10,
-      inputs: [
-        {
-          label: '请输入图片URL',
-          type: 2,
-        },
-      ],
+      ...config.configs[0],
     },
   ],
 }
