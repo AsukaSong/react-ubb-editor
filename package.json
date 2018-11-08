@@ -117,5 +117,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "storybook-deployer": {
+    "commitMessage": "Deploy Storybook to GitHub Pages [skip ci]"
   }
 }
