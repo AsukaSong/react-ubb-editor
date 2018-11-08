@@ -1,4 +1,5 @@
 # react-ubb-editor
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0cf952cd94bf4f779943d1217aa9caa4)](https://app.codacy.com/app/yansongdong/react-ubb-editor?utm_source=github.com&utm_medium=referral&utm_content=AsukaSong/react-ubb-editor&utm_campaign=Badge_Grade_Settings)
 [![Build Status](https://travis-ci.org/AsukaSong/react-ubb-editor.svg?branch=master)](https://travis-ci.org/AsukaSong/react-ubb-editor)
 [![CircleCI](https://circleci.com/gh/AsukaSong/react-ubb-editor.svg?style=shield)](https://circleci.com/gh/AsukaSong/react-ubb-editor)
 [![codecov](https://codecov.io/gh/AsukaSong/react-ubb-editor/branch/master/graph/badge.svg)](https://codecov.io/gh/AsukaSong/react-ubb-editor)
