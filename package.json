@@ -58,7 +58,7 @@
     "jest": "^23.6.0",
     "jest-emotion": "^9.2.11",
     "lint-staged": "^8.0.4",
-    "prettier": "^1.15.1",
+    "prettier": "^1.15.2",
     "prop-types": "^15.6.2",
     "react-docgen-typescript-loader": "^3.0.0",
     "react-markdown": "^4.0.3",
