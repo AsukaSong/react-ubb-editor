@@ -11,8 +11,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9e0619a0ba684e42b73be279e22dadd5)](https://www.codacy.com/app/yansongdong/react-ubb-editor?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AsukaSong/react-ubb-editor&amp;utm_campaign=Badge_Grade)
 [![CodeFactor](https://www.codefactor.io/repository/github/asukasong/react-ubb-editor/badge)](https://www.codefactor.io/repository/github/asukasong/react-ubb-editor)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=AsukaSong/react-ubb-editor)](https://dependabot.com)
-[![dependencies Status](https://david-dm.org/asukasong/react-ubb-editor/status.svg)](https://david-dm.org/asukasong/react-ubb-editor)
-[![devDependencies Status](https://david-dm.org/asukasong/react-ubb-editor/dev-status.svg)](https://david-dm.org/asukasong/react-ubb-editor?type=dev)
 
 A ubb editor based on react
 <br />
