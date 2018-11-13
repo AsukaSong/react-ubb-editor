@@ -1005,17 +1005,17 @@
   resolved "http://registry.npm.taobao.org/@storybook/channels/download/@storybook/channels-4.0.4.tgz#fdf717cd726d15508ac80ff93a3893b75d3ab8b8"
   integrity sha1-/fcXzXJtFVCKyA/5OjiTt106uLg=
 
-"@storybook/cli@4.0.4":
-  version "4.0.4"
-  resolved "http://registry.npm.taobao.org/@storybook/cli/download/@storybook/cli-4.0.4.tgz#ec5e74a9f08f1fd3b114f5ac354251f9d92dbaa3"
-  integrity sha1-7F50qfCPH9OxFPWsNUJR+dktuqM=
+"@storybook/cli@4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-4.0.6.tgz#aad6ad494b06e3923f5b54f11a5eeb55edd6f753"
+  integrity sha512-zk6EU+WUyK/qIohKeAl2LpIy3U3pUsY0vZR9iRmGk4aHCNVn1YPJGjDIhG68r8MkORgHbCwkGHRBbg0yq+M6uA==
   dependencies:
     "@babel/core" "^7.1.2"
     "@babel/plugin-transform-runtime" "^7.1.0"
     "@babel/preset-env" "^7.1.0"
     "@babel/register" "^7.0.0"
     "@babel/runtime" "^7.1.2"
-    "@storybook/codemod" "4.0.4"
+    "@storybook/codemod" "4.0.6"
     chalk "^2.4.1"
     child-process-promise "^2.2.1"
     commander "^2.19.0"
@@ -1033,10 +1033,10 @@
   resolved "http://registry.npm.taobao.org/@storybook/client-logger/download/@storybook/client-logger-4.0.4.tgz#b3570c8d39b051261fe1cda992f13208338cff8c"
   integrity sha1-s1cMjTmwUSYf4c2pkvEyCDOM/4w=
 
-"@storybook/codemod@4.0.4":
-  version "4.0.4"
-  resolved "http://registry.npm.taobao.org/@storybook/codemod/download/@storybook/codemod-4.0.4.tgz#f700799cd2d5dc0e1c0486e3bda22b1f1e77cb3a"
-  integrity sha1-9wB5nNLV3A4cBIbjvaIrHx53yzo=
+"@storybook/codemod@4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-4.0.6.tgz#a5b5599ed9a6c659994a5503a1b32922162ed23f"
+  integrity sha512-e0bcaY3TVWlLstfTjuQ0Bc3zgzBrx2FR3LAjGZjIu4FTWMcP+/x1rdXcYCAjz3j9x3lFbm2DZVC6jYJwiWKgtw==
   dependencies:
     "@babel/runtime" "^7.1.2"
     jscodeshift "^0.5.1"
@@ -10017,14 +10017,6 @@ sax@^1.2.4:
   version "1.2.4"
   resolved "http://registry.npm.taobao.org/sax/download/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha1-KBYjTiN4vdxOU1T6tcqold9xANk=
-
-scheduler@^0.11.0:
-  version "0.11.0"
-  resolved "http://registry.npm.taobao.org/scheduler/download/scheduler-0.11.0.tgz#def1f1bfa6550cc57981a87106e65e8aea41a6b5"
-  integrity sha1-3vHxv6ZVDMV5gahxBuZeiupBprU=
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
 
 scheduler@^0.11.2:
   version "0.11.2"
