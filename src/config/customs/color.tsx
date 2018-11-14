@@ -1,5 +1,4 @@
 import { faEyeDropper } from '@fortawesome/free-solid-svg-icons'
-import bind from 'lodash-decorators/bind'
 import React from 'react'
 import { ColorResult, GithubPicker } from 'react-color'
 import createAction from '../../createAction'
@@ -10,8 +9,7 @@ interface IState {
 }
 
 class ColorPicker extends React.PureComponent<ICustomComponentProps, IState> {
-  @bind
-  handleOk(result: ColorResult) {
+  handleOk = (result: ColorResult) => {
     const { dispatch } = this.props
 
     dispatch(
