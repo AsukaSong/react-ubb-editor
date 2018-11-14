@@ -1,13 +1,12 @@
-import bindAll from 'lodash-decorators/bindAll'
 import React from 'react'
 import Text from './styles/Textarea'
 
 // @ts-ignore override interface type
 export interface IProps
   extends React.DetailedHTMLProps<
-      React.TextareaHTMLAttributes<HTMLTextAreaElement>,
-      HTMLTextAreaElement
-    > {
+    React.TextareaHTMLAttributes<HTMLTextAreaElement>,
+    HTMLTextAreaElement
+  > {
   onChange: (value: string) => void
   value: string
   ref?: any
@@ -18,7 +17,6 @@ interface IState {
   redoStack: string[]
 }
 
-@bindAll()
 export default class Textarea extends React.PureComponent<IProps, IState> {
   static getDerivedStateFromProps(nextProps: IProps, prevState: IState) {
     if (nextProps.value !== prevState.valueStack[prevState.valueStack.length - 1]) {
@@ -41,7 +39,7 @@ export default class Textarea extends React.PureComponent<IProps, IState> {
   private scrollTop: number = 0
   textarea!: HTMLTextAreaElement
 
-  undo() {
+  undo = () => {
     if (this.state.valueStack.length === 1) {
       return
     }
@@ -51,7 +49,7 @@ export default class Textarea extends React.PureComponent<IProps, IState> {
     this.props.onChange(prevValue)
   }
 
-  redo() {
+  redo = () => {
     const prevValue = this.state.redoStack.pop()
     if (prevValue) {
       this.state.valueStack.push(prevValue)
@@ -59,17 +57,17 @@ export default class Textarea extends React.PureComponent<IProps, IState> {
     }
   }
 
-  blur() {
+  blur = () => {
     this.textarea.blur()
   }
 
-  private changeValue(value: string) {
+  private changeValue = (value: string) => {
     this.props.onChange(value)
     this.state.valueStack.push(value)
     this.textarea.scrollTop = this.scrollTop
   }
 
-  handleFocus(e: React.FocusEvent<HTMLTextAreaElement>) {
+  handleFocus = (e: React.FocusEvent<HTMLTextAreaElement>) => {
     this.textarea.scrollTop = this.scrollTop
     if (this.props.onFocus) this.props.onFocus(e)
   }

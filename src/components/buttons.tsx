@@ -1,6 +1,5 @@
 import { faRedo, faUndo, faWindowMaximize } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
-import bindAll from 'lodash-decorators/bindAll'
 import React from 'react'
 
 import { IConfigProps, withConfig } from '../context'
@@ -21,11 +20,10 @@ export interface IProps extends IConfigProps, ICustomComponentProps {
   isPreviewing: boolean
 }
 
-@bindAll()
 export class Buttons extends React.PureComponent<IProps> {
   handlerMap: IMap<() => void | undefined> = {}
 
-  renderContent(config: IUBBConfig): JSX.Element {
+  renderContent = (config: IUBBConfig): JSX.Element => {
     return (
       <span>
         {config.label}
@@ -34,7 +32,7 @@ export class Buttons extends React.PureComponent<IProps> {
     )
   }
 
-  generateHandleButtonClick(config: IUBBConfig) {
+  generateHandleButtonClick = (config: IUBBConfig) => {
     let handler = this.handlerMap[config.tagName]
     if (handler) return handler
     switch (config.type) {
@@ -52,7 +50,7 @@ export class Buttons extends React.PureComponent<IProps> {
     return handler
   }
 
-  renderCustom(config: IUBBCustomConfig) {
+  renderCustom = (config: IUBBCustomConfig) => {
     const { customTagName, dispatch, message } = this.props
     const Component = config.Component
     return (

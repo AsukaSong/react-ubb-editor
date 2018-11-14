@@ -1,7 +1,6 @@
-import { Omit } from 'lodash'
 import React from 'react'
 import config from './config'
-import { ConfigMap, IConfig } from './types'
+import { ConfigMap, IConfig, Omit } from './types'
 
 export interface IConfigProps {
   config: Omit<IConfig, 'configs'> & {

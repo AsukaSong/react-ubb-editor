@@ -1,4 +1,3 @@
-import bindAll from 'lodash-decorators/bindAll'
 // @ts-ignore there's no types for rc-notification
 import Notification from 'rc-notification'
 import React from 'react'
@@ -46,7 +45,6 @@ export interface IState extends State {
   fromProps: boolean
 }
 
-@bindAll()
 export class Core extends React.PureComponent<props, IState> {
   static defaultProps = {
     onChange: () => null,
@@ -102,35 +100,35 @@ export class Core extends React.PureComponent<props, IState> {
     if (this.state.fromProps) this.focusAndSelectTextarea()
   }
 
-  redo() {
+  redo = () => {
     this.customTextarea.redo()
   }
 
-  undo() {
+  undo = () => {
     this.customTextarea.undo()
   }
 
-  focusAndSelectTextarea(start = this.state.start, end = this.state.end) {
+  focusAndSelectTextarea = (start = this.state.start, end = this.state.end) => {
     const newState = { start, end }
     this.customTextarea.textarea.focus()
     this.customTextarea.textarea.setSelectionRange(start, end)
     this.setState(newState)
   }
 
-  clearExtendAndCustom() {
+  clearExtendAndCustom = () => {
     this.setState({
       customTagName: '',
       extendConfig: null,
     })
   }
 
-  changePreviewing() {
+  changePreviewing = () => {
     this.setState(prevState => ({
       isPreviewing: !prevState.isPreviewing,
     }))
   }
 
-  notice(message: string) {
+  notice = (message: string) => {
     this.message.notice({
       content: message,
       style: {
@@ -139,7 +137,7 @@ export class Core extends React.PureComponent<props, IState> {
     })
   }
 
-  private reduce(action: IAction): void {
+  private reduce = (action: IAction): void => {
     const handler = this.getHandlerByTagName(action.tagName)
     this.setState(
       prevState => handler(prevState, action),
@@ -151,27 +149,27 @@ export class Core extends React.PureComponent<props, IState> {
     this.clearExtendAndCustom()
   }
 
-  private getHandlerByTagName(tagName: string) {
+  private getHandlerByTagName = (tagName: string) => {
     const config = this.getConfigByTagName(tagName)
     if (config && config.handler) return config.handler
     return defaultHandler
   }
 
-  private getConfigByTagName(tagName: string) {
+  private getConfigByTagName = (tagName: string) => {
     const {
       config: { configs },
     } = this.props
     return configs[tagName]
   }
 
-  private handleTextareaChange(value: string) {
+  private handleTextareaChange = (value: string) => {
     this.setState({
       value,
     })
     this.props.onChange!(value)
   }
 
-  private handleExtendButtonClick(extendTagName: string) {
+  private handleExtendButtonClick = (extendTagName: string) => {
     this.setState(prevState => ({
       extendConfig:
         prevState.extendConfig && prevState.extendConfig.tagName === extendTagName
@@ -181,30 +179,30 @@ export class Core extends React.PureComponent<props, IState> {
     }))
   }
 
-  private handleCustomButtonClick(customTagName: string) {
+  private handleCustomButtonClick = (customTagName: string) => {
     this.setState(prevState => ({
       customTagName: prevState.customTagName === customTagName ? '' : customTagName,
       extendConfig: null,
     }))
   }
 
-  private handleTextareaBlur(e: React.FocusEvent<HTMLTextAreaElement>) {
+  private handleTextareaBlur = (e: React.FocusEvent<HTMLTextAreaElement>) => {
     const { selectionStart: start, selectionEnd: end } = e.target
     this.setState({ start, end })
   }
 
-  private handleFocus(e: React.FocusEvent<HTMLTextAreaElement>) {
+  private handleFocus = (e: React.FocusEvent<HTMLTextAreaElement>) => {
     this.clearExtendAndCustom()
     if (this.props.onFocus) this.props.onFocus(e, this.reduce, this.notice)
   }
 
-  handleRootBlur() {
+  handleRootBlur = () => {
     this.timer = setTimeout(() => {
       this.clearExtendAndCustom()
     })
   }
 
-  handleRootFocus() {
+  handleRootFocus = () => {
     clearTimeout(this.timer)
   }
 

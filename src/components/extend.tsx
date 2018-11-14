@@ -1,6 +1,5 @@
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
-import bindAll from 'lodash-decorators/bindAll'
 import React from 'react'
 
 import createAction from '../createAction'
@@ -15,9 +14,8 @@ export interface IProps extends ICustomComponentProps {
   extendConfig: IUBBExtendConfig | null
 }
 
-@bindAll()
 export default class Extends extends React.PureComponent<IProps> {
-  handleFormSubmit(e: React.FormEvent<HTMLFormElement>) {
+  handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const { dispatch, extendConfig: config } = this.props
     const payload: IAction['payload'] = {
@@ -45,7 +43,7 @@ export default class Extends extends React.PureComponent<IProps> {
     dispatch(createAction(config!, payload))
   }
 
-  renderFormItem(item: IUBBExtendConfig['inputs'][0], config: IUBBExtendConfig) {
+  renderFormItem = (item: IUBBExtendConfig['inputs'][0], config: IUBBExtendConfig) => {
     const key = `${config.tagName}${item.key}${item.type}`
     return (
       <React.Fragment key={key}>
@@ -60,7 +58,7 @@ export default class Extends extends React.PureComponent<IProps> {
     )
   }
 
-  renderContent(config: IUBBExtendConfig): React.ReactNode {
+  renderContent = (config: IUBBExtendConfig): React.ReactNode => {
     if (!config) return null
     const { dispatch, message } = this.props
     const ExtraComponent = config.ExtraComponent

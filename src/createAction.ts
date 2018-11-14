@@ -1,5 +1,4 @@
-import { Omit } from 'lodash'
-import { IAction, IUBBConfig } from './types'
+import { IAction, IUBBConfig, Omit } from './types'
 
 // prettier-ignore
 const createAction: (
