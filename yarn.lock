@@ -1352,10 +1352,10 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/sinon@^5.0.5":
-  version "5.0.5"
-  resolved "http://registry.npm.taobao.org/@types/sinon/download/@types/sinon-5.0.5.tgz#de600fa07eb1ec9d5f55669d5bac46a75fc88115"
-  integrity sha1-3mAPoH6x7J1fVWadW6xGp1/IgRU=
+"@types/sinon@^5.0.6":
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-5.0.6.tgz#2d362a14209fb6a85dd5d54a595a13c3e355f4d7"
+  integrity sha512-qipHQv36qZsFGVXs/RMYuTUXvniBKXVCBBxiIP7WTzEBKjVYELeCXt6W4H8sNnUdd+IULItwQ/C6NmIqJrW4Kw==
 
 "@types/storybook__addon-info@^3.4.2":
   version "3.4.2"
