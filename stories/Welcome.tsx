@@ -2,9 +2,8 @@ import { storiesOf } from '@storybook/react'
 import React from 'react'
 // @ts-ignore
 import ReactMarkdown from 'react-markdown/with-html'
-import SyntaxHighlighter from 'react-syntax-highlighter'
 // @ts-ignore
-import prism from 'react-syntax-highlighter/ems/styles/prism/prism'
+import { Prism } from 'react-syntax-highlighter'
 
 import Head from './components/Head'
 import Layout from './components/Layout'
@@ -24,7 +23,7 @@ storiesOf('Welcome', module)
             return <H>{children}</H>
           },
           code: ({ language, value }: { language: string, value: string }) => {
-            return <SyntaxHighlighter style={prism} language={language}>{value}</SyntaxHighlighter>
+            return <Prism language={language}>{value}</Prism>
           },
         }}
       />

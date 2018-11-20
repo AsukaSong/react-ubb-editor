@@ -3,10 +3,8 @@ import { setOptions } from '@storybook/addon-options'
 import { configure } from '@storybook/react'
 import React from 'react'
 import styled from 'react-emotion'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-
 // @ts-ignore
-import prism from 'react-syntax-highlighter/ems/styles/prism/prism'
+import { Prism } from 'react-syntax-highlighter'
 
 import 'highlight.js/styles/xcode.css'
 
@@ -52,7 +50,7 @@ setDefaults({
   },
   components: {
     code: ({ language, code }: { language: string, code: string }) => {
-      return <SyntaxHighlighter style={prism} language={language}>{code}</SyntaxHighlighter>
+      return <Prism language={language}>{code}</Prism>
     },
     table: ({ children }: { children: React.ReactChildren }) => <Table>{children}</Table>,
     h3: ({ children }: { children: React.ReactChildren }) => <h3>{children}</h3>,
