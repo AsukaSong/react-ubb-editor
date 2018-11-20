@@ -6,7 +6,7 @@ import styled from 'react-emotion'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 
 // @ts-ignore
-import prism from 'react-syntax-highlighter/dist/styles/prism/prism'
+import prism from 'react-syntax-highlighter/ems/styles/prism/prism'
 
 import 'highlight.js/styles/xcode.css'
 

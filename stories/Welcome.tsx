@@ -4,7 +4,7 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown/with-html'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 // @ts-ignore
-import prism from 'react-syntax-highlighter/dist/styles/prism/prism'
+import prism from 'react-syntax-highlighter/ems/styles/prism/prism'
 
 import Head from './components/Head'
 import Layout from './components/Layout'
