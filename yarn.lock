@@ -9366,10 +9366,10 @@ react-style-proptype@^3.0.0:
   dependencies:
     prop-types "^15.5.4"
 
-react-syntax-highlighter@^10.1.0:
-  version "10.1.0"
-  resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-10.1.0.tgz#9ad243bd2115cf44155c57d9342248d945ac0aac"
-  integrity sha512-CA53Xz3ZbtrVaMzRqz/fNy363WC/ija8jCcJY2DwgGqM/6mYnIxauGFOAanMoS8/7WYHAygBfwd9B36IDsQCWg==
+react-syntax-highlighter@^10.1.1:
+  version "10.1.1"
+  resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-10.1.1.tgz#1bf7ad4f2f16d2978b04594407b670671b4d3316"
+  integrity sha512-2EzDjKuU51BuL9CZ5qfGJ9+6m9BKGm+IJODyeR7ANC3g3wQY1LPxEzo6vDPsdV1EzDbYUAAai3AYtSBaKVusuw==
   dependencies:
     babel-runtime "^6.18.0"
     highlight.js "~9.12.0"
