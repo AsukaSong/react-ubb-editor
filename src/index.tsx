@@ -16,7 +16,7 @@ import {
   IUBBExtendConfig,
 } from './types'
 
-export default function createEditor(extraConfig: IConfig = {}, ignoreDefaultConfig = false) {
+function createEditor(extraConfig: IConfig = {}, ignoreDefaultConfig = false) {
   let configs = { ...configMap }
 
   if (ignoreDefaultConfig) {
@@ -39,6 +39,8 @@ export default function createEditor(extraConfig: IConfig = {}, ignoreDefaultCon
   return Editor
 }
 
+const Editor = createEditor()
+
 export {
   IUBBConfig,
   IUBBButtonConfig,
@@ -52,4 +54,6 @@ export {
   IAction,
   IState,
   CoreType,
+  createEditor,
+  Editor as default,
 }

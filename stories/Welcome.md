@@ -29,8 +29,7 @@ npm install --save @cc98/react-ubb-editor
 ## Usage
 
 ~~~jsx
-import createEditor from '@cc98/react-ubb-editor'
-const Editor = createEditor()
+import Editor from '@cc98/react-ubb-editor'
 ReactDOM.render(<Editor />, document.getElementById('app'))
 ~~~
 
