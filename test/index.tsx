@@ -2,8 +2,10 @@ import { shallow } from 'enzyme'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Editor, { createEditor } from '../src'
+import createEditor from '../src'
 import defaultConfig from '../src/config'
+
+const Editor = createEditor()
 
 describe('editor factory', () => {
   it('render without crash', done => {
