@@ -969,15 +969,15 @@
     react-inspector "^2.3.0"
     uuid "^3.3.2"
 
-"@storybook/addon-info@4.0.8":
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-4.0.8.tgz#463105d7bb47c2074505330fe72c07537ab20d2a"
-  integrity sha512-8JBaxXougDLk916syq+03xoii8S6nsaKkDQ8Tw++L9nPhpKatHXuSJod1FzEE4rznbuQv5GmVv4PABUzEa+4pQ==
+"@storybook/addon-info@4.0.9":
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-4.0.9.tgz#4ca3cd32e30e7959bef2bc07dc00a5a9041395d3"
+  integrity sha512-fhenKMloeKbMVg1J6/FOU7fOrxwLUjnuTfO/6dI9pZkmjV8CD2w2x4ZxMQM3ilA3xharuZwYgF5lGfx2O5ZC7Q==
   dependencies:
     "@emotion/styled" "^0.10.6"
-    "@storybook/addons" "4.0.8"
+    "@storybook/addons" "4.0.9"
     "@storybook/client-logger" "4.0.8"
-    "@storybook/components" "4.0.8"
+    "@storybook/components" "4.0.9"
     core-js "2.5.7"
     global "^4.3.2"
     marksy "^6.1.0"
@@ -1002,6 +1002,16 @@
   dependencies:
     "@storybook/channels" "4.0.8"
     "@storybook/components" "4.0.8"
+    global "^4.3.2"
+    util-deprecate "^1.0.2"
+
+"@storybook/addons@4.0.9":
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.0.9.tgz#cfa18fe10ddda454dbbc3aae17562e46d04d3955"
+  integrity sha512-D+RsN1fNywgk46UxG6Lue+p9Egf7/DpgEJtQb6RS+UoyOF24p3FlwWMh36kpRfSSgGqFZ+a0jIKhXuRSr31UNQ==
+  dependencies:
+    "@storybook/channels" "4.0.8"
+    "@storybook/components" "4.0.9"
     global "^4.3.2"
     util-deprecate "^1.0.2"
 
@@ -1059,6 +1069,22 @@
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-4.0.8.tgz#0c0701e64b52538acb0d39412db476549a3d7579"
   integrity sha512-6r6/B2i2sQrDPvOgzo5YgCtSCj3q4E54e6V5fkbrYhSvH7Ro8fwca6Pee0uHbKECT+N8+HzWveV0WKg20TZvIg==
+  dependencies:
+    "@emotion/core" "^0.13.1"
+    "@emotion/provider" "^0.11.2"
+    "@emotion/styled" "^0.10.6"
+    global "^4.3.2"
+    lodash "^4.17.11"
+    prop-types "^15.6.2"
+    react-inspector "^2.3.0"
+    react-split-pane "^0.1.84"
+    react-textarea-autosize "^7.0.4"
+    render-fragment "^0.1.1"
+
+"@storybook/components@4.0.9":
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-4.0.9.tgz#c5cc9f52768fd7a6078d9601cecacd0e357dc130"
+  integrity sha512-EoPJitDUBkNdg4UiWyrmU6IkpLmJTjJO6KD382isHXA7qCxBJQTPb2m3GXy35KKF510NtJ9H0l4k5x7yg5Wzng==
   dependencies:
     "@emotion/core" "^0.13.1"
     "@emotion/provider" "^0.11.2"
