@@ -82,7 +82,7 @@
     "react": "^16.6.3",
     "react-color": "^2.14.1",
     "react-dom": "^16.6.3",
-    "react-emotion": "^9.2.12",
+    "react-emotion": "^10.0.0",
     "tslib": "^1.9.3"
   },
   "jest": {
