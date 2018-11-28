@@ -1405,15 +1405,10 @@
     "@types/cheerio" "*"
     "@types/react" "*"
 
-"@types/jest@^23.0.2":
-  version "23.3.7"
-  resolved "http://registry.npm.taobao.org/@types/jest/download/@types/jest-23.3.7.tgz#77f9a4332ccf8db680a31818ade3ee454c831a79"
-  integrity sha1-d/mkMyzPjbaAoxgYrePuRUyDGnk=
-
-"@types/jest@^23.3.9":
-  version "23.3.9"
-  resolved "http://registry.npm.taobao.org/@types/jest/download/@types/jest-23.3.9.tgz#c16b55186ee73ae65e001fbee69d392c51337ad1"
-  integrity sha1-wWtVGG7nOuZeAB++5p05LFEzetE=
+"@types/jest@^23.0.2", "@types/jest@^23.3.10":
+  version "23.3.10"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.10.tgz#4897974cc317bf99d4fe6af1efa15957fa9c94de"
+  integrity sha512-DC8xTuW/6TYgvEg3HEXS7cu9OijFqprVDXXiOcdOKZCU/5PJNLZU37VVvmZHdtMiGOa8wAA/We+JzbdxFzQTRQ==
 
 "@types/lodash@^4.14.118":
   version "4.14.118"
