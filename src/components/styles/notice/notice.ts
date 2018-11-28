@@ -1,4 +1,4 @@
-import { css } from 'emotion'
+import { css } from '@emotion/core'
 import center from '../utils/center'
 
 const notice = css`

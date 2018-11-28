@@ -1,5 +1,5 @@
+import createCache from '@emotion/cache'
 import { CacheProvider } from '@emotion/core'
-import { cache } from 'emotion'
 import React from 'react'
 
 import Core, { Core as CoreType, IProps } from './components'
@@ -19,6 +19,8 @@ import {
   IUBBExtendConfig,
 } from './types'
 
+const cache = createCache()
+
 export default function createEditor(extraConfig: IConfig = {}, ignoreDefaultConfig = false) {
   let configs = { ...configMap }
 
@@ -33,7 +35,7 @@ export default function createEditor(extraConfig: IConfig = {}, ignoreDefaultCon
     extraConfig.configs.forEach(item => (configs[item.tagName] = item))
   }
 
-  const Editor: React.SFC<IProps> = props => (
+  const Editor: React.FunctionComponent<IProps> = props => (
     <Provider value={{ ...extraConfig, configs }}>
       <CacheProvider value={cache}>
         <Core {...props} />

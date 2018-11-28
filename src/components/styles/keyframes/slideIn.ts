@@ -1,4 +1,4 @@
-import { keyframes } from 'emotion'
+import { keyframes } from '@emotion/core'
 
 const slideIn = keyframes`
   from {

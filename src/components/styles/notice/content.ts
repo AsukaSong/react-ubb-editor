@@ -1,4 +1,4 @@
-import { css } from 'emotion'
+import { css } from '@emotion/core'
 import slideIn from '../keyframes/slideIn'
 import center from '../utils/center'
 
