@@ -75,7 +75,7 @@ export default class Textarea extends React.PureComponent<IProps, IState> {
   render() {
     return (
       <Text
-        innerRef={(it: any) => (this.textarea = it)}
+        ref={(it: any) => (this.textarea = it)}
         {...this.props}
         defaultValue={undefined}
         onChange={e => this.changeValue(e.target.value)}

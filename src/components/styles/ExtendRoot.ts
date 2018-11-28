@@ -1,4 +1,4 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 const ExtendRoot = styled('div')<{ isShown: boolean }>`
   height: ${props => (props.isShown ? '2em' : '0em')};

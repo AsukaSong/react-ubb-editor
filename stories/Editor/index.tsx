@@ -2,12 +2,12 @@ import { withInfo } from '@storybook/addon-info'
 import { storiesOf } from '@storybook/react'
 import React, { Fragment } from 'react'
 
-import creatEditor, { CoreType, IAction } from '../../src'
+import createEditor, { CoreType, IAction } from '../../src'
 import LayoutDecorator from '../components/Layout'
 import Table from '../components/Table'
 import types from '../types/basicuse'
 
-const UbbEditor = creatEditor()
+const UbbEditor = createEditor()
 
 class Container extends React.Component {
   static displayName = 'Container'

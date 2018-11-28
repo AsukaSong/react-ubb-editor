@@ -2,7 +2,7 @@
 import { faLaugh } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 
-import creatEditor, { IAction, IState } from '../../src/index'
+import createEditor, { IAction, IState } from '../../src/index'
 
 const Emoji = ({ dispatch }: { dispatch: (action: IAction) => void }) => {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -50,6 +50,6 @@ const config = {
   ],
 }
 
-const Editor = creatEditor(config, true)
+const Editor = createEditor(config, true)
 Editor.displayName = 'Editor'
 export default Editor

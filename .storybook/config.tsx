@@ -1,8 +1,8 @@
+import styled from '@emotion/styled'
 import { setDefaults } from '@storybook/addon-info'
 import { setOptions } from '@storybook/addon-options'
 import { configure } from '@storybook/react'
 import React from 'react'
-import styled from 'react-emotion'
 // @ts-ignore
 import { Prism } from 'react-syntax-highlighter'
 

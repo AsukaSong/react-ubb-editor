@@ -3,7 +3,7 @@ import { faUpload } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 
-import creatEditor from '../../src/index'
+import createEditor from '../../src/index'
 
 const Upload = () => (
   <div style={{ display: 'none' }}>
@@ -24,6 +24,6 @@ const config = {
   ],
 }
 
-const Editor = creatEditor(config, true)
+const Editor = createEditor(config, true)
 Editor.displayName = 'Editor'
 export default Editor

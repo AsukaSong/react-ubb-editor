@@ -249,7 +249,7 @@ export class Core extends React.PureComponent<props, IState> {
           />
         )}
         {isPreviewing && UbbContainer && <UbbContainer value={this.props.value || value} />}
-        <NoticeContainer innerRef={(it: any) => (this.root = it)} />
+        <NoticeContainer ref={(it: any) => (this.root = it)} />
       </Root>
     )
   }

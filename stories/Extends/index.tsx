@@ -5,7 +5,7 @@ import { withInfo } from '@storybook/addon-info'
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 
-import creatEditor from '../../src/index'
+import createEditor from '../../src/index'
 import LayoutDecorator from '../components/Layout'
 
 const styles = {
@@ -58,8 +58,8 @@ const config2 = {
   ],
 }
 
-const UbbEditor = creatEditor(config, true)
-const UbbEditor2 = creatEditor(config2, true)
+const UbbEditor = createEditor(config, true)
+const UbbEditor2 = createEditor(config2, true)
 UbbEditor.displayName = 'Editor'
 UbbEditor2.displayName = 'Editor'
 

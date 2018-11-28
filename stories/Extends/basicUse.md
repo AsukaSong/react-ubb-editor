@@ -18,7 +18,7 @@ const config = {
   ],
 }
 
-const UbbEditor = creatEditor(config, true)
+const UbbEditor = createEditor(config, true)
 ~~~
 ### Extend Config Type
 | name          | type                     | isRequired | default        | description                                                |

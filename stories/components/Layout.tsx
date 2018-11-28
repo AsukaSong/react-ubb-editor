@@ -1,5 +1,5 @@
+import styled from '@emotion/styled'
 import React from 'react'
-import styled from 'react-emotion'
 
 export const Layout = styled('div')`
   border: 1px solid rgb(238, 238, 238);

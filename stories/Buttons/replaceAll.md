@@ -12,7 +12,7 @@ const config = {
   ],
 }
 
-const UbbEditor = creatEditor(config, true)
+const UbbEditor = createEditor(config, true)
 ~~~
 ### Button Config Type
 | name          | type                     | isRequired | default        | description                                                |

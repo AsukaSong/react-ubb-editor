@@ -1,4 +1,4 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import center from './utils/center'
 import clear from './utils/clear'
 

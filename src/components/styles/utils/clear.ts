@@ -1,4 +1,4 @@
-import { css } from 'react-emotion'
+import { css } from 'emotion'
 
 const clear = css`
   appearance: none;

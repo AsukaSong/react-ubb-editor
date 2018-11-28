@@ -19,7 +19,7 @@ const config = {
   ],
 }
 
-const Editor = creatEditor(config, true)
+const Editor = createEditor(config, true)
 ```
 ### Custom Config Type
 | name          | type                     | isRequired | default        | description                                                |

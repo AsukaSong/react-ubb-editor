@@ -3,7 +3,7 @@ import { withInfo } from '@storybook/addon-info'
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 
-import creatEditor from '../../src/index'
+import createEditor from '../../src/index'
 import LayoutDecorator from '../components/Layout'
 
 const config = {
@@ -18,7 +18,7 @@ const config = {
   ],
 }
 
-const UbbEditor = creatEditor(config, true)
+const UbbEditor = createEditor(config, true)
 UbbEditor.displayName = 'Editor'
 
 const config2 = {
@@ -33,7 +33,7 @@ const config2 = {
   ],
 }
 
-const UbbEditor2 = creatEditor(config2)
+const UbbEditor2 = createEditor(config2)
 UbbEditor2.displayName = 'Editor'
 
 storiesOf('Buttons', module)

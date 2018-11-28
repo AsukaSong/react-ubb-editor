@@ -1,4 +1,4 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 const Divider = styled('span')<{ margin: string }>`
   display: inline-flex;

@@ -28,7 +28,7 @@ const config = {
   ],
 }
 
-const UbbEditor = creatEditor(config, true)
+const UbbEditor = createEditor(config, true)
 ~~~
 ### ExtraComponent Props
 | name     | type                      | description     |

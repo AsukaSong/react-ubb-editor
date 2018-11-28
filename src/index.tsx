@@ -1,4 +1,7 @@
+import { CacheProvider } from '@emotion/core'
+import { cache } from 'emotion'
 import React from 'react'
+
 import Core, { Core as CoreType, IProps } from './components'
 import configMap from './config'
 import { Provider } from './context'
@@ -32,7 +35,9 @@ export default function createEditor(extraConfig: IConfig = {}, ignoreDefaultCon
 
   const Editor: React.SFC<IProps> = props => (
     <Provider value={{ ...extraConfig, configs }}>
-      <Core {...props} />
+      <CacheProvider value={cache}>
+        <Core {...props} />
+      </CacheProvider>
     </Provider>
   )
 

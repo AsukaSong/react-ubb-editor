@@ -1,7 +1,7 @@
 ### Source
 
 ```jsx
-const Editor = creatEditor()
+const Editor = createEditor()
 ```
 
 ### Params

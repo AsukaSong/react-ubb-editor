@@ -1,6 +1,6 @@
 ### Source
 ```tsx
-const UbbEditor = creatEditor()
+const UbbEditor = createEditor()
 
 class Container extends React.Component {
   it!: CoreType

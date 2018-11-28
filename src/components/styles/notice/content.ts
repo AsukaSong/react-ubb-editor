@@ -1,4 +1,4 @@
-import { css } from 'react-emotion'
+import { css } from 'emotion'
 import slideIn from '../keyframes/slideIn'
 import center from '../utils/center'
 
