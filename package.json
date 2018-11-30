@@ -61,7 +61,7 @@
     "prettier": "^1.15.3",
     "prop-types": "^15.6.2",
     "react-docgen-typescript-loader": "^3.0.0",
-    "react-markdown": "^4.0.3",
+    "react-markdown": "^4.0.4",
     "react-syntax-highlighter": "^10.1.1",
     "react-test-renderer": "^16.6.3",
     "rimraf": "^2.6.2",
