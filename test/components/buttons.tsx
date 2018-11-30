@@ -33,7 +33,7 @@ describe('editor buttons component', () => {
     wrapper.setProps({
       config: {
         configs: defaultConfig,
-        UbbContainer: ({ value }) => <span>{value}</span>,
+        UbbContainer: ({ value }: { value: string }) => <span>{value}</span>,
       },
     })
 

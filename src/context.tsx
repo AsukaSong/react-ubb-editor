@@ -17,6 +17,8 @@ const { Provider, Consumer } = context
 const withConfig: <P extends IConfigProps>(
   Component: React.ComponentType<P>,
 ) => React.ComponentType<Omit<P, keyof IConfigProps>> = Component => props => (
+  // @ts-ignore
+  // FIXME: move to hooks
   <Consumer>{config => <Component {...props} config={config} />}</Consumer>
 )
 

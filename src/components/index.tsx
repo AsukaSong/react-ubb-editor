@@ -97,7 +97,12 @@ export class Core extends React.PureComponent<props, IState> {
 
   componentDidUpdate() {
     // select after change value from props
-    if (this.state.fromProps) this.focusAndSelectTextarea()
+    if (this.state.fromProps) {
+      this.focusAndSelectTextarea()
+      this.setState({
+        fromProps: false,
+      })
+    }
   }
 
   redo = () => {

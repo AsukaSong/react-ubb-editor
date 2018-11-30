@@ -21,7 +21,10 @@ import {
 
 const cache = createCache()
 
-export default function createEditor(extraConfig: IConfig = {}, ignoreDefaultConfig = false) {
+export default function createEditor(
+  extraConfig: Partial<IConfig> = {},
+  ignoreDefaultConfig = false,
+) {
   let configs = { ...configMap }
 
   if (ignoreDefaultConfig) {
