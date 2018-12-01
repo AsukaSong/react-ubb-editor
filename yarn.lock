@@ -753,10 +753,10 @@
     "@emotion/sheet" "^0.8.1"
     "@emotion/utils" "^0.8.2"
 
-"@emotion/core@^10.0.0":
-  version "10.0.0"
-  resolved "http://registry.npm.taobao.org/@emotion/core/download/@emotion/core-10.0.0.tgz#4ec44fdafce2d111f286862388cbd4c3c7502d40"
-  integrity sha1-TsRP2vzi0RHyhoYjiMvUw8dQLUA=
+"@emotion/core@^10.0.1":
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.0.1.tgz#5cbd7507e87473c390478120cf16e0e328e4259f"
+  integrity sha512-Fbk+pqwdPCdm7oY6UuaJ9JNT+ig5bRLjlEwH20Uq5brrWvRc+NqI8PhcfK4jZul24etj45pFRSIoteaUD2H2jw==
   dependencies:
     "@emotion/cache" "10.0.0"
     "@emotion/css" "10.0.0"
