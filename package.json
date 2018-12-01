@@ -27,7 +27,7 @@
   "author": "AsukaSong",
   "license": "WTFPL",
   "devDependencies": {
-    "@storybook/addon-actions": "4.0.9",
+    "@storybook/addon-actions": "4.0.10",
     "@storybook/addon-info": "4.0.9",
     "@storybook/addon-options": "4.0.8",
     "@storybook/cli": "4.0.9",
