@@ -854,10 +854,10 @@
   resolved "http://registry.npm.taobao.org/@emotion/sheet/download/@emotion/sheet-0.8.1.tgz#6eed686c927a1c39f5045ec45ecfa36de896819d"
   integrity sha1-bu1obJJ6HDn1BF7EXs+jbeiWgZ0=
 
-"@emotion/styled-base@10.0.0":
-  version "10.0.0"
-  resolved "http://registry.npm.taobao.org/@emotion/styled-base/download/@emotion/styled-base-10.0.0.tgz#df8bf95d0cdd669dab73ba2bde4eb3223bedf85a"
-  integrity sha1-34v5XQzdZp2rc7or3k6zIjvt+Fo=
+"@emotion/styled-base@10.0.1":
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/@emotion/styled-base/-/styled-base-10.0.1.tgz#751b5db7401b159e13f2b69165ff010ea43505cf"
+  integrity sha512-vCWNZ2LGL9aV2QFFOojypGyUFWKwmCYsLJ843QYImsQEMdfDgiTqKdnxDty4di1BftQY+vLiD2woR/mzB8lfZw==
   dependencies:
     "@emotion/is-prop-valid" "0.7.2"
     "@emotion/serialize" "0.11.0"
@@ -880,12 +880,12 @@
   dependencies:
     "@emotion/styled-base" "^0.10.6"
 
-"@emotion/styled@^10.0.0":
-  version "10.0.0"
-  resolved "http://registry.npm.taobao.org/@emotion/styled/download/@emotion/styled-10.0.0.tgz#44b3511b2474e6626a9dde1a266cc5d2eac591a5"
-  integrity sha1-RLNRGyR05mJqnd4aJmzF0urFkaU=
+"@emotion/styled@^10.0.1":
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-10.0.1.tgz#be7c57e69aa87f9e1158dbeb1894ee871de074c4"
+  integrity sha512-j1s4oUxAb8RRr8e3u+ygiZ/54Fb5d8vZl6WhoYRRw7SNxOhSUXs4HsEKSMOpP6MYizPYNIFiVm41RFT9QmXw4Q==
   dependencies:
-    "@emotion/styled-base" "10.0.0"
+    "@emotion/styled-base" "10.0.1"
     babel-plugin-emotion "10.0.0"
 
 "@emotion/stylis@0.8.3":
