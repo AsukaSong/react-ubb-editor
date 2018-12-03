@@ -1480,12 +1480,14 @@
   dependencies:
     "@types/react" "*"
 
-"@types/storybook__addon-options@^3.2.2":
-  version "3.2.2"
-  resolved "http://registry.npm.taobao.org/@types/storybook__addon-options/download/@types/storybook__addon-options-3.2.2.tgz#f42f81414fa9692cf20d947e9b49c60c4bdfbc4d"
-  integrity sha1-9C+BQU+paSzyDZR+m0nGDEvfvE0=
+"@types/storybook__addon-options@^3.2.3":
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/@types/storybook__addon-options/-/storybook__addon-options-3.2.3.tgz#a33649175959b3703d8a9996d8120190d3674ab0"
+  integrity sha512-HcQfDBWL5Lb7NX1UNfWE3gk+0n2n8bsvYd17q9LUjaQB+MuHWeKmHI60zGFL/3Jw1wo9qOTeupVLRGh0x+d6fw==
+  dependencies:
+    "@types/storybook__react" "*"
 
-"@types/storybook__react@^4.0.0":
+"@types/storybook__react@*", "@types/storybook__react@^4.0.0":
   version "4.0.0"
   resolved "http://registry.npm.taobao.org/@types/storybook__react/download/@types/storybook__react-4.0.0.tgz#52cc452fbab599568d595075a90142ef4a1233f6"
   integrity sha1-UsxFL7q1mVaNWVB1qQFC70oSM/Y=
