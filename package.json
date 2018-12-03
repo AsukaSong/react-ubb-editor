@@ -76,7 +76,7 @@
   "dependencies": {
     "@emotion/cache": "^10.0.0",
     "@emotion/core": "^10.0.1",
-    "@emotion/styled": "^10.0.1",
+    "@emotion/styled": "^10.0.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.8",
     "@fortawesome/free-solid-svg-icons": "^5.5.0",
     "@fortawesome/react-fontawesome": "^0.1.3",
