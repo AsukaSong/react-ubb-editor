@@ -32,7 +32,7 @@
     "@storybook/addon-options": "4.0.10",
     "@storybook/cli": "4.0.10",
     "@storybook/react": "4.0.10",
-    "@storybook/storybook-deployer": "^2.4.0",
+    "@storybook/storybook-deployer": "^2.5.0",
     "@types/enzyme": "^3.1.15",
     "@types/enzyme-adapter-react-16": "^1.0.3",
     "@types/jest": "^23.3.10",
