@@ -1347,10 +1347,10 @@
     semver "^5.6.0"
     webpack "^4.23.1"
 
-"@storybook/storybook-deployer@^2.5.0":
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/@storybook/storybook-deployer/-/storybook-deployer-2.5.0.tgz#a9a6eebf31d36437b238dc471aa994568393ef36"
-  integrity sha512-NfgEpmvjsJS6OkdAttEoiIQW/fDNoffqimaQpLeWy6czXhNefkUYrXrJZjBYyrKJRBQWr5aIKYcdHopXRQvW0A==
+"@storybook/storybook-deployer@^2.5.1":
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/@storybook/storybook-deployer/-/storybook-deployer-2.5.1.tgz#4aceb968778c023d9bca700f1e141c3e0a6b1d61"
+  integrity sha512-LuTsuyxpA43F4vWG59sYm5toNBm61t5gg59QX+BJb0mAm1jVyS4mFnZ8/NAz3+TKep5343d3FZuxoh+RnMKh2A==
   dependencies:
     git-url-parse "^8.1.0"
     glob "^7.1.3"
