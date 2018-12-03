@@ -1076,10 +1076,10 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-options@4.0.10":
-  version "4.0.10"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-4.0.10.tgz#766cbda158e9c0639053018e95fa05374fd45e82"
-  integrity sha512-3dx7ts89HtuBJwD9f5Y64SPmL0ejKGXxUI6o26qfSoXAA7qOY3oIjJAdobAKyjxwkZ/9OczYAB7wrzFZRRoAvQ==
+"@storybook/addon-options@4.0.11":
+  version "4.0.11"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-4.0.11.tgz#22eba81942747a8e1dc7132eaffd1dad9f0a822a"
+  integrity sha512-W856fnhHENkzPMvB3XMEBrhF8Gn2JWAYiLnr22Sq5J/i2aDS5+APvDUrHSDOUgCqZJF07oaFpxqTQLbJfuB/Pg==
   dependencies:
     "@storybook/addons" "4.0.8"
     util-deprecate "^1.0.2"
