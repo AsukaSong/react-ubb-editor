@@ -1480,10 +1480,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/storybook__addon-options@^3.2.3":
-  version "3.2.3"
-  resolved "https://registry.yarnpkg.com/@types/storybook__addon-options/-/storybook__addon-options-3.2.3.tgz#a33649175959b3703d8a9996d8120190d3674ab0"
-  integrity sha512-HcQfDBWL5Lb7NX1UNfWE3gk+0n2n8bsvYd17q9LUjaQB+MuHWeKmHI60zGFL/3Jw1wo9qOTeupVLRGh0x+d6fw==
+"@types/storybook__addon-options@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@types/storybook__addon-options/-/storybook__addon-options-4.0.0.tgz#80beff796c892f9bccbd221cbfc792dbe2d9764f"
+  integrity sha512-toMfmqTdbh65jafemsy2+dVWjt3wjgHxbJF6V0jhfsyeZckc/1VYtjMqQZdR4vlFT+nBcOKQYt7+kw2nqYF91Q==
   dependencies:
     "@types/storybook__react" "*"
 
