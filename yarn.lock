@@ -1138,17 +1138,17 @@
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.0.8.tgz#36d96ad714c685f144fd1f1e5394faf0e0291032"
   integrity sha512-nGMVPN4eOJlAXxS2u3a5aj7YJ4ChhlLx0+4HC6xaU5Uv+PaL6ba0gh84Zd9K73JnTSPPMq/4Mg3oncZumyeN9Q==
 
-"@storybook/cli@4.0.11":
-  version "4.0.11"
-  resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-4.0.11.tgz#e18702d3585b2788645d43ace5d7f4dd87f9f2c5"
-  integrity sha512-dk08GXvlp/HILGRJHQ+pdyF/reFjmu3SUKrGzFdPbBU6vqYm7DO+HnwpCaoJFHeS5BnPt2yN17SP/a+gFyUOAw==
+"@storybook/cli@4.0.12":
+  version "4.0.12"
+  resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-4.0.12.tgz#004bf1791015297e9a3aaf922d23b90b665c44eb"
+  integrity sha512-4/OiJPef5UHW+q1gf12OCtvYmeILjjrHHh+ylBLJ/DdGwBZjflyWQks1NQ6Mu73ant+kUEFm/uk4iAKCMtr9Pg==
   dependencies:
     "@babel/core" "^7.1.2"
     "@babel/plugin-transform-runtime" "^7.1.0"
     "@babel/preset-env" "^7.1.0"
     "@babel/register" "^7.0.0"
     "@babel/runtime" "^7.1.2"
-    "@storybook/codemod" "4.0.11"
+    "@storybook/codemod" "4.0.12"
     chalk "^2.4.1"
     child-process-promise "^2.2.1"
     commander "^2.19.0"
@@ -1166,10 +1166,10 @@
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-4.0.12.tgz#ec7dec5cd33226707df83c30dadab1b693c79312"
   integrity sha512-6VfDSJ3shrQ+iI5TGtF4ZzkRjrDE/BJpxhhU4r7b2UVgqeaLqWhW3AyV6e6CDfvjSt42+DVw94p4QNLBWuH8tg==
 
-"@storybook/codemod@4.0.11":
-  version "4.0.11"
-  resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-4.0.11.tgz#5419f04472de8d2d46e425feb593b3e254c0b6a6"
-  integrity sha512-dUKqpxvgab6d+MjOGS+sCMer0ZApMrx3jfu041ukZzCeh5mfp7TCYwEHvPC3T3VyLkdHFKpM3G5Ry2d8+x3jzg==
+"@storybook/codemod@4.0.12":
+  version "4.0.12"
+  resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-4.0.12.tgz#77ea0d764eeea987713b52637782b57d75740c70"
+  integrity sha512-MB1es7K03xbQUskw7MK7EKSrmPNYiHLM+0Rnt9g2EjvCU9gMQzALXAbZg9slMHupkCFeFSjdo/8NAhCThyWOkA==
   dependencies:
     "@babel/runtime" "^7.1.2"
     jscodeshift "^0.5.1"
