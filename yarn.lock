@@ -1020,7 +1020,7 @@
   dependencies:
     type-detect "4.0.8"
 
-"@sinonjs/commons@^1.2.0":
+"@sinonjs/commons@^1.0.2", "@sinonjs/commons@^1.2.0":
   version "1.3.0"
   resolved "http://registry.npm.taobao.org/@sinonjs/commons/download/@sinonjs/commons-1.3.0.tgz#50a2754016b6f30a994ceda6d9a0a8c36adda849"
   integrity sha1-UKJ1QBa28wqZTO2m2aCow2rdqEk=
@@ -1034,7 +1034,7 @@
   dependencies:
     "@sinonjs/samsam" "^2 || ^3"
 
-"@sinonjs/samsam@^2 || ^3", "@sinonjs/samsam@^3.0.1":
+"@sinonjs/samsam@^2 || ^3":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@sinonjs/samsam/-/samsam-3.0.1.tgz#1302682a71ad74308ba614582ad1768618347e1d"
   integrity sha512-pSgyLnrBNtKHosNULXd+wEk6edqlBs2qfGHagS14t+zOhDkE5Yto5HbsZwQRmRoCBNg13osPHb/4uwvLOJBkug==
@@ -1042,6 +1042,15 @@
     "@sinonjs/commons" "1.0.2"
     array-from "^2.1.1"
     lodash.get "4.4.2"
+
+"@sinonjs/samsam@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@sinonjs/samsam/-/samsam-3.0.2.tgz#304fb33bd5585a0b2df8a4c801fcb47fa84d8e43"
+  integrity sha512-m08g4CS3J6lwRQk1pj1EO+KEVWbrbXsmi9Pw0ySmrIbcVxVaedoFgLvFsV8wHLwh01EpROVz3KvVcD1Jmks9FQ==
+  dependencies:
+    "@sinonjs/commons" "^1.0.2"
+    array-from "^2.1.1"
+    lodash.get "^4.4.2"
 
 "@storybook/addon-actions@4.0.12":
   version "4.0.12"
@@ -7494,7 +7503,7 @@ lodash.flattendeep@^4.4.0:
   resolved "http://registry.npm.taobao.org/lodash.flattendeep/download/lodash.flattendeep-4.4.0.tgz#fb030917f86a3134e5bc9bec0d69e0013ddfedb2"
   integrity sha1-+wMJF/hqMTTlvJvsDWngAT3f7bI=
 
-lodash.get@4.4.2:
+lodash.get@4.4.2, lodash.get@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
   integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
@@ -10380,14 +10389,14 @@ simple-git@^1.85.0:
   dependencies:
     debug "^4.0.1"
 
-sinon@^7.2.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-7.2.0.tgz#929472d3a85cb7e9ad7eec42b41e17bfa40fb165"
-  integrity sha512-N+ebPVqU55E6IUUGPSia57D5nTlCjfxrVR/33KTMRjsJJP5ZoGW1TXyLa2kDREgMtzqdnnksv7gA9oGC2v2LGw==
+sinon@^7.2.1:
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-7.2.1.tgz#f5e279faeb0e949326d7fee79a540d176eda3d27"
+  integrity sha512-nqtSI7iJDKqj1QoWLW70WwRmp6IYseuOOpEHVFFrE+DQYEaqJHjs+HiB7u1MyagL7S1++PjgNmWSSN4BA9r+WA==
   dependencies:
     "@sinonjs/commons" "^1.2.0"
     "@sinonjs/formatio" "^3.1.0"
-    "@sinonjs/samsam" "^3.0.1"
+    "@sinonjs/samsam" "^3.0.2"
     diff "^3.5.0"
     lolex "^3.0.0"
     nise "^1.4.7"
