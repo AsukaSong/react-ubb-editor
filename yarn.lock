@@ -10389,10 +10389,10 @@ simple-git@^1.85.0:
   dependencies:
     debug "^4.0.1"
 
-sinon@^7.2.1:
-  version "7.2.1"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-7.2.1.tgz#f5e279faeb0e949326d7fee79a540d176eda3d27"
-  integrity sha512-nqtSI7iJDKqj1QoWLW70WwRmp6IYseuOOpEHVFFrE+DQYEaqJHjs+HiB7u1MyagL7S1++PjgNmWSSN4BA9r+WA==
+sinon@^7.2.2:
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-7.2.2.tgz#388ecabd42fa93c592bfc71d35a70894d5a0ca07"
+  integrity sha512-WLagdMHiEsrRmee3jr6IIDntOF4kbI6N2pfbi8wkv50qaUQcBglkzkjtoOEbeJ2vf1EsrHhLI+5Ny8//WHdMoA==
   dependencies:
     "@sinonjs/commons" "^1.2.0"
     "@sinonjs/formatio" "^3.1.0"
