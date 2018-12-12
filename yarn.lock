@@ -1580,16 +1580,16 @@
     react-inspector "^2.3.0"
     uuid "^3.3.2"
 
-"@storybook/addon-info@4.0.12":
-  version "4.0.12"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-4.0.12.tgz#7d11dd941fa47ba9a0147732ac4dd93d373db2c2"
-  integrity sha512-hrF0tzHa5axoJGmuale+CZtBnYrrPAXonByXZ1SY6y2/iRSWug5Af3JaKDorcPZaP1JJ0PK+dJCOKD74mjGXWQ==
+"@storybook/addon-info@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-4.1.0.tgz#38b42621746c792b20b70287c2706f21e14f170d"
+  integrity sha512-ZPs4ebD8pQyAns5XFvKQ/aHiTYapuDSUKFEshqSA+jqnqWg8nBB12xHNNU0jzzcmQ9Hmc46p8rQ87znfP0ED1A==
   dependencies:
     "@emotion/styled" "^0.10.6"
-    "@storybook/addons" "4.0.12"
-    "@storybook/client-logger" "4.0.12"
-    "@storybook/components" "4.0.12"
-    core-js "2.5.7"
+    "@storybook/addons" "4.1.0"
+    "@storybook/client-logger" "4.1.0"
+    "@storybook/components" "4.1.0"
+    core-js "^2.5.7"
     global "^4.3.2"
     marksy "^6.1.0"
     nested-object-assign "^1.0.1"
@@ -1605,16 +1605,6 @@
   dependencies:
     "@storybook/addons" "4.1.0"
     core-js "^2.5.7"
-    util-deprecate "^1.0.2"
-
-"@storybook/addons@4.0.12":
-  version "4.0.12"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.0.12.tgz#3e1658875dd042095f4e4e987d385ee8558d8db6"
-  integrity sha512-ID+gaFFg2deybuklXrl7ZjNQ+SRaP5DJP/eri9K0cAIyTitzYg/OR5wxSeqdp5MseP1b3rdAoIW+Hkwf2F0ApA==
-  dependencies:
-    "@storybook/channels" "4.0.12"
-    "@storybook/components" "4.0.12"
-    global "^4.3.2"
     util-deprecate "^1.0.2"
 
 "@storybook/addons@4.1.0":
@@ -1635,11 +1625,6 @@
     "@storybook/channels" "4.1.0"
     global "^4.3.2"
     json-stringify-safe "^5.0.1"
-
-"@storybook/channels@4.0.12":
-  version "4.0.12"
-  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.0.12.tgz#7698b5365a85b8a57ff018da637c8bc8bb6cc737"
-  integrity sha512-HmdjiTeY9GO3ZTeveaAisbpXE7fMb/T7nRpR8vIJxS/9g87z/RInH88aUnCerfwrz56y+GkqrX5bpO/cAhYNvg==
 
 "@storybook/channels@4.1.0":
   version "4.1.0"
@@ -1669,11 +1654,6 @@
     shelljs "^0.8.2"
     update-notifier "^2.5.0"
 
-"@storybook/client-logger@4.0.12":
-  version "4.0.12"
-  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-4.0.12.tgz#ec7dec5cd33226707df83c30dadab1b693c79312"
-  integrity sha512-6VfDSJ3shrQ+iI5TGtF4ZzkRjrDE/BJpxhhU4r7b2UVgqeaLqWhW3AyV6e6CDfvjSt42+DVw94p4QNLBWuH8tg==
-
 "@storybook/client-logger@4.1.0":
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-4.1.0.tgz#a326560fa46aa127b89aba421f3214704db1dfb7"
@@ -1686,22 +1666,6 @@
   dependencies:
     "@babel/runtime" "^7.1.2"
     jscodeshift "^0.5.1"
-
-"@storybook/components@4.0.12":
-  version "4.0.12"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-4.0.12.tgz#7174b531efcbea721ac1d90efdfa2a8c79c37e47"
-  integrity sha512-3vTX1ew18lgciV2N4LMyUa+msdSDMTc86pIUxT0wNr6sOxT4J5wJtCUkmUXYskA3tgxtokgt0LkrDfRsQ8I7OA==
-  dependencies:
-    "@emotion/core" "^0.13.1"
-    "@emotion/provider" "^0.11.2"
-    "@emotion/styled" "^0.10.6"
-    global "^4.3.2"
-    lodash "^4.17.11"
-    prop-types "^15.6.2"
-    react-inspector "^2.3.0"
-    react-split-pane "^0.1.84"
-    react-textarea-autosize "^7.0.4"
-    render-fragment "^0.1.1"
 
 "@storybook/components@4.1.0":
   version "4.1.0"
@@ -4686,15 +4650,15 @@ copy-descriptor@^0.1.0:
   resolved "http://registry.npm.taobao.org/copy-descriptor/download/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
-core-js@2.5.7, core-js@^2.4.0, core-js@^2.5.0, core-js@^2.5.7:
-  version "2.5.7"
-  resolved "http://registry.npm.taobao.org/core-js/download/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
-  integrity sha1-+XJgj/DOrWi4QaFqky0LGDeRgU4=
-
 core-js@^1.0.0:
   version "1.2.7"
   resolved "http://registry.npm.taobao.org/core-js/download/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
   integrity sha1-ZSKUwUZR2yj6k70tX/KYOk8IxjY=
+
+core-js@^2.4.0, core-js@^2.5.0, core-js@^2.5.7:
+  version "2.5.7"
+  resolved "http://registry.npm.taobao.org/core-js/download/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
+  integrity sha1-+XJgj/DOrWi4QaFqky0LGDeRgU4=
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
