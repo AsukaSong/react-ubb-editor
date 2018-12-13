@@ -2026,10 +2026,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-syntax-highlighter@^0.0.8":
-  version "0.0.8"
-  resolved "http://registry.npm.taobao.org/@types/react-syntax-highlighter/download/@types/react-syntax-highlighter-0.0.8.tgz#ed44e2ead992c513327bcf2ede5eda7daa981421"
-  integrity sha1-7UTi6tmSxRMye88u3l7afaqYFCE=
+"@types/react-syntax-highlighter@^10.1.0":
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/@types/react-syntax-highlighter/-/react-syntax-highlighter-10.1.0.tgz#9c534e29bbe05dba9beae1234f3ae944836685d4"
+  integrity sha512-dF49hC4FZp1dIKyzacOrHvqMUe8U2IXyQCQXOcT1e6n64gLBp+xM6qGtPsThIT9XjiIHSg2W5Jc2V5IqekBfnA==
   dependencies:
     "@types/react" "*"
 
