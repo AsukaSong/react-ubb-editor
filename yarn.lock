@@ -1526,17 +1526,17 @@
     array-from "^2.1.1"
     lodash.get "^4.4.2"
 
-"@storybook/addon-actions@4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-4.1.0.tgz#84660147001e7634155045917dbab5a7ebdfbd53"
-  integrity sha512-WH0K9Ky9BO/yGMxi2kdp3wEl7ZTgJuyfuDbr+mFwL0Va3Q9qPDhVI62XMqdz7gtpwdJiYY/IQmXkT2P9lvqX7Q==
+"@storybook/addon-actions@4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-4.1.1.tgz#c8f939ddf75d61a25c907544b35f8793769f5084"
+  integrity sha512-lSPvoZbjg7o3l9UFCIPNkyGOXa8lgdq/bXcue02yTsYHp/luRLBNfQ4mn1J6hoIePcaYMLhReNbaApFhb5DHJQ==
   dependencies:
     "@emotion/core" "^0.13.1"
     "@emotion/provider" "^0.11.2"
     "@emotion/styled" "^0.10.6"
-    "@storybook/addons" "4.1.0"
-    "@storybook/components" "4.1.0"
-    "@storybook/core-events" "4.1.0"
+    "@storybook/addons" "4.1.1"
+    "@storybook/components" "4.1.1"
+    "@storybook/core-events" "4.1.1"
     core-js "^2.5.7"
     deep-equal "^1.0.1"
     global "^4.3.2"
@@ -1688,6 +1688,11 @@
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.1.0.tgz#adb8883bbadecbb923fd28c726f52b32d4e8707b"
   integrity sha512-/y7vDsg5lys3VNEVjQdQkZ5aR3B3VulGnSH6PuHoaYyUGjJBiKJzJww5thgm9EydnTOq4qOq599bCgjnvhJagA==
+
+"@storybook/core-events@4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.1.1.tgz#29e95368f298d12bcd685c9825de8509de5d62d4"
+  integrity sha512-XEEjzXjteTtRy6A/jzZkQmldFFmYsoFM2lz0KTTXdFtUvW4rcjqhR9GuicALqRh0c25T9QtGKf0BLCsK4WAtSw==
 
 "@storybook/core@4.1.0":
   version "4.1.0"
