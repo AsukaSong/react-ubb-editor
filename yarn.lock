@@ -1546,15 +1546,15 @@
     react-inspector "^2.3.0"
     uuid "^3.3.2"
 
-"@storybook/addon-info@4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-4.1.0.tgz#38b42621746c792b20b70287c2706f21e14f170d"
-  integrity sha512-ZPs4ebD8pQyAns5XFvKQ/aHiTYapuDSUKFEshqSA+jqnqWg8nBB12xHNNU0jzzcmQ9Hmc46p8rQ87znfP0ED1A==
+"@storybook/addon-info@4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-4.1.1.tgz#c79bffa5ecfbb91987f483fe3c4f5f706cc777d6"
+  integrity sha512-2r8V6P7WiY0WLdb4VTuNuf0Oe9OHTmpdjs98B5444TxeCB+Vu4i0D+0lkpIZY3QFVbJsrZ+PL259p15gCB0KBg==
   dependencies:
     "@emotion/styled" "^0.10.6"
-    "@storybook/addons" "4.1.0"
-    "@storybook/client-logger" "4.1.0"
-    "@storybook/components" "4.1.0"
+    "@storybook/addons" "4.1.1"
+    "@storybook/client-logger" "4.1.1"
+    "@storybook/components" "4.1.1"
     core-js "^2.5.7"
     global "^4.3.2"
     marksy "^6.1.0"
@@ -1637,6 +1637,11 @@
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-4.1.0.tgz#a326560fa46aa127b89aba421f3214704db1dfb7"
   integrity sha512-LG7DS+E9HfF/6q+xiHWbsZIpYsPcsg2K7HKM7q8LlfWxTo1qTnH3srZEv94WKmSjSsh3fRjUqjJD5axSXG99EA==
+
+"@storybook/client-logger@4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-4.1.1.tgz#afb2f7d080576be24f14e3880a60b4d86646c363"
+  integrity sha512-NrxQGqrNL2vQjDhkvcMIhDte/FNkAziBdeY1tt5WB9fOZMHxruPamp/lag3XW7G1AiHLk3R4M07kLqBExXZZGQ==
 
 "@storybook/codemod@4.1.0":
   version "4.1.0"
