@@ -1227,13 +1227,13 @@
     "@emotion/sheet" "^0.8.1"
     "@emotion/utils" "^0.8.2"
 
-"@emotion/core@^10.0.5":
-  version "10.0.5"
-  resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.0.5.tgz#fda655bb040deb69090faf2fa9d66d39b2bbe4bf"
-  integrity sha512-kCw+JNXy5DmtS4qbCklz8hEobdJ0m9q0tAVzpAjHDAsbRwfSL/Kj3ObMG0DiLhbUPXOGAHSWCVXa4DmXvgup+Q==
+"@emotion/core@^10.0.6":
+  version "10.0.6"
+  resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.0.6.tgz#c10d7884a525728f05589b31da1c804a5d7449fa"
+  integrity sha512-S5KkrodTKby1S6pKZnH8LzjzlebHvjactujfVzzu/mYYdVdKYegJuJdrAz3m9zhIeizzeQGD8xWF490ioGpUtw==
   dependencies:
     "@emotion/cache" "10.0.0"
-    "@emotion/css" "^10.0.5"
+    "@emotion/css" "^10.0.6"
     "@emotion/serialize" "^0.11.3"
     "@emotion/sheet" "0.9.2"
     "@emotion/utils" "0.11.1"
@@ -1246,14 +1246,14 @@
     "@emotion/serialize" "^0.9.1"
     "@emotion/utils" "^0.8.2"
 
-"@emotion/css@^10.0.5":
-  version "10.0.5"
-  resolved "https://registry.yarnpkg.com/@emotion/css/-/css-10.0.5.tgz#3bc6593fb98ba096a1ccd843d9f32744929b6cfd"
-  integrity sha512-FKFdXjvQw+xpDxE7SW6lA0LzP5lmUqXlzejOGEDlJtQO3FsaqE+sU3q2efV/IPxSku8TyPJ0l7C3TUaOv/WO4g==
+"@emotion/css@^10.0.6":
+  version "10.0.6"
+  resolved "https://registry.yarnpkg.com/@emotion/css/-/css-10.0.6.tgz#50b325e6ee18f0ca791036149a985e3b40a9354b"
+  integrity sha512-/suYOvP0zeKC3UNoIeN/3zvr/ghUKgfWx0Pht5ZY9qgHis68fB+V45OjonzMbdOw4mGX0vjZzJhINk9JbRWVrg==
   dependencies:
     "@emotion/serialize" "^0.11.3"
     "@emotion/utils" "0.11.1"
-    babel-plugin-emotion "^10.0.5"
+    babel-plugin-emotion "^10.0.6"
 
 "@emotion/hash@0.7.1":
   version "0.7.1"
@@ -2953,7 +2953,7 @@ babel-plugin-dynamic-import-node@2.2.0:
   dependencies:
     object.assign "^4.1.0"
 
-babel-plugin-emotion@^10.0.5, babel-plugin-emotion@^10.0.6:
+babel-plugin-emotion@^10.0.6:
   version "10.0.6"
   resolved "https://registry.yarnpkg.com/babel-plugin-emotion/-/babel-plugin-emotion-10.0.6.tgz#fd9bb4a5dc6cf2289b656215dbbc80469fd251b3"
   integrity sha512-JD2st8enZJn8h7W1s8kcb40r3RBCJwV9E8ZAhyyhELUMP8OYwyI9K1rz7MxRi0CoorX15kVo2NXZ+OJ6CeMY8A==
