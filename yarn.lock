@@ -12066,10 +12066,10 @@ tslint-react@^3.6.0:
   dependencies:
     tsutils "^2.13.1"
 
-tslint@^5.12.0:
-  version "5.12.0"
-  resolved "https://registry.yarnpkg.com/tslint/-/tslint-5.12.0.tgz#47f2dba291ed3d580752d109866fb640768fca36"
-  integrity sha512-CKEcH1MHUBhoV43SA/Jmy1l24HJJgI0eyLbBNSRyFlsQvb9v6Zdq+Nz2vEOH00nC5SUx4SneJ59PZUS/ARcokQ==
+tslint@^5.12.1:
+  version "5.12.1"
+  resolved "https://registry.yarnpkg.com/tslint/-/tslint-5.12.1.tgz#8cec9d454cf8a1de9b0a26d7bdbad6de362e52c1"
+  integrity sha512-sfodBHOucFg6egff8d1BvuofoOQ/nOeYNfbp7LDlKBcLNrL3lmS5zoiDGyOMdT7YsEXAwWpTdAHwOGOc8eRZAw==
   dependencies:
     babel-code-frame "^6.22.0"
     builtin-modules "^1.1.1"
@@ -12098,14 +12098,7 @@ tsutils@^2.13.1, tsutils@^2.27.2, tsutils@^2.29.0:
   dependencies:
     tslib "^1.8.1"
 
-tsutils@^3.0.0:
-  version "3.2.0"
-  resolved "http://registry.npm.taobao.org/tsutils/download/tsutils-3.2.0.tgz#bb2a7e2f34331f1dbd9fbe04ac0886524ae11e36"
-  integrity sha1-uyp+LzQzHx29n74ErAiGUkrhHjY=
-  dependencies:
-    tslib "^1.8.1"
-
-tsutils@^3.1.0:
+tsutils@^3.0.0, tsutils@^3.1.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-3.5.0.tgz#42602f7df241e753a2105cc3627a664abf11f745"
   integrity sha512-/FZ+pEJQixWruFejFxNPRSwg+iF6aw7PYZVRqUscJ7EnzV3zieI8byfZziUR7QjCuJFulq8SEe9JcGflO4ze4Q==
