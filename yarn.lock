@@ -1552,12 +1552,12 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-options@4.1.9":
-  version "4.1.9"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-4.1.9.tgz#be370da4788025a1b85fa01769e998d7a0cc2f94"
-  integrity sha512-Ci2fDXqGybmKudecxThfsqKFeZ6PFGMBFJRtA3+uXlZ+FdXlR7DEFY8UHy9ZOEbFoHCIhm2ENx648zVcF3bofQ==
+"@storybook/addon-options@4.1.11":
+  version "4.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-4.1.11.tgz#88da466fa1a220126094de5198c6d2d69ea4e0e0"
+  integrity sha512-JqtqnkVFk60LIANDZidv7NinTBxHZYloYNJmBzCM7iwqXQxpgYJ4t1bKkv4u7I4Bkm9w3+VIXV5QnfgDC7Y8uA==
   dependencies:
-    "@storybook/addons" "4.1.9"
+    "@storybook/addons" "4.1.11"
     core-js "^2.5.7"
     util-deprecate "^1.0.2"
 
@@ -1568,6 +1568,16 @@
   dependencies:
     "@storybook/channels" "4.1.10"
     "@storybook/components" "4.1.10"
+    global "^4.3.2"
+    util-deprecate "^1.0.2"
+
+"@storybook/addons@4.1.11":
+  version "4.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.1.11.tgz#a0d537bd10d123ecee6cb1f5f149b148ce250e57"
+  integrity sha512-n9oDs7GgJbiN5NYPkR3B3e5W0Tr6bIZvFfcJzgyP4dn50AUvS1IE1CEthezfn1L/nc2suw/8Oe30bOXOyTl/SQ==
+  dependencies:
+    "@storybook/channels" "4.1.11"
+    "@storybook/components" "4.1.11"
     global "^4.3.2"
     util-deprecate "^1.0.2"
 
@@ -1604,6 +1614,11 @@
   version "4.1.10"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.1.10.tgz#1c131e687a01ae3022d1e9a6811d648c933772f2"
   integrity sha512-r6VR0BDz4TiQFqTrfL8E9eQ8FvnAnerPTQFIACrJeJMjOACBPoVU4tZWQiSawDNvrgceU5pw3FpRR0V1GxFHDA==
+
+"@storybook/channels@4.1.11":
+  version "4.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.1.11.tgz#d161497fa3cd848cc9d518aa1c37052857e22e3c"
+  integrity sha512-zYusY8cno4keMozn2lDpBgyNSOueFh+hrPETioSB5Z8Kd3F5OjM7681vJC8QA67yOBEie2hHk0CVxRpuxziMwA==
 
 "@storybook/channels@4.1.8":
   version "4.1.8"
@@ -1659,6 +1674,22 @@
   version "4.1.10"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-4.1.10.tgz#00845638fb24acf485de8e3e7efb1877f5d34d91"
   integrity sha512-3ku9RAr/RIpwTYBglCmjsNVfh/bT6mZcZrAOiE7b5fEthCSnscOm3bPkwZhFV63gf9Lu+Z6J+jcR+4NowBtZGw==
+  dependencies:
+    "@emotion/core" "^0.13.1"
+    "@emotion/provider" "^0.11.2"
+    "@emotion/styled" "^0.10.6"
+    global "^4.3.2"
+    lodash "^4.17.11"
+    prop-types "^15.6.2"
+    react-inspector "^2.3.0"
+    react-split-pane "^0.1.84"
+    react-textarea-autosize "^7.0.4"
+    render-fragment "^0.1.1"
+
+"@storybook/components@4.1.11":
+  version "4.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-4.1.11.tgz#25458a4a4f2edd836b1e4b944cfcfcb4a3567036"
+  integrity sha512-KJA8Nr8MbXiibDLcndx1GRVmVDyBBL2Tbb1kfQfr58vDwz6qhYxempejY6W+voaEqohnFxrOtnnbqlCyf8peUQ==
   dependencies:
     "@emotion/core" "^0.13.1"
     "@emotion/provider" "^0.11.2"
