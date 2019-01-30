@@ -2034,12 +2034,13 @@
   resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-7.0.5.tgz#f7dea19400c193a3b36a804a7f1f4b26dacf452b"
   integrity sha512-4DShbH857bZVOY4tPi1RQJNrLcf89hEtU0klZ9aYTMbtt95Ok4XdPqqcbtGOHIbAHMLSzQP8Uw/6qtBBqyloww==
 
-"@types/storybook__addon-info@^3.4.2":
-  version "3.4.2"
-  resolved "http://registry.npm.taobao.org/@types/storybook__addon-info/download/@types/storybook__addon-info-3.4.2.tgz#31a27e66867f02e593579cc58f54d22e726b0925"
-  integrity sha1-MaJ+ZoZ/AuWTV5zFj1TSLnJrCSU=
+"@types/storybook__addon-info@^3.4.3":
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/@types/storybook__addon-info/-/storybook__addon-info-3.4.3.tgz#c952150737830d665b8c95a9b652b18226dd8afa"
+  integrity sha512-j9lhGbdSV6ydZGJ24CShlMEnvYTiGYBM+sfT88XnLm3j/mr/VkBzU9fhGlDPdWk7/rDgqkrztDk/0E3AsxBNRg==
   dependencies:
     "@types/react" "*"
+    "@types/storybook__react" "*"
 
 "@types/storybook__addon-options@^4.0.0":
   version "4.0.0"
