@@ -78,7 +78,7 @@
     "@emotion/core": "^10.0.6",
     "@emotion/styled": "^10.0.6",
     "@fortawesome/fontawesome-svg-core": "^1.2.14",
-    "@fortawesome/free-solid-svg-icons": "^5.7.0",
+    "@fortawesome/free-solid-svg-icons": "^5.7.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "rc-notification": "^3.3.0",
     "react": "^16.7.0",
