@@ -74,7 +74,7 @@
     "typescript-styled-plugin": "^0.13.0"
   },
   "dependencies": {
-    "@emotion/cache": "^10.0.0",
+    "@emotion/cache": "^10.0.7",
     "@emotion/core": "^10.0.6",
     "@emotion/styled": "^10.0.7",
     "@fortawesome/fontawesome-svg-core": "^1.2.14",
