@@ -2019,10 +2019,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-test-renderer@^16.0.3":
-  version "16.0.3"
-  resolved "http://registry.npm.taobao.org/@types/react-test-renderer/download/@types/react-test-renderer-16.0.3.tgz#cce5c983d66cc5c3582e7c2f44b274ab635a8acc"
-  integrity sha1-zOXJg9ZsxcNYLnwvRLJ0q2Naisw=
+"@types/react-test-renderer@^16.8.0":
+  version "16.8.0"
+  resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-16.8.0.tgz#dbed6549f97a7f114b6920bf553a5db7e61bf83c"
+  integrity sha512-m563EQSTVB2g6h+FDUH2cgfiRdjL1KHVyi643EQQSFIblMPrWwJh/adqTcMS/FhJHvhEboR4pmhrhEXyHDDsmQ==
   dependencies:
     "@types/react" "*"
 
@@ -11055,14 +11055,6 @@ sax@>=0.6.0, sax@^1.2.4, sax@~1.2.4:
   version "1.2.4"
   resolved "http://registry.npm.taobao.org/sax/download/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha1-KBYjTiN4vdxOU1T6tcqold9xANk=
-
-scheduler@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.12.0.tgz#8ab17699939c0aedc5a196a657743c496538647b"
-  integrity sha512-t7MBR28Akcp4Jm+QoR63XgAi9YgCUmgvDHqf5otgAj4QvdoBE4ImCX0ffehefePPG+aitiYHp0g/mW6s4Tp+dw==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
 
 scheduler@^0.13.0:
   version "0.13.0"
