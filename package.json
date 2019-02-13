@@ -45,7 +45,7 @@
     "@types/sinon": "^7.0.6",
     "@types/storybook__addon-info": "^3.4.4",
     "@types/storybook__addon-options": "^4.0.0",
-    "@types/storybook__react": "^4.0.0",
+    "@types/storybook__react": "^4.0.1",
     "awesome-typescript-loader": "^5.2.1",
     "babel-core": "^7.0.0-beta.41",
     "babel-loader": "^8.0.5",
