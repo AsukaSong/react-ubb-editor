@@ -33,7 +33,7 @@
     "@storybook/cli": "4.1.13",
     "@storybook/react": "4.1.13",
     "@storybook/storybook-deployer": "^2.8.1",
-    "@types/enzyme": "^3.1.18",
+    "@types/enzyme": "^3.9.0",
     "@types/enzyme-adapter-react-16": "^1.0.4",
     "@types/jest": "^24.0.6",
     "@types/lodash": "^4.14.121",
