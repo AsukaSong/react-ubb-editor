@@ -1483,16 +1483,16 @@
     react-inspector "^2.3.0"
     uuid "^3.3.2"
 
-"@storybook/addon-info@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-5.0.0.tgz#e983613b746a0efa2113dd66b62577777651dffc"
-  integrity sha512-sc2Jbuk/McBUm+NUVtyLpDwGMEGwfkKj6PLeqQRChhiGQjYPlna+w0s8ocQurscRhL9x5MVdUphmVBT0a8bgaQ==
+"@storybook/addon-info@5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-5.0.1.tgz#959de89d0c1b24f8d560fac8a44b6d46b4abc5c4"
+  integrity sha512-i4shAaEunsKzWwT/B+kRqJzy4ecPlPtweBcHm62ISOgadiuQ+pwiqS9qosVENBzx8yZ0uBO9RoWpbVZxs6L0fQ==
   dependencies:
-    "@storybook/addons" "5.0.0"
-    "@storybook/client-logger" "5.0.0"
-    "@storybook/components" "5.0.0"
-    "@storybook/theming" "5.0.0"
-    core-js "^2.6.2"
+    "@storybook/addons" "5.0.1"
+    "@storybook/client-logger" "5.0.1"
+    "@storybook/components" "5.0.1"
+    "@storybook/theming" "5.0.1"
+    core-js "^2.6.5"
     global "^4.3.2"
     marksy "^6.1.0"
     nested-object-assign "^1.0.1"
