@@ -31,7 +31,7 @@
     "@storybook/addon-info": "5.0.1",
     "@storybook/addon-options": "5.0.0",
     "@storybook/cli": "5.0.1",
-    "@storybook/react": "5.0.0",
+    "@storybook/react": "5.0.1",
     "@storybook/storybook-deployer": "^2.8.1",
     "@types/enzyme": "^3.9.0",
     "@types/enzyme-adapter-react-16": "^1.0.5",
