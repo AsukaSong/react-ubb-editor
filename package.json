@@ -75,7 +75,7 @@
   },
   "dependencies": {
     "@emotion/cache": "^10.0.9",
-    "@emotion/core": "^10.0.7",
+    "@emotion/core": "^10.0.9",
     "@emotion/styled": "^10.0.9",
     "@fortawesome/fontawesome-svg-core": "^1.2.15",
     "@fortawesome/free-solid-svg-icons": "^5.7.2",
