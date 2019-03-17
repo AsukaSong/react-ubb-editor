@@ -1504,12 +1504,12 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-options@5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.0.1.tgz#a4d0541f6151ef3148b0b3837648db367685ba11"
-  integrity sha512-ajTEiDXiD9BVO1EgAG7VRVJQ5IjbE2v/DWQ1wfoOn0GSV1U/843rw/7GyojpgfEDmgh8bge5xVAKMb1tyyUojg==
+"@storybook/addon-options@5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.0.2.tgz#0d4f59c3b751df485df4a2cc52dd8a0d3f2642dc"
+  integrity sha512-WAYNEwQ4Bh690AVoEejXojJ3UjUmSJ58rwc9UUbonLcD6RjHvacDayPuOShUytLhhfzXriWjs1NoPEIdebgTqQ==
   dependencies:
-    "@storybook/addons" "5.0.1"
+    "@storybook/addons" "5.0.2"
     core-js "^2.6.5"
     util-deprecate "^1.0.2"
 
@@ -1520,6 +1520,17 @@
   dependencies:
     "@storybook/channels" "5.0.1"
     "@storybook/client-logger" "5.0.1"
+    core-js "^2.6.5"
+    global "^4.3.2"
+    util-deprecate "^1.0.2"
+
+"@storybook/addons@5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.0.2.tgz#429a65db9806a90c77193309f0cf64c5cdc65bc2"
+  integrity sha512-TVx/rCFB+gGtCfInXWpZpSzP1xuzDEge8oUkxUmylz75jVOMAfuP8OViCMxeyjFGZHLPxUOdtiJglptVZAMipg==
+  dependencies:
+    "@storybook/channels" "5.0.2"
+    "@storybook/client-logger" "5.0.2"
     core-js "^2.6.5"
     global "^4.3.2"
     util-deprecate "^1.0.2"
@@ -1539,6 +1550,13 @@
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-5.0.1.tgz#68e0c67ee6d9d7b526c3b3a79e7bc320dae058e7"
   integrity sha512-INIIez+a7h99KkYX/3FGLUFa1a5rKckSrHMRK/+FcFLIpALsvwuY5n7ihdHfU9TgXOBmtpt84oJO/JliFHjw9w==
+  dependencies:
+    core-js "^2.6.5"
+
+"@storybook/channels@5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-5.0.2.tgz#7b841cfe83c4f3766d91076a44c0f4014bcd3e45"
+  integrity sha512-pNX/7m7Y1LZb+BAKg5nzDB87JSVlahk2M1KfC9veqL4g2wDnlZRqweWwCvJaYmCChoD9FWZRhYo1IFdhduxdzQ==
   dependencies:
     core-js "^2.6.5"
 
@@ -1586,6 +1604,13 @@
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-5.0.1.tgz#1f02aa7af7aab1b69c2797ce75f7306397415e0a"
   integrity sha512-UWswQhukybl4P3f9MRhqmVlLf4aseVvktL3EfLFdWkiPss845mXY6Yateju6zZ6z4yXrPg0mXWN3ct2vFADpoA==
+  dependencies:
+    core-js "^2.6.5"
+
+"@storybook/client-logger@5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-5.0.2.tgz#14c2773f6f5cc50fea007445b4a4bf7e83703915"
+  integrity sha512-4A7tBiU5gb0xCbGCQyY5YE7F/0fxXIUCKUA1299x/H1foD0JR1/JImwGAgSpowBe2R2n3vxK9uLdncKnXUrlSQ==
   dependencies:
     core-js "^2.6.5"
 
