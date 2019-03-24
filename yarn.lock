@@ -1504,12 +1504,12 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-options@5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.0.3.tgz#0321f05504b6e0c23d064584706ed6f529bb7c59"
-  integrity sha512-hOas4I8zjuH0py/gkhQy3xAADLdXatn3Q2w9eMxKAYD7iDqfcopDW9fugdgX+5ROffSGhEA52ZwGGuYHGPy0Sw==
+"@storybook/addon-options@5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.0.4.tgz#e201773152f09d346ead20844fabd6bd4d287736"
+  integrity sha512-fZfiTWkWBJA+OZWMFPfXY/jGU4fDYKsPWLK625VyM3UJyXxBl7LRJ0Bxtva5JevDuR8gHiyJCUOXC+rSQB5Kbg==
   dependencies:
-    "@storybook/addons" "5.0.3"
+    "@storybook/addons" "5.0.4"
     core-js "^2.6.5"
     util-deprecate "^1.0.2"
 
@@ -1520,6 +1520,17 @@
   dependencies:
     "@storybook/channels" "5.0.3"
     "@storybook/client-logger" "5.0.3"
+    core-js "^2.6.5"
+    global "^4.3.2"
+    util-deprecate "^1.0.2"
+
+"@storybook/addons@5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.0.4.tgz#30372602a9ec3a4f25a1f46f84e7975a5920d94f"
+  integrity sha512-r4+DwHstK1g0Wbt3Q4xy9zrqId5fSkx+atv96njb6prhu2RlYm00VF54uIaSi4i/0wi73zVDBlO8bRmLGvnTOQ==
+  dependencies:
+    "@storybook/channels" "5.0.4"
+    "@storybook/client-logger" "5.0.4"
     core-js "^2.6.5"
     global "^4.3.2"
     util-deprecate "^1.0.2"
@@ -1539,6 +1550,13 @@
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-5.0.3.tgz#ab1623b2dc6ab9202f7938bf2210b00259794784"
   integrity sha512-trqHZPOmv3yTgT4EHQn74UhqIPOuFHZzHURKi3JWxDvDntZ+itIDgX8u3jiME0EIEVWwru5QM88j87GfqfzRmA==
+  dependencies:
+    core-js "^2.6.5"
+
+"@storybook/channels@5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-5.0.4.tgz#20012787b337cf568fcb452473b59e21ee698f7b"
+  integrity sha512-nRmRVOyU3RKQQTYaOqI0J0BS9cNLjdQgCXGbakA+kNBGP09UP26HCW39vqkesKi3o2apy1W9PINJDqWBF0ghRg==
   dependencies:
     core-js "^2.6.5"
 
@@ -1586,6 +1604,13 @@
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-5.0.3.tgz#5ec45b3173313aa7912ac95ac1ec530598a9d20e"
   integrity sha512-1izIxCV1QsYfz5c93sUlHI6IlkVF3Rslje0QQeGOQPHZ4Pe73JzUjIlMKww9BAYS7rYbq7asNNplEp4GIgIdYQ==
+  dependencies:
+    core-js "^2.6.5"
+
+"@storybook/client-logger@5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-5.0.4.tgz#ea94249ef9eb29710583da89ae0f534df9f46e07"
+  integrity sha512-vh/pjhe7PqBQFheDA3jymQ6WeJejmZufziKlsBZBqesGwi01gnBj3cOUfbEgYVUVDyMg813KTuPUuTx89B0sHQ==
   dependencies:
     core-js "^2.6.5"
 
