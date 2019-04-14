@@ -1511,12 +1511,12 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-options@5.0.5":
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.0.5.tgz#359ccd9dbc215491a6aea6c09fd2ad43b602c534"
-  integrity sha512-fi99hBTkNVOAAAaJLKkK2xtjMPwwZgfJsXZzwj5b10SIlNP7ojMIBh9lVis9uuHHTTZMOm7VW3N+CHtI+TCzjA==
+"@storybook/addon-options@5.0.7":
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.0.7.tgz#72037309fa53434720f633a9c265c865ecdd76c4"
+  integrity sha512-qLiLiwE6YlMNxzvErfPDL64rKW7RCtSmgtg2iglLPOQhIAgFxBXAT3zfiKmHfs9qMuyNzykYbztv0nvS0dq6Ww==
   dependencies:
-    "@storybook/addons" "5.0.5"
+    "@storybook/addons" "5.0.7"
     core-js "^2.6.5"
     util-deprecate "^1.0.2"
 
@@ -1527,6 +1527,17 @@
   dependencies:
     "@storybook/channels" "5.0.5"
     "@storybook/client-logger" "5.0.5"
+    core-js "^2.6.5"
+    global "^4.3.2"
+    util-deprecate "^1.0.2"
+
+"@storybook/addons@5.0.7":
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.0.7.tgz#2663cb384a0c840e74dc34d738b4f8173b58a0e5"
+  integrity sha512-/4Gwy6DYSSk2FDjJt9lqbrJQliH1Sliy8yQ+a7SThaNxZ3ixiGgonSf55eRyhjyMYTrdUpcy/FjPZo6RcvBzEQ==
+  dependencies:
+    "@storybook/channels" "5.0.7"
+    "@storybook/client-logger" "5.0.7"
     core-js "^2.6.5"
     global "^4.3.2"
     util-deprecate "^1.0.2"
@@ -1546,6 +1557,13 @@
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-5.0.5.tgz#76a7a0ead489a544dc6827e09e8ef66fa5415a78"
   integrity sha512-PKSGev6fRzquBpeqk473P7M+2GmTveO4v2LFkFyUOQkxKyyGJzbLkfrptgy1SNBpqmPRkiIxGIrab7iN9QUbEg==
+  dependencies:
+    core-js "^2.6.5"
+
+"@storybook/channels@5.0.7":
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-5.0.7.tgz#38fa956882acbcdab75aadbf7f8f04e864fce402"
+  integrity sha512-zZ/HMtsWANwMH2oRzqW2PIGctzMYRvIR7xH7emGwZQP8YX3IyncHwUdmiOudqMHoc2NnlAGtcSFPz5uIHg9TlQ==
   dependencies:
     core-js "^2.6.5"
 
@@ -1594,6 +1612,13 @@
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-5.0.5.tgz#35af9420325cc7dcd5952593351620670db0903d"
   integrity sha512-7J0FfwgYcMw6WsEfE0174C8O0yalN73Aqqo6At3SyYHwy6/UiIPFs2X78MzahIqOqywXEWjCIPoGghmpukuCmw==
+  dependencies:
+    core-js "^2.6.5"
+
+"@storybook/client-logger@5.0.7":
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-5.0.7.tgz#24a4471d152610e898b0ccb62189d14ffd03491b"
+  integrity sha512-L8AKnSYWxhfiGGjrue2FNBIO+WkYlJUHD20bYBe1l7QP3VgjadLtreCm7kNaY0MwKgDsdajRwV4KANQuBI+vyw==
   dependencies:
     core-js "^2.6.5"
 
