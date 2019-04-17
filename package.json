@@ -28,7 +28,7 @@
   "license": "WTFPL",
   "devDependencies": {
     "@storybook/addon-actions": "5.0.9",
-    "@storybook/addon-info": "5.0.8",
+    "@storybook/addon-info": "5.0.9",
     "@storybook/addon-options": "5.0.9",
     "@storybook/cli": "5.0.9",
     "@storybook/react": "5.0.8",
