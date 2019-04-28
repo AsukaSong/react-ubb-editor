@@ -1822,15 +1822,15 @@
   dependencies:
     core-js "^2.6.5"
 
-"@storybook/cli@5.0.10":
-  version "5.0.10"
-  resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-5.0.10.tgz#3ff4adc2bf6e6058571d1fdf3c3d6959fe118c61"
-  integrity sha512-pQiKT8ul9UIyS7Cl/tQENMdMv4cvkkYmuBcXI+gowyWbmlrv9Y715/ECJ0GoJob/ENPZmR/U+zy/rKInpMxOCw==
+"@storybook/cli@5.0.11":
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-5.0.11.tgz#293dfc9c09a57c64176d64b8a78448780dc728c6"
+  integrity sha512-yL5R3oplKmAclllP4I/2aR5y3+rYE/pg+ekIMVcCDAXrMdEAYoauFIVToPq6UXPKinPryxbYwkVMQZjYrkEupw==
   dependencies:
     "@babel/core" "^7.3.4"
     "@babel/preset-env" "^7.4.1"
     "@babel/register" "^7.0.0"
-    "@storybook/codemod" "5.0.10"
+    "@storybook/codemod" "5.0.11"
     chalk "^2.4.1"
     commander "^2.19.0"
     core-js "^2.6.5"
@@ -1870,10 +1870,10 @@
   dependencies:
     core-js "^2.6.5"
 
-"@storybook/codemod@5.0.10":
-  version "5.0.10"
-  resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-5.0.10.tgz#9a177a6dbd835b3fe5c9a3b9c2d3be497708e7b5"
-  integrity sha512-i1VDQZ1IkIVIXBYMgJEl//6BD2p/3o9c9iI+HO3jHNiCCPXeweyr3x1QxSlvgwCDj6Cpt4AJhaxeL2tU/FfaxQ==
+"@storybook/codemod@5.0.11":
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-5.0.11.tgz#7b0dbfcd01cf1e971bb6c837d34ebcef4fc08b77"
+  integrity sha512-wvqY0qFFEQRmaYW9DJZXw+VUwf8WG4QSyUfTyb/ExppYghYt89XkISwkXuB1xXycHh+bLomcG43gIP2F59cgdg==
   dependencies:
     core-js "^2.6.5"
     jscodeshift "^0.6.3"
