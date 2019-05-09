@@ -1208,12 +1208,12 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4":
-  version "7.3.4"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.3.4.tgz#73d12ba819e365fcf7fd152aed56d6df97d21c83"
-  integrity sha512-IvfvnMdSaLBateu0jfsYIpZTxAc2cKEXEMiezGGN75QcBcecDUKd3PgLAncT0oOgxKy8dd8hrJKj9MfzgfZd6g==
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.3":
+  version "7.4.4"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.4.tgz#dc2e34982eb236803aa27a07fea6857af1b9171d"
+  integrity sha512-w0+uT71b6Yi7i5SE0co4NioIpSYS6lLiXvCzWzGSKvpK5vdQtCbICHMj+gbAKAOtxiV6HsVh/MBdaF9EQ6faSg==
   dependencies:
-    regenerator-runtime "^0.12.0"
+    regenerator-runtime "^0.13.2"
 
 "@babel/template@^7.0.0", "@babel/template@^7.2.2":
   version "7.2.2"
@@ -7255,15 +7255,15 @@ jest-each@^24.8.0:
     jest-util "^24.8.0"
     pretty-format "^24.8.0"
 
-jest-emotion@^10.0.10:
-  version "10.0.10"
-  resolved "https://registry.yarnpkg.com/jest-emotion/-/jest-emotion-10.0.10.tgz#94ba32b3982ba790bab82b3475a1e2d1f2a3f5c8"
-  integrity sha512-RHlOHonIEWwPeOuUZoHSnbf+ZDVlvrZoSuUzWHNcQxQIJPo7LWuRzzZhTZeU+QVWWSSNIFvgfJl7muLezJnlgg==
+jest-emotion@^10.0.11:
+  version "10.0.11"
+  resolved "https://registry.yarnpkg.com/jest-emotion/-/jest-emotion-10.0.11.tgz#7d75e2675f36c4c8a30333e5b8e405f11c1a0638"
+  integrity sha512-gSlcRwDq5A6RCK+9vnQ3was3W3wTcQ1Jl+MbS6A4F9yvhT+YKHC4T1W7l+iqmGGNGiqFtJ7nXL6f0Q0En6o2ew==
   dependencies:
+    "@babel/runtime" "^7.4.3"
     "@types/jest" "^23.0.2"
     chalk "^2.4.1"
     css "^2.2.1"
-    object-assign "^4.1.1"
 
 jest-environment-jsdom@^24.8.0:
   version "24.8.0"
@@ -10480,6 +10480,11 @@ regenerator-runtime@^0.12.0, regenerator-runtime@^0.12.1:
   version "0.12.1"
   resolved "http://registry.npm.taobao.org/regenerator-runtime/download/regenerator-runtime-0.12.1.tgz#fa1a71544764c036f8c49b13a08b2594c9f8a0de"
   integrity sha1-+hpxVEdkwDb4xJsToIsllMn4oN4=
+
+regenerator-runtime@^0.13.2:
+  version "0.13.2"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.2.tgz#32e59c9a6fb9b1a4aff09b4930ca2d4477343447"
+  integrity sha512-S/TQAZJO+D3m9xeN1WTI8dLKBBiRgXBlTJvbWjCThHWZj9EvHK70Ff50/tYj2J/fvBY6JtFVwRuazHN2E7M9BA==
 
 regenerator-transform@^0.13.3:
   version "0.13.3"
