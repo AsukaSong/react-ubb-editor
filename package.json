@@ -50,7 +50,7 @@
     "babel-core": "^7.0.0-beta.41",
     "babel-loader": "^8.0.5",
     "codacy-coverage": "^3.4.0",
-    "codecov": "^3.3.0",
+    "codecov": "^3.4.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "highlight.js": "^9.15.6",
