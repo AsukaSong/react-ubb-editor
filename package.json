@@ -48,7 +48,7 @@
     "@types/storybook__react": "^4.0.1",
     "awesome-typescript-loader": "^5.2.1",
     "babel-core": "^7.0.0-beta.41",
-    "babel-loader": "^8.0.5",
+    "babel-loader": "^8.0.6",
     "codacy-coverage": "^3.4.0",
     "codecov": "^3.4.0",
     "enzyme": "^3.9.0",
