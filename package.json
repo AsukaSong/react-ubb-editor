@@ -53,7 +53,7 @@
     "codecov": "^3.5.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.2",
-    "highlight.js": "^9.15.6",
+    "highlight.js": "^9.15.8",
     "husky": "^2.3.0",
     "jest": "^24.8.0",
     "jest-emotion": "^10.0.11",
