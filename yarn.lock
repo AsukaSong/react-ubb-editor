@@ -2351,10 +2351,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-syntax-highlighter@^10.2.0":
-  version "10.2.0"
-  resolved "https://registry.yarnpkg.com/@types/react-syntax-highlighter/-/react-syntax-highlighter-10.2.0.tgz#c50cb61a98a34b49ec570151509f8590adaa2eb0"
-  integrity sha512-2SoIispTGKWs2wDXV19nAo3lDPvEEjRPM4OQ9MZ5u2GfrUX7sR1bSoGWSU2REEW2cBYidCzvdyMXiFhO+4REJA==
+"@types/react-syntax-highlighter@^10.2.1":
+  version "10.2.1"
+  resolved "https://registry.yarnpkg.com/@types/react-syntax-highlighter/-/react-syntax-highlighter-10.2.1.tgz#b0f75c22cbe7d12104581648348d91d3cd7f13fa"
+  integrity sha512-M2BAOiiQ2KDkCiuhO1UxAsSNfrSegUfXL1MabRggOoqJoPpaoSuTxGF+TgLuAjMEVW8dJDtp7WpBjjRLMxWgrQ==
   dependencies:
     "@types/react" "*"
 
