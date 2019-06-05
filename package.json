@@ -29,7 +29,7 @@
   "devDependencies": {
     "@storybook/addon-actions": "5.1.1",
     "@storybook/addon-info": "5.1.1",
-    "@storybook/addon-options": "5.0.11",
+    "@storybook/addon-options": "5.1.1",
     "@storybook/cli": "5.1.1",
     "@storybook/react": "5.0.11",
     "@storybook/storybook-deployer": "^2.8.1",
