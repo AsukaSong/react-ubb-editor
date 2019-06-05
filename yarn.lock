@@ -1806,13 +1806,13 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-options@5.0.11":
-  version "5.0.11"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.0.11.tgz#fea3b1b92e64c2321efa52fac67772043126cc66"
-  integrity sha512-vfeuKm25y8yfiqmYbL4T98BXXzbUPOldrVmAQevYF2pqaoLnBpFneMqgSEJwV0m25kHBR6rWRj9HT6BdDDpWfg==
+"@storybook/addon-options@5.1.1":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.1.1.tgz#adcde1e06c68726459356b4f1bcea03b925fcee3"
+  integrity sha512-xXJDVliacyULreWLg4DJNsBPW2C6g39QeoRWVO6RUNztRKUJjaPyRTqrLJU6miSCTdnRGyMFtPsT406blh7V7g==
   dependencies:
-    "@storybook/addons" "5.0.11"
-    core-js "^2.6.5"
+    "@storybook/addons" "5.1.1"
+    core-js "^3.0.1"
     util-deprecate "^1.0.2"
 
 "@storybook/addons@5.0.11":
