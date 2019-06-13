@@ -1,8 +1,8 @@
 const path = require("path")
 
-module.exports = (baseConfig, env, defaultConfig) => {
+module.exports = ({ config, mode }) => {
 
-  defaultConfig.module.rules.push({
+  config.module.rules.push({
     test: /\.(ts|tsx)$/,
     include: path.resolve(__dirname, "../"),
     use: [
@@ -10,6 +10,6 @@ module.exports = (baseConfig, env, defaultConfig) => {
       require.resolve("react-docgen-typescript-loader")
     ],
   })
-  defaultConfig.resolve.extensions.push(".ts", ".tsx")
-  return defaultConfig
+  config.resolve.extensions.push(".ts", ".tsx")
+  return config
 }
