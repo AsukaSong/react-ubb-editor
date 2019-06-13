@@ -11,18 +11,14 @@ storiesOf('Customs', module)
   .add(
     'upload',
     withInfo({
-      text: require('./upload.md'),
+      text: require('./upload.md').default,
       propTablesExclude: [Upload],
-    })(
-      () => <Upload />,
-    ),
+    })(() => <Upload />)
   )
   .add(
     'emoji',
     withInfo({
-      text: require('./emoji.md'),
+      text: require('./emoji.md').default,
       propTablesExclude: [Emoji],
-    })(
-      () => <Emoji />,
-    ),
+    })(() => <Emoji />)
   )

@@ -21,7 +21,7 @@ class Container extends React.Component {
     this.editor.notice('a simple message')
   }
 
-  getRef = (it: CoreType) => this.editor = it
+  getRef = (it: CoreType) => (this.editor = it)
 
   render() {
     return (
@@ -41,7 +41,7 @@ class Container2 extends React.Component {
   handleDrop(
     e: React.DragEvent<HTMLTextAreaElement>,
     dispatch: (action: IAction) => void,
-    message: (message: string) => void,
+    message: (message: string) => void
   ) {
     const files = Array.from(e.dataTransfer.files) as File[]
     if (files.length > 0) {
@@ -61,7 +61,7 @@ class Container2 extends React.Component {
   render() {
     return (
       <UbbEditor
-        wrappedComponentRef={it => this.it = it}
+        wrappedComponentRef={it => (this.it = it)}
         defaultValue="drop file here"
         onDrop={this.handleDrop}
         disabled={true}
@@ -77,27 +77,21 @@ storiesOf('Editor', module)
   .add(
     'basic use',
     withInfo({
-      text: require('./basicUse.md'),
+      text: require('./basicUse.md').default,
       TableComponent: Table(types),
-    } as any)(
-      () => <UbbEditor />,
-    ),
+    } as any)(() => <UbbEditor />)
   )
   .add(
     'wrapped component ref',
     withInfo({
-      text: require('./wrappedComponentRef.md'),
+      text: require('./wrappedComponentRef.md').default,
       propTablesExclude: [Container],
-    })(
-      () => <Container />,
-    ),
+    })(() => <Container />)
   )
   .add(
     'drop and paste',
     withInfo({
-      text: require('./dropAndPaste.md'),
+      text: require('./dropAndPaste.md').default,
       propTablesExclude: [Container2],
-    })(
-      () => <Container2 />,
-    ),
+    })(() => <Container2 />)
   )

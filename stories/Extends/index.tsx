@@ -1,4 +1,3 @@
-
 import { faImage, faUpload } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import { withInfo } from '@storybook/addon-info'
@@ -43,9 +42,13 @@ const config = {
 const ExtraComponent = () => (
   <div style={styles.div}>
     <input id="file" type="file" style={styles.upload} />
-    <label htmlFor="file" style={styles.label}><Icon icon={faUpload} /></label>
+    <label htmlFor="file" style={styles.label}>
+      <Icon icon={faUpload} />
+    </label>
     <input type="checkbox" id="checkbox" />
-    <label style={styles.label} htmlFor="checkbox">无损上传</label>
+    <label style={styles.label} htmlFor="checkbox">
+      无损上传
+    </label>
   </div>
 )
 
@@ -68,18 +71,14 @@ storiesOf('Extends', module)
   .add(
     'basic use',
     withInfo({
-      text: require('./basicUse.md'),
+      text: require('./basicUse.md').default,
       propTablesExclude: [UbbEditor],
-    })(
-      () => <UbbEditor />,
-    ),
+    })(() => <UbbEditor />)
   )
   .add(
     'with extra component',
     withInfo({
-      text: require('./withExtraComponent.md'),
+      text: require('./withExtraComponent.md').default,
       propTablesExclude: [UbbEditor],
-    })(
-      () => <UbbEditor2 />,
-    ),
+    })(() => <UbbEditor2 />)
   )
