@@ -10194,10 +10194,10 @@ react-resize-detector@^4.0.5:
     raf-schd "^4.0.0"
     resize-observer-polyfill "^1.5.1"
 
-react-syntax-highlighter@^10.3.3:
-  version "10.3.3"
-  resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-10.3.3.tgz#90afebef3637cb5dda76daf101d12455ef08b549"
-  integrity sha512-sJut7u0UVamgXNWt4Z2mVJgb3CMR+T+oXE/v5Sc947hWktFgfdqd52uJNpu45Ohnkjk6jf/d+PVsiM0w6CWFkg==
+react-syntax-highlighter@^11.0.1:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-11.0.1.tgz#3be753865a70c47d50173cab7f775207b195ccbe"
+  integrity sha512-cGmvw1TnevtryC7WnGCI65gnE8lApYa6QufjtMSYoiWL7X9OKeSkyPGlSgubdz+908Swlls4BFHbuDcSHPnGEQ==
   dependencies:
     "@babel/runtime" "^7.3.1"
     highlight.js "~9.13.0"
