@@ -5966,11 +5966,12 @@ humps@^2.0.1:
   resolved "https://registry.npm.taobao.org/humps/download/humps-2.0.1.tgz#dd02ea6081bd0568dc5d073184463957ba9ef9aa"
   integrity sha1-3QLqYIG9BWjcXQcxhEY5V7qe+ao=
 
-husky@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npm.taobao.org/husky/download/husky-3.0.0.tgz#de63821a7049dc412b1afd753c259e2f6e227562"
-  integrity sha1-3mOCGnBJ3EErGv11PCWeL24idWI=
+husky@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-3.0.1.tgz#06152c28e129622b05fa09c494209de8cf2dfb59"
+  integrity sha512-PXBv+iGKw23GHUlgELRlVX9932feFL407/wHFwtsGeArp0dDM4u+/QusSQwPKxmNgjpSL+ustbOdQ2jetgAZbA==
   dependencies:
+    chalk "^2.4.2"
     cosmiconfig "^5.2.1"
     execa "^1.0.0"
     get-stdin "^7.0.0"
@@ -6768,9 +6769,9 @@ jest-each@^24.8.0:
     pretty-format "^24.8.0"
 
 jest-emotion@^10.0.14:
-  version "10.0.11"
-  resolved "https://registry.npm.taobao.org/jest-emotion/download/jest-emotion-10.0.11.tgz#7d75e2675f36c4c8a30333e5b8e405f11c1a0638"
-  integrity sha1-fXXiZ182xMijAzPluOQF8RwaBjg=
+  version "10.0.14"
+  resolved "https://registry.yarnpkg.com/jest-emotion/-/jest-emotion-10.0.14.tgz#e3b7b267fda4201de995388f1934e1083f5dec81"
+  integrity sha512-iwvJV06Ref40/t5l3MswnNx7V9hohiaDRuegxADZr9ybPjdHt9Xvv+XGSARqHp2V/N6nIGQzBZ0nb1TCmyG2nw==
   dependencies:
     "@babel/runtime" "^7.4.3"
     "@types/jest" "^23.0.2"
