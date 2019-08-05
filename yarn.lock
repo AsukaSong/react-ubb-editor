@@ -970,10 +970,10 @@
   resolved "https://registry.npm.taobao.org/@emmetio/extract-abbreviation/download/@emmetio/extract-abbreviation-0.1.6.tgz#e4a9856c1057f0aff7d443b8536477c243abe28c"
   integrity sha1-5KmFbBBX8K/31EO4U2R3wkOr4ow=
 
-"@emotion/cache@^10.0.14", "@emotion/cache@^10.0.9":
-  version "10.0.14"
-  resolved "https://registry.npm.taobao.org/@emotion/cache/download/@emotion/cache-10.0.14.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40emotion%2Fcache%2Fdownload%2F%40emotion%2Fcache-10.0.14.tgz#56093cff025c04b0330bdd92afe8335ed326dd18"
-  integrity sha1-Vgk8/wJcBLAzC92Sr+gzXtMm3Rg=
+"@emotion/cache@^10.0.14", "@emotion/cache@^10.0.15":
+  version "10.0.15"
+  resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.15.tgz#b81767b48015aae2689c60373992145c67b8de02"
+  integrity sha512-8VthgeKhlGeTXSW1JN7I14AnAaiFPbOrqNqg3dPoGCZ3bnMjkrmRU0zrx0BtBw9esBaPaQgDB9y0tVgAGT2Mrg==
   dependencies:
     "@emotion/sheet" "0.9.3"
     "@emotion/stylis" "0.8.4"
