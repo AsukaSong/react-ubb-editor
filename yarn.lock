@@ -1401,12 +1401,12 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-options@5.1.9":
-  version "5.1.9"
-  resolved "https://registry.npm.taobao.org/@storybook/addon-options/download/@storybook/addon-options-5.1.9.tgz#dc326b94c52a7ee27bf948fb7ca63a6ea3c9736d"
-  integrity sha1-3DJrlMUqfuJ7+Uj7fKY6bqPJc20=
+"@storybook/addon-options@5.1.10":
+  version "5.1.10"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.1.10.tgz#ae6cf58744cee4ed161ffc537bc7e29a7c7337d0"
+  integrity sha512-DA6r84JYMJ5zACGdPQ7utpig8pUU1wywMMZt43k2IhxKBFcamw0Nmc80vvlTMM4mUu+mevH1ZiuzWxTZU7IcxA==
   dependencies:
-    "@storybook/addons" "5.1.9"
+    "@storybook/addons" "5.1.10"
     core-js "^3.0.1"
     util-deprecate "^1.0.2"
 
