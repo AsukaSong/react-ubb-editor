@@ -2019,10 +2019,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-syntax-highlighter@^10.2.1":
-  version "10.2.1"
-  resolved "https://registry.npm.taobao.org/@types/react-syntax-highlighter/download/@types/react-syntax-highlighter-10.2.1.tgz#b0f75c22cbe7d12104581648348d91d3cd7f13fa"
-  integrity sha1-sPdcIsvn0SEEWBZINI2R081/E/o=
+"@types/react-syntax-highlighter@^11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@types/react-syntax-highlighter/-/react-syntax-highlighter-11.0.0.tgz#ae67cce95cca4da66911ef7c3fc97e3ae042076b"
+  integrity sha512-iZ3uJ4Cv+ya47zirtfOua/h3EzTOlgvOr7MP1QaPPf35e14Vjz5bOdM3kIOTURo32y7FUOouke1ZpHgRqXfqbQ==
   dependencies:
     "@types/react" "*"
 
