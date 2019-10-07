@@ -60,7 +60,7 @@
     "lint-staged": "^9.4.1",
     "prettier": "^1.18.2",
     "prop-types": "^15.7.2",
-    "react-docgen-typescript-loader": "^3.2.1",
+    "react-docgen-typescript-loader": "^3.3.0",
     "react-markdown": "^4.2.2",
     "react-syntax-highlighter": "^11.0.2",
     "react-test-renderer": "^16.10.2",
