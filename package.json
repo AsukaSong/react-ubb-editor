@@ -63,7 +63,7 @@
     "react-docgen-typescript-loader": "^3.2.1",
     "react-markdown": "^4.2.2",
     "react-syntax-highlighter": "^11.0.2",
-    "react-test-renderer": "^16.10.1",
+    "react-test-renderer": "^16.10.2",
     "rimraf": "^3.0.0",
     "sinon": "^7.5.0",
     "ts-jest": "^24.1.0",
