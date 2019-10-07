@@ -2333,10 +2333,10 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/sinon@^7.0.13":
-  version "7.0.13"
-  resolved "https://registry.npm.taobao.org/@types/sinon/download/@types/sinon-7.0.13.tgz#ca039c23a9e27ebea53e0901ef928ea2a1a6d313"
-  integrity sha1-ygOcI6nifr6lPgkB75KOoqGm0xM=
+"@types/sinon@^7.5.0":
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-7.5.0.tgz#f5a10c27175465a0b001b68d8b9f761582967cc6"
+  integrity sha512-NyzhuSBy97B/zE58cDw4NyGvByQbAHNP9069KVSgnXt/sc0T6MFRh0InKAeBVHJWdSXG1S3+PxgVIgKo9mTHbw==
 
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
