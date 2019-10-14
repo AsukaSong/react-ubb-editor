@@ -52,7 +52,7 @@
     "codacy-coverage": "^3.4.0",
     "codecov": "^3.6.1",
     "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "highlight.js": "^9.15.10",
     "husky": "^3.0.9",
     "jest": "^24.9.0",
