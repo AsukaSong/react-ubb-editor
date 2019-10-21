@@ -41,7 +41,7 @@
     "@types/react-color": "^3.0.1",
     "@types/react-dom": "^16.9.1",
     "@types/react-syntax-highlighter": "^11.0.1",
-    "@types/react-test-renderer": "^16.9.0",
+    "@types/react-test-renderer": "^16.9.1",
     "@types/sinon": "^7.5.0",
     "@types/storybook__addon-info": "^4.1.2",
     "@types/storybook__addon-options": "^4.0.2",
