@@ -71,7 +71,7 @@
     "tslint-config-airbnb": "^5.11.2",
     "tslint-react": "^4.1.0",
     "typescript": "^3.6.4",
-    "typescript-styled-plugin": "^0.14.0"
+    "typescript-styled-plugin": "^0.15.0"
   },
   "dependencies": {
     "@emotion/cache": "^10.0.19",
