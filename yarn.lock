@@ -1697,7 +1697,7 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-options@5.3.9":
+"@storybook/addon-options@*", "@storybook/addon-options@5.3.9":
   version "5.3.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.3.9.tgz#55ad8573431b1c04e3dc681a3bb1391ccf70d3a4"
   integrity sha512-6TDYL8E66rZjpkbmUzgh6nW1lECKSAe/sozhUQ5ht9Z3SMeFxOZWHEbxORGfanOYQ4p1YxW6EFAQK4ij0F8DSw==
@@ -2564,14 +2564,14 @@
     "@storybook/react" "^5.2.0"
     "@types/react" "*"
 
-"@types/storybook__addon-options@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.npm.taobao.org/@types/storybook__addon-options/download/@types/storybook__addon-options-4.0.2.tgz#72f905c2751f42758504cba3db3e0c32b047ae7b"
-  integrity sha1-cvkFwnUfQnWFBMuj2z4MMrBHrns=
+"@types/storybook__addon-options@^5.2.1":
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/@types/storybook__addon-options/-/storybook__addon-options-5.2.1.tgz#c373d85203d4bba831b8c99b3fd4d0ea39bcdd35"
+  integrity sha512-5mvfXaHdNZ2c5QZj3AZagq6L8cEdLrxqf/EsocRxJNJt8B+6KV+PXBKqLT8G2trRQQRToq8pPIsZiFa/V+gDXA==
   dependencies:
-    "@types/storybook__react" "*"
+    "@storybook/addon-options" "*"
 
-"@types/storybook__react@*", "@types/storybook__react@^5.2.1":
+"@types/storybook__react@^5.2.1":
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/@types/storybook__react/-/storybook__react-5.2.1.tgz#b5fd1612f2e5846b2f441725ea946bafd7ab9edb"
   integrity sha512-p4QGO+VjEO3YxyWVHpPylNheA0JhStzoCg6RBTmdobrC0ZqLPEIIWu0pFkHlNkmGIiEKW2yDGFJooBe8M4Df0Q==
