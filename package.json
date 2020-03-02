@@ -81,7 +81,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "rc-notification": "^3.3.1",
-    "react": "^16.12.0",
+    "react": "^16.13.0",
     "react-color": "^2.18.0",
     "react-dom": "^16.12.0",
     "tslib": "^1.11.0"
