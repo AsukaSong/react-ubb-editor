@@ -4563,6 +4563,11 @@ commondir@^1.0.1:
   resolved "https://registry.npm.taobao.org/commondir/download/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
   integrity sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=
 
+compare-versions@^3.5.1:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/compare-versions/-/compare-versions-3.6.0.tgz#1a5689913685e5a87637b8d3ffca75514ec41d62"
+  integrity sha512-W6Af2Iw1z4CB7q4uU4hv646dW9GQuBM+YpC0UvUCWSD8w90SJjp+ujJuXaEMtAXBtSqGfMPuFOVn4/+FlaqfBA==
+
 component-classes@^1.2.5:
   version "1.2.6"
   resolved "https://registry.npm.taobao.org/component-classes/download/component-classes-1.2.6.tgz#c642394c3618a4d8b0b8919efccbbd930e5cd691"
@@ -6160,6 +6165,13 @@ find-up@^4.0.0, find-up@^4.1.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
+find-versions@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/find-versions/-/find-versions-3.2.0.tgz#10297f98030a786829681690545ef659ed1d254e"
+  integrity sha512-P8WRou2S+oe222TOCHitLy8zj+SIsVJh52VP4lvXkaFVnOFFdoWv1H1Jjvel1aI6NCFOAaeAVm8qrI0odiLcww==
+  dependencies:
+    semver-regex "^2.0.0"
+
 flatstr@^1.0.4:
   version "1.0.12"
   resolved "https://registry.yarnpkg.com/flatstr/-/flatstr-1.0.12.tgz#c2ba6a08173edbb6c9640e3055b95e287ceb5931"
@@ -6414,11 +6426,6 @@ get-own-enumerable-property-symbols@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npm.taobao.org/get-own-enumerable-property-symbols/download/get-own-enumerable-property-symbols-3.0.0.tgz#b877b49a5c16aefac3655f2ed2ea5b684df8d203"
   integrity sha1-uHe0mlwWrvrDZV8u0upbaE340gM=
-
-get-stdin@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.npm.taobao.org/get-stdin/download/get-stdin-7.0.0.tgz#8d5de98f15171a125c5e516643c7a6d0ea8a96f6"
-  integrity sha1-jV3pjxUXGhJcXlFmQ8em0OqKlvY=
 
 get-stream@^3.0.0:
   version "3.0.0"
@@ -7060,22 +7067,21 @@ humanize-ms@^1.2.1:
   dependencies:
     ms "^2.0.0"
 
-husky@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-3.1.0.tgz#5faad520ab860582ed94f0c1a77f0f04c90b57c0"
-  integrity sha512-FJkPoHHB+6s4a+jwPqBudBDvYZsoQW5/HBuMSehC8qDiCe50kpcxeqFoDSlow+9I6wg47YxBoT3WxaURlrDIIQ==
+husky@^4.2.3:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-4.2.3.tgz#3b18d2ee5febe99e27f2983500202daffbc3151e"
+  integrity sha512-VxTsSTRwYveKXN4SaH1/FefRJYCtx+wx04sSVcOpD7N2zjoHxa+cEJ07Qg5NmV3HAK+IRKOyNVpi2YBIVccIfQ==
   dependencies:
-    chalk "^2.4.2"
+    chalk "^3.0.0"
     ci-info "^2.0.0"
-    cosmiconfig "^5.2.1"
-    execa "^1.0.0"
-    get-stdin "^7.0.0"
+    compare-versions "^3.5.1"
+    cosmiconfig "^6.0.0"
+    find-versions "^3.2.0"
     opencollective-postinstall "^2.0.2"
     pkg-dir "^4.2.0"
     please-upgrade-node "^3.2.0"
-    read-pkg "^5.2.0"
-    run-node "^1.0.0"
     slash "^3.0.0"
+    which-pm-runs "^1.0.0"
 
 iconv-lite@0.4.24, iconv-lite@^0.4.24, iconv-lite@^0.4.4, iconv-lite@~0.4.13:
   version "0.4.24"
@@ -11466,7 +11472,7 @@ read-pkg@^3.0.0:
     normalize-package-data "^2.3.2"
     path-type "^3.0.0"
 
-read-pkg@^5.1.1, read-pkg@^5.2.0:
+read-pkg@^5.1.1:
   version "5.2.0"
   resolved "https://registry.npm.taobao.org/read-pkg/download/read-pkg-5.2.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fread-pkg%2Fdownload%2Fread-pkg-5.2.0.tgz#7bf295438ca5a33e56cd30e053b34ee7250c93cc"
   integrity sha1-e/KVQ4yloz5WzTDgU7NO5yUMk8w=
@@ -11968,11 +11974,6 @@ run-async@^2.2.0:
   dependencies:
     is-promise "^2.1.0"
 
-run-node@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npm.taobao.org/run-node/download/run-node-1.0.0.tgz#46b50b946a2aa2d4947ae1d886e9856fd9cabe5e"
-  integrity sha1-RrULlGoqotSUeuHYhumFb9nKvl4=
-
 run-parallel@^1.1.9:
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/run-parallel/-/run-parallel-1.1.9.tgz#c9dd3a7cf9f4b2c4b6244e173a6ed866e61dd679"
@@ -12087,6 +12088,11 @@ semver-diff@^2.0.0:
   integrity sha1-S7uEN8jTfksM8aaP1ybsbWRdbTY=
   dependencies:
     semver "^5.0.3"
+
+semver-regex@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/semver-regex/-/semver-regex-2.0.0.tgz#a93c2c5844539a770233379107b38c7b4ac9d338"
+  integrity sha512-mUdIBBvdn0PLOeP3TEkMH7HHeUP3GjsXCwKarjv/kGmUFOYg1VqEemKhoQpWMu6X2I8kHeuVdGibLGkVK+/5Qw==
 
 "semver@2 || 3 || 4 || 5", semver@^5.0.3, semver@^5.3.0, semver@^5.4.1, semver@^5.5, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0, semver@^5.7.0, semver@^5.7.1:
   version "5.7.1"
@@ -14117,6 +14123,11 @@ which-module@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/which-module/download/which-module-2.0.0.tgz#d9ef07dce77b9902b8a3a8fa4b31c3e3f7e6e87a"
   integrity sha1-2e8H3Od7mQK4o6j6SzHD4/fm6Ho=
+
+which-pm-runs@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/which-pm-runs/-/which-pm-runs-1.0.0.tgz#670b3afbc552e0b55df6b7780ca74615f23ad1cb"
+  integrity sha1-Zws6+8VS4LVd9rd4DKdGFfI60cs=
 
 which@1, which@^1.2.9, which@^1.3.1:
   version "1.3.1"
