@@ -82,7 +82,7 @@
     "@fortawesome/react-fontawesome": "^0.1.9",
     "rc-notification": "^4.0.0",
     "react": "^16.13.1",
-    "react-color": "^2.18.0",
+    "react-color": "^2.18.1",
     "react-dom": "^16.13.1",
     "tslib": "^1.11.1"
   },
