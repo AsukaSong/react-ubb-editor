@@ -84,7 +84,7 @@
     "react": "^16.13.1",
     "react-color": "^2.18.1",
     "react-dom": "^16.13.1",
-    "tslib": "^1.11.1"
+    "tslib": "^1.11.2"
   },
   "jest": {
     "transform": {
