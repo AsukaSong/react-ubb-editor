@@ -2330,10 +2330,10 @@
   resolved "https://registry.npm.taobao.org/@types/jest/download/@types/jest-23.3.14.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fjest%2Fdownload%2F%40types%2Fjest-23.3.14.tgz#37daaf78069e7948520474c87b80092ea912520a"
   integrity sha1-N9qveAaeeUhSBHTIe4AJLqkSUgo=
 
-"@types/jest@^26.0.3":
-  version "26.0.3"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.3.tgz#79534e0e94857171c0edc596db0ebe7cb7863251"
-  integrity sha512-v89ga1clpVL/Y1+YI0eIu1VMW+KU7Xl8PhylVtDKVWaSUHBHYPLXMQGBdrpHewaKoTvlXkksbYqPgz8b4cmRZg==
+"@types/jest@^26.0.4":
+  version "26.0.4"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.4.tgz#d2e513e85aca16992816f192582b5e67b0b15efb"
+  integrity sha512-4fQNItvelbNA9+sFgU+fhJo8ZFF+AS4Egk3GWwCW2jFtViukXbnztccafAdLhzE/0EiCogljtQQXP8aQ9J7sFg==
   dependencies:
     jest-diff "^25.2.1"
     pretty-format "^25.2.1"
