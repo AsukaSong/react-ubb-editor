@@ -35,7 +35,7 @@
     "@storybook/storybook-deployer": "^2.8.6",
     "@types/enzyme": "^3.10.5",
     "@types/enzyme-adapter-react-16": "^1.0.6",
-    "@types/jest": "^26.0.9",
+    "@types/jest": "^26.0.10",
     "@types/lodash": "^4.14.159",
     "@types/react": "^16.9.45",
     "@types/react-color": "^3.0.4",
