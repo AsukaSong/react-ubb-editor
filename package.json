@@ -30,7 +30,7 @@
     "@storybook/addon-actions": "5.3.19",
     "@storybook/addon-info": "5.3.21",
     "@storybook/addon-options": "5.3.21",
-    "@storybook/cli": "5.2.8",
+    "@storybook/cli": "6.2.9",
     "@storybook/react": "5.3.19",
     "@storybook/storybook-deployer": "^2.8.6",
     "@types/enzyme": "^3.10.6",
